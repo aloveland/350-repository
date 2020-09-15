@@ -19,7 +19,7 @@ const query1 = "SELECT mlength, title FROM movies where (mlength < 100) ORDER BY
 //
 // query 2: We want the titles of all the movies whose title ends with the letter 'e' ordered alphabetically
 //
-const query2 = "";
+const query2 = "SELECT title FROM movies where LIKE '%e' ORDER BY movies";
 //
 // query 3: for each genre, the total boxoffice. Ordered by box office total. 
 //          The column with that total should be labeled total_boxoffice. So something that returns:
