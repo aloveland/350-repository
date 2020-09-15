@@ -15,7 +15,7 @@ const pool = new Pool(config);
 //  query 1: We want the titles and running time, of all the movies whose running time is less than 100 minutes. 
 //           Ordered by the shortest movie first.
 //
-const query1 = "SELECT title, mlength FROM movies where mlength < 100";
+const query1 = "SELECT ORDERY BY mlength, title FROM movies where mlength < 100";
 //
 // query 2: We want the titles of all the movies whose title ends with the letter 'e' ordered alphabetically
 //
