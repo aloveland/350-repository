@@ -32,7 +32,7 @@ const query2 = "SELECT title FROM movies where title LIKE '%e' ORDER BY title";
 //      Comedy      |           370.6
 //      Animation   |           968.5
 //      Action      |         3853.27
-const query3 = "SELECT genre, boxoffice as total_boxoffice, from movies order by boxoffice DESC";
+const query3 = "SELECT genre, boxoffice as total_boxoffice, from movies order by boxoffice desc";
 //
 // query 4: print out the title and boxoffice of the movie with the highest boxoffice.
 //
