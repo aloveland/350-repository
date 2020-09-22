@@ -36,7 +36,7 @@ const query3 = "SELECT genre as genre, SUM(boxoffice) as total_boxoffice FROM mo
 //
 // query 4: print out the title and boxoffice of the movie with the highest boxoffice.
 //
-const query4 = "SELECT title, SUM(boxoffice) as total_boxoffice FROM movies GROUP BY genre order by SUM(boxoffice) DESC LIMIT 1";
+const query4 = "SELECT title, boxoffice FROM movies order by boxoffice DESC LIMIT 1";
 
 const foo = async(req, res) => {
 
