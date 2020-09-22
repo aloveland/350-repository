@@ -40,6 +40,6 @@ INSERT INTO billboard(artist,track,album)VALUES
 ('Shawn Mendez', 'Senorita', 'Shawn Mendes'),
 ('Billie Eilish', 'Bad Guy', 'When We All Fall Asleep, \Where Do We Go?'),
 ('Lil Tecca', 'Ran$om', 'Ran$om'),
-('Shawn Mendes', 'There''s Nothing Holdin' Me Back','Illuminate'),
+('Shawn Mendes', 'There''s Nothing Holdin'' Me Back','Illuminate'),
 ('Billie Eilish, 'Everything I wanted', NULL,
 	
