@@ -27,3 +27,19 @@ INSERT INTO movies (title, boxoffice, tmeter, rating, mlength, genre,released) V
   ('Ready Or Not', 13.8, 87, 'R', 95, 'Horror', '2019-08-21'),
   ('The Peanut Butter Falcon', 3.7, 95, 'PG-13', 93, 'Drama', '2019-08-09'),
   ('The Art of Racing In The Rain', 26.2, 42, 'PG', NULL, 'Drama', '2019-08-09');  
+
+CREATE TABLE billboard(
+	id SERIAL PRIMARY KEY,
+	artist TEXT NOT NULL,
+	track TEXT NOT NULL,
+	album TEXT
+);
+INSERT INTO billboard(artist,track,album)VALUES
+('Lizzo', 'Truth Hurts', 'Cuz I Love You'),
+('Lizzo, 'Good \as Hell', 'Cuz I love You'),
+('Shawn Mendez', 'Senorita', 'Shawn Mendes'),
+('Billie Eilish', 'Bad Guy', 'When We All Fall Asleep, \Where Do We Go?'),
+('Lil Tecca', 'Ran$om', 'Ran$om'),
+('Shawn Mendes', 'There's Nothing Holdin' Me Back','Illuminate'),
+('Billie Eilish, 'Everything I wanted', NULL,
+	
