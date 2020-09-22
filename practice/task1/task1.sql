@@ -36,9 +36,9 @@ CREATE TABLE billboard(
 );
 INSERT INTO billboard(artist,track,album)VALUES
 ('Lizzo', 'Truth Hurts', 'Cuz I Love You'),
-('Lizzo', 'Good 'as' Hell', 'Cuz I love You'),
+('Lizzo', 'Good \as Hell', 'Cuz I love You'),
 ('Shawn Mendez', 'Senorita', 'Shawn Mendes'),
-('Billie Eilish', 'Bad Guy', 'When We All Fall Asleep, 'Where' Do We Go?'),
+('Billie Eilish', 'Bad Guy', 'When We All Fall Asleep, \Where Do We Go?'),
 ('Lil Tecca', 'Ran$om', 'Ran$om'),
 ('Shawn Mendes', 'There's Nothing Holdin' Me Back','Illuminate'),
 ('Billie Eilish, 'Everything I wanted', NULL,
