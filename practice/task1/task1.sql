@@ -41,5 +41,5 @@ INSERT INTO billboard(artist,track,album)VALUES
 ('Billie Eilish', 'Bad Guy', 'When We All Fall Asleep, \Where Do We Go?'),
 ('Lil Tecca', 'Ran$om', 'Ran$om'),
 ('Shawn Mendes', 'There''s Nothing Holdin'' Me Back','Illuminate'),
-('Billie Eilish', 'Everything I wanted', NULL,
+('Billie Eilish', 'Everything I wanted', NULL);
 	
