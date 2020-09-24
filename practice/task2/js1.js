@@ -31,13 +31,18 @@ const staff = [{name: 'Stephen Davies', role: "Professor",  department: "Compute
    returns the associated telephone number. If the person's name is not
    found it returns the string 'not found'
 */
+for(const x of book){
+      if(x.name == person){
+        console.log(x.name);
+        return(x.phone);
+    }
 
 const getNumber = (person, book) => {
     // TO DO
     for(const x of book){
       if(x.name == person){
         console.log(x.name);
-        return(x['phone']);
+        return(x.phone);
     }
     return ("not found");
 }
