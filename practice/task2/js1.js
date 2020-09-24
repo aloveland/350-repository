@@ -41,6 +41,7 @@ const getNumber = (person, book) => {
     }
     return ("not found");
 }
+}
 
 
 /* The find function takes a role which is a string and a phonebook
