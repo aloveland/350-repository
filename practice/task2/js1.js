@@ -60,7 +60,7 @@ const find = (role, phonebook) => {
     let answer = [];
     for(const x in phonebook){
       if(x.role == role){
-        answer.push[x.name];
+        answer.role = x.name;
     }
     }
     // TODO
