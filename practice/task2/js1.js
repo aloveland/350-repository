@@ -39,8 +39,9 @@ const getNumber = (person, book) => {
       if(x.name == person){
         return(x.phone);
     }
+    }
     return ("not found");
-}
+
 }
 
 
