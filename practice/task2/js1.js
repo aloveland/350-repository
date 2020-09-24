@@ -1,4 +1,4 @@
-<script>
+
 const assert = require('assert').strict;
 
 const phonebook = [{name: 'Ann', phone: '575.580.1400', role: 'Developer'}, 
@@ -107,4 +107,4 @@ assert(answer.Chair.includes("Ian Finlayson"));
 assert(answer.Professor.includes("Catie Finlayson"));
 
 console.log("ROLES FUNCTION PASSED TESTS");
-</script>
+
