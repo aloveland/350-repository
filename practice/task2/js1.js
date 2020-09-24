@@ -1,3 +1,4 @@
+<script>
 const assert = require('assert').strict;
 
 const phonebook = [{name: 'Ann', phone: '575.580.1400', role: 'Developer'}, 
@@ -31,17 +32,11 @@ const staff = [{name: 'Stephen Davies', role: "Professor",  department: "Compute
    returns the associated telephone number. If the person's name is not
    found it returns the string 'not found'
 */
-for(const x of book){
-      if(x.name == person){
-        console.log(x.name);
-        return(x.phone);
-    }
 
 const getNumber = (person, book) => {
     // TO DO
     for(const x of book){
       if(x.name == person){
-        console.log(x.name);
         return(x.phone);
     }
     return ("not found");
@@ -112,3 +107,4 @@ assert(answer.Chair.includes("Ian Finlayson"));
 assert(answer.Professor.includes("Catie Finlayson"));
 
 console.log("ROLES FUNCTION PASSED TESTS");
+</script>
