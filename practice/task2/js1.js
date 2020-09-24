@@ -36,6 +36,7 @@ const getNumber = (person, book) => {
     // TO DO
     for(const x of book){
       if(x['name'] == person){
+        console.log(x['name']);
         return(x['phone']);
     }
     return ("not found");
