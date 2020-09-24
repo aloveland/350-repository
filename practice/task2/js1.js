@@ -62,6 +62,7 @@ const find = (role, phonebook) => {
       if(phonebook.role == role){
         answer.push(x.role);
     }
+    }
     // TODO
     return answer
 }
