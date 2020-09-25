@@ -101,6 +101,7 @@ console.log("GETNUMBER PASSED ALL TESTS\n");
 
 answer = find("Developer", phonebook);
 console.log(answer);
+console.log("test");
 assert.equal(answer.filter(function(item){ if (item.employee == 'Ann') return item})[0].employee, 'Ann')
 assert.equal(answer.filter(function(item){ if (item.employee == 'Clara') return item})[0].employee, 'Clara')
 assert.equal(answer.filter(function(item){ if (item.employee == 'Fiona') return item})[0].employee, 'Fiona')
