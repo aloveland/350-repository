@@ -67,7 +67,7 @@ const find = (role, phonebook) => {
       element.employee = item.name;
       answer.push(element);
     }
-   console.log(item);
+   //console.log(item);
    });
     // TODO
     return answer
