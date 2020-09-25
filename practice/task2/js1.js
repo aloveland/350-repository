@@ -96,9 +96,9 @@ const roles = (book) => {
     let OpsList = [];
     let MarkList = [];
     let Sales = [];
-    let chairs = [];
-    let profs = [];
-    let adjuncts = [];
+    let Chairs = [];
+    let Profs = [];
+    let Adjuncts = [];
      jobs = new Object();
       phonebook.forEach(function(item){
         if(item.role == 'Developer'){
@@ -131,9 +131,9 @@ const roles = (book) => {
     answer.DevOps = OpsList;
     answer.Marketing = MarkList;
     answer.Sales = Sales;
-    answer.Chair = chairs;
-    answer.Professor = profs;
-    answer.Adjuncts = adjuncts;
+    answer.Chair = Chairs;
+    answer.Professor = Profs;
+    answer.Adjuncts = Adjuncts;
     // TODO
     return answer;
 }
