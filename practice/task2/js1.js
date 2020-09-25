@@ -119,10 +119,10 @@ const roles = (book) => {
         if(item.role == 'Chair'){
           Chairs.push(item.name);
         }
-        if(item.role == 'profs'){
+        if(item.role == 'Professor'){
           Profs.push(item.name);
         }
-        if(item.role == 'adjuncts'){
+        if(item.role == 'Adjuncts'){
           Adjuncts.push(item.name);
         }
       });
