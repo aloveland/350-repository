@@ -100,7 +100,7 @@ const roles = (book) => {
     let Profs = [];
     let Adjuncts = [];
      jobs = new Object();
-      phonebook.forEach(function(item){
+      book.forEach(function(item){
         if(item.role == 'Developer'){
           DevList.push(item.name);
         }
