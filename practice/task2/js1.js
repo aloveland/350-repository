@@ -58,10 +58,10 @@ const getNumber = (person, book) => {
 
 const find = (role, phonebook) => {
     let answer = [];
+   let obj  = new Object();
   for(const x in phonebook){
       if(x.role == role){
-        let obj = {employee: x.name};
-        obj.employee = x.name
+        obj.employee = x.name;
         answer.push(obj);
     }
     }
