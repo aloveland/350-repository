@@ -61,12 +61,9 @@ function employee(employee){
 const find = (role, phonebook) => {
   console.log("WE ARE HERE");
     let answer = [];
-  for(const x in phonebook){
-      if(x.role == role){
-        obj.employee = x.name;
-        console.log("THIS IS THE THING->" + obj.employee);
-        answer.push(obj);
-    }
+  phonebook.forEach(function(item){
+   console.log(item);
+   });
     }
     // TODO
     return answer
