@@ -64,7 +64,6 @@ const find = (role, phonebook) => {
   phonebook.forEach(function(item){
    console.log(item);
    });
-    }
     // TODO
     return answer
 }
