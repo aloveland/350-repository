@@ -59,10 +59,11 @@ function employee(employee){
   this.employee = employee;
 }
 const find = (role, phonebook) => {
+  console.log("WE ARE HERE");
     let answer = [];
   for(const x in phonebook){
       if(x.role == role){
-        obj  = new employee(x.name);
+        obj.employee = x.name;
         answer.push(obj);
     }
     }
