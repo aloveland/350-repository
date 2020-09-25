@@ -91,6 +91,34 @@ const find = (role, phonebook) => {
 */
 const roles = (book) => {
     let answer = {};
+    let DevList = [];
+    let ManList = [];
+    let OpsList = [];
+    let MarkList = [];
+    let Sales = [];
+     jobs = new Object();
+      phonebook.forEach(function(item){
+        if(item.role == 'Developer'){
+          DevList.push(item.name);
+        }
+        if(item.role == 'Manager'){
+          ManList.push(item.name);
+        }
+        if(item.role == 'DevOps'){
+          OpsList.push(item.name);
+        }
+        if(item.role == 'Marketing'){
+          MarkList.push(item.name);
+        }
+        if(item.role == 'Sales'){
+          Sales.push(item.name);
+        }
+      });
+    answer.Devloper = DevList;
+    answer.Manager = ManList;
+    answer.DevOps = OpsList;
+    answer.Marketing = MarkList;
+    answer.Sales = Sales;
     // TODO
     return answer;
 }
