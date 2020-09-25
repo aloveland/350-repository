@@ -62,6 +62,11 @@ const find = (role, phonebook) => {
   console.log("WE ARE HERE");
     let answer = [];
   phonebook.forEach(function(item){
+    element = new Object();
+    if(item.role == role){
+      element.employee = item.name;
+      answer.push(element);
+    }
    console.log(item);
    });
     // TODO
