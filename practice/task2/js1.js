@@ -132,8 +132,8 @@ const roles = (book) => {
     answer.Marketing = MarkList;
     answer.Sales = Sales;
     answer.Chair = chairs;
-    answer.profs = profs;
-    answer.adjuncts = adjuncts;
+    answer.Professor = profs;
+    answer.Adjuncts = adjuncts;
     // TODO
     return answer;
 }
