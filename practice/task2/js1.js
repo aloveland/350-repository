@@ -96,6 +96,9 @@ const roles = (book) => {
     let OpsList = [];
     let MarkList = [];
     let Sales = [];
+    let chairs = [];
+    let profs = [];
+    let adjuncts = [];
      jobs = new Object();
       phonebook.forEach(function(item){
         if(item.role == 'Developer'){
@@ -113,12 +116,24 @@ const roles = (book) => {
         if(item.role == 'Sales'){
           Sales.push(item.name);
         }
+        if(item.role == 'Chair'){
+          chairs.push(item.name);
+        }
+        if(item.role == 'profs'){
+          profs.push(item.name);
+        }
+        if(item.role == 'adjuncts'){
+          adjuncts.push(item.name);
+        }
       });
     answer.Developer = DevList;
     answer.Manager = ManList;
     answer.DevOps = OpsList;
     answer.Marketing = MarkList;
     answer.Sales = Sales;
+    answer.Chair = chairs;
+    answer.profs = profs;
+    answer.adjuncts = adjuncts;
     // TODO
     return answer;
 }
