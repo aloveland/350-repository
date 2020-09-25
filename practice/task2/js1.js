@@ -55,14 +55,14 @@ const getNumber = (person, book) => {
    [ { employee: 'Ann' }, { employee: 'Clara' }, { employee: 'Fiona' } ]
  
 */
-function element(employee){
+function employee(employee){
   this.employee = employee;
 }
 const find = (role, phonebook) => {
     let answer = [];
   for(const x in phonebook){
       if(x.role == role){
-        obj  = new element(x.name);
+        obj  = new employee(x.name);
         answer.push(obj);
     }
     }
