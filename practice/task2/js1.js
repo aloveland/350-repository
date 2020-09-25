@@ -58,7 +58,7 @@ const getNumber = (person, book) => {
 
 const find = (role, phonebook) => {
     let answer = [];
-    let obj = {'employee': NULL};
+    let obj = {'employee': ''};
   for(const x in phonebook){
       if(x.role == role){
         obj.employee = x.name
