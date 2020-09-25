@@ -60,8 +60,7 @@ const find = (role, phonebook) => {
     let answer = [];
   for(const x in phonebook){
       if(x.role == role){
-        let obj = {'employee': x.name};
-        answer.push(obj);
+        answer.push(x.name);
     }
     }
     // TODO
