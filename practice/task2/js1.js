@@ -114,7 +114,7 @@ const roles = (book) => {
           Sales.push(item.name);
         }
       });
-    answer.Devloper = DevList;
+    answer.Developer = DevList;
     answer.Manager = ManList;
     answer.DevOps = OpsList;
     answer.Marketing = MarkList;
