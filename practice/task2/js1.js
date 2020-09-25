@@ -117,13 +117,13 @@ const roles = (book) => {
           Sales.push(item.name);
         }
         if(item.role == 'Chair'){
-          chairs.push(item.name);
+          Chairs.push(item.name);
         }
         if(item.role == 'profs'){
-          profs.push(item.name);
+          Profs.push(item.name);
         }
         if(item.role == 'adjuncts'){
-          adjuncts.push(item.name);
+          Adjuncts.push(item.name);
         }
       });
     answer.Developer = DevList;
