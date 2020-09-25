@@ -64,6 +64,7 @@ const find = (role, phonebook) => {
   for(const x in phonebook){
       if(x.role == role){
         obj.employee = x.name;
+        console.log("THIS IS THE THING->" + obj.employee);
         answer.push(obj);
     }
     }
