@@ -123,8 +123,8 @@ app.get('/search', (req, res) => {
 
 */
 app.get('/fit', (req, res) => {
-	let searchTerm = req.query.x;
-	console.log(x);
+	let searchTerm = req.query.length;
+	console.log(searchTerm);
 	var results = []
     // TO DO
 
