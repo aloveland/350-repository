@@ -125,6 +125,7 @@ app.get('/search', (req, res) => {
 app.get('/fit', (req, res) => {
 	let searchTerm = req.query.q;
 	console.log(searchTerm);
+	var results = []
     // TO DO
 
     res.json({campgrounds: results});
