@@ -62,6 +62,7 @@ app.get("/listAll", (req, res) => {
 app.get('/search', (req, res) => {
     let searchTerm = req.query.q;
     console.log(`Search for ${searchTerm}`);
+    console.log('testing this right now');
     
     // TODO
 
