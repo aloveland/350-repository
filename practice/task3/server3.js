@@ -64,7 +64,7 @@ app.get('/search', (req, res) => {
     console.log(`Search for ${searchTerm}`);
     campgrounds.forEach(function(camp) {
    	 if(camp.name == searchTerm){
-		 res.json(name: camp.name, lengthLimit: camp.lengthLimit, elevation: camp.elevation);
+		 res.json({name: camp.name, lengthLimit: camp.lengthLimit, elevation: camp.elevation});
 	 }
      });
     
