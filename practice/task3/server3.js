@@ -125,7 +125,14 @@ app.get('/search', (req, res) => {
 app.get('/fit', (req, res) => {
 	let searchTerm = req.query.length;
 	console.log(searchTerm);
-	var results = []
+	var results = [];
+	campgrounds.forEach(function(camp) {
+   	 if(camp.lengthLimit > searchTerm){
+		var entry = { "campground": camp.name, "location": camp.town, "maxLength": camp.lengthLimit}
+		results.push(entry);
+	 }
+     });
+    
     // TO DO
 
     res.json({campgrounds: results});
