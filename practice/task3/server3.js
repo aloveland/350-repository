@@ -63,7 +63,9 @@ app.get('/search', (req, res) => {
     let searchTerm = req.query.q;
     console.log(`Search for ${searchTerm}`);
     campgrounds.forEach(function(camp) {
-   	 console.log(camp);
+   	 if(camp.name == searchTerm){
+		 return camp;
+	 }
      });
     
     // TODO
