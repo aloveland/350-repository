@@ -176,8 +176,29 @@ app.get('/fit', (req, res) => {
 app.get("/elevation", (req, res) => {
     altitude = req.query.altitude;
     direction = req.query.direction;
-    console.log(direction);
-    console.log(altitude);
+    var results = [];
+    if(direction == "higher"){
+	campgrounds.forEach(function(camp) {
+   	 if(camp.elevation > altitude){
+		var entry = { "campground": camp.name, "location": camp.town, "maxLength": camp.lengthLimit}
+		results.push(entry);
+	 }
+     });
+	    
+	    
+    }
+    if(direction == "lower"){
+	campgrounds.forEach(function(camp) {
+   	 if(camp.elevation < altitude){
+		var entry = { "campground": camp.name, "location": camp.town, "maxLength": camp.lengthLimit}
+		results.push(entry);
+	 }
+     });  
+	    
+    }  
+	res.json({campgrounds: results});
+    
+    
 });
 
 
