@@ -70,7 +70,7 @@ app.get('/search', (req, res) => {
     
     // TODO
 
-    res.json({});
+   // res.json({});
 })
 
 
