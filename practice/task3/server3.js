@@ -173,7 +173,12 @@ app.get('/fit', (req, res) => {
 */
 
   // TO DO
-
+app.get("/elevation", (req, res) => {
+    altitude = req.query.altitude;
+    direction = req.query.direction;
+    console.log(direction);
+    console.log(altitude);
+});
 
 
 //SERVER START
