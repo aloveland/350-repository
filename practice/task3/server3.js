@@ -180,7 +180,7 @@ app.get("/elevation", (req, res) => {
     if(direction == "higher"){
 	campgrounds.forEach(function(camp) {
    	 if(camp.elevation > altitude){
-		var entry = { "campground": camp.name, "location": camp.town, "maxLength": camp.lengthLimit}
+		var entry = { "campground": camp.name, "elevation": camp.elevation, "town": camp.town}
 		results.push(entry);
 	 }
      });
@@ -190,7 +190,7 @@ app.get("/elevation", (req, res) => {
     if(direction == "lower"){
 	campgrounds.forEach(function(camp) {
    	 if(camp.elevation < altitude){
-		var entry = { "campground": camp.name, "location": camp.town, "maxLength": camp.lengthLimit}
+		var entry = { "campground": camp.name, "elevation": camp.elevation, "town": camp.town}
 		results.push(entry);
 	 }
      });  
