@@ -122,7 +122,6 @@ app.get('/search', async (req, res) => {
       const dbresponse = await pool.query(query, [req.query.name]);
       console.log(dbresponse);
       var ground = [];
-      var results = [];
       const results = dbresponse.rows.map((row) => {return row.name});
       for(i = 0;i < dbresponse.rowCount; i++){
 	     ground.campground = dbresponse.rows[i].name;
