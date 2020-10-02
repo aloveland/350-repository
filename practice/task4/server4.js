@@ -89,7 +89,7 @@ app.post("/addAttraction", async (req, res) => {
 app.get("/listAll", async (req, res) => {
     try {
         // TO DO: write the query below
-        const query = "TO DO";
+        const query = "SELECT NAME from campgrounds where NAME is not NULL";
         const dbresponse = await pool.query(query);
         const results = dbresponse.rows.map((row) => {return row.name});
         res.json({campgrounds: results})
