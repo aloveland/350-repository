@@ -123,7 +123,7 @@ app.get('/search', async (req, res) => {
       console.log(dbresponse);
       var results = [];
       for(i = 0;i < dbresponse.rowCount; i++){
-	      results.push(dbresponse.rows[i];
+	      results.push(dbresponse.rows[i]);
       }
       res.json({campgrounds: results});
        //const dbresponse = await pool.query(query);
