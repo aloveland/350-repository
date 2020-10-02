@@ -127,6 +127,7 @@ app.get('/search', async (req, res) => {
 	     ground = dbresponse.rows[i];
 	      ground['name'] = ground['campground'];
 	      ground = dbresponse.rows[i];
+	      console.log("here is ground");
 	      console.log(ground);
       }
       res.json({campgrounds: results});
