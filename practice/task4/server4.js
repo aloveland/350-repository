@@ -121,7 +121,7 @@ app.get('/search', async (req, res) => {
        const query = "SELECT name, location, maxlength FROM camgrounds where name is searchTerm";
        const dbresponse = await pool.query(query);
        let results = [];
-       console.log(query.name);
+       console.log(dbresponse.name);
        res.json({campgrounds: results})
 	    
 
