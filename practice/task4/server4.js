@@ -128,6 +128,7 @@ app.get('/search', async (req, res) => {
 	      ground.location = dbresponse.rows[i].location;
 	      ground.maxLength = dbresponse.rows[i].maxLength;
 	      results.push(ground);
+	      console.log(ground);
       }
       res.json({campgrounds: results});
        //const dbresponse = await pool.query(query);
