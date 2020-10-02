@@ -131,7 +131,7 @@ app.get('/search', async (req, res) => {
 	      console.log(ground);
 	      results.push(ground);
       }
-      res.json({campgrounds: results});
+      res.json({campgrounds: ground});
        //const dbresponse = await pool.query(query);
       // const results = dbresponse.rows.map((row) => {return row.name});
        //console.log(dbresponse);
