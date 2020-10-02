@@ -118,12 +118,12 @@ app.get('/search', async (req, res) => {
     
     // TODO
     try {
-      /* const query = "SELECT name, location, maxlength FROM camgrounds where name is searchTerm";
-       const dbresponse = await pool.query(query);
-       const results = dbresponse.rows.map((row) => {return row.name});
-       console.log(dbresponse);
-       res.json({campgrounds: results})
-	*/    
+      const query = "SELECT name, location, maxlength FROM camgrounds where name is searchTerm";
+       //const dbresponse = await pool.query(query);
+      // const results = dbresponse.rows.map((row) => {return row.name});
+       //console.log(dbresponse);
+      // res.json({campgrounds: results})
+	
 
         
         
