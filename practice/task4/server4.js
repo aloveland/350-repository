@@ -126,7 +126,7 @@ app.get('/search', async (req, res) => {
       for(i = 0;i < dbresponse.rowCount; i++){
 	      ground.campground = dbresponse.rows[i].name;
 	      ground.location = dbresponse.rows[i].location;
-	      ground.maxLength = dbresponse.rows[i].maxLength;
+	      ground.maxlength = dbresponse.rows[i].maxlength;
 	      results.push(ground);
 	      console.log(ground);
       }
