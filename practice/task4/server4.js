@@ -129,6 +129,7 @@ app.get('/search', async (req, res) => {
 	     ground.maxlength = dbresponse.rows[i].maxlength;
 	      console.log("here is ground");
 	      console.log(ground);
+	      results.push(ground);
       }
       res.json({campgrounds: results});
        //const dbresponse = await pool.query(query);
