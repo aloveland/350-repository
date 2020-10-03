@@ -122,16 +122,10 @@ app.get('/search', async (req, res) => {
       const dbresponse = await pool.query(query, [req.query.name]);
       console.log(dbresponse);
       var ground = [];
-      let results = {};
+      let results = [];
        results.campground = dbresponse.rows.map((row) => {return row.name});
 	     console.log("here is results");
 	      console.log(results);
-      for(i = 0;i < dbresponse.rowCount; i++){
-	     ground.campground = dbresponse.rows[i].name;
-	     ground.location = dbresponse.rows[i].location;
-	     ground.maxlength = dbresponse.rows[i].maxlength;
-	      results.push(ground);
-      }
       res.json({campgrounds: results});
        //const dbresponse = await pool.query(query);
       // const results = dbresponse.rows.map((row) => {return row.name});
