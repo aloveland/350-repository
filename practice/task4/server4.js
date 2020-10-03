@@ -121,12 +121,6 @@ app.get('/search', async (req, res) => {
       console.log('in the try catch block');
       const query = "SELECT name, location, maxlength FROM campgrounds where name = $1";
       const dbresponse = await pool.query(query, [req.query.name]);
-      console.log(dbresponse);
-      var ground = [];
-      let results = [];
-       results.campground = dbresponse.rows.map((row) => {return row.name});
-	     console.log("here is results");
-	      console.log(results);
       res.json({campgrounds: results});
        //const dbresponse = await pool.query(query);
       // const results = dbresponse.rows.map((row) => {return row.name});
