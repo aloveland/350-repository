@@ -118,6 +118,7 @@ app.get('/search', async (req, res) => {
     
     // TODO
     try {
+      console.log('in the try catch block');
       const query = "SELECT name, location, maxlength FROM campgrounds where name = $1";
       const dbresponse = await pool.query(query, [req.query.name]);
       console.log(dbresponse);
