@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS workshopONE;
 CREATE DATABASE workshopONE;
 \c workshopV1
 
-CREATE TABLE React Fundementals{
+CREATE TABLE 'React Fundementals'{
        id SERIAL PRIMARY KEY,
        name TEXT NOT NULL,
 };
