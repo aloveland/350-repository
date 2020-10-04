@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 
-app.set("port", 34.106.215.20);
+app.set("port", 8080);
 
 app.get('/hello', (req, res) => {
   // console log the request query json object
