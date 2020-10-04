@@ -34,7 +34,7 @@ app.get("/api",async (req, res) => {
     console.log(workshop);
     try {
         const tablename = workshop;
-        const shop = "SELECT name FROM" + tablename + "WHERE name is not NULL";
+        const shop = "SELECT name FROM " + tablename + " WHERE name is not NULL";
         console.log(shop);
         const response = await pool.query(shop, [workshop]);
         const results = response.rows.map((row) => {return (row.name)})
