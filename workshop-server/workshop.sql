@@ -1,7 +1,7 @@
 \c postgres
 DROP DATABASE IF EXISTS workshopv1;
 CREATE DATABASE workshopv1;
-\c workshopV1
+\c workshopv1
 
 CREATE TABLE 'React Fundementals'{
        id SERIAL PRIMARY KEY,
