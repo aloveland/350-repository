@@ -33,8 +33,8 @@ app.get("/api",async (req, res) => {
     const workshop = req.query.workshop;
     console.log(workshop);
     try {
-        declare @tablename varchar(50);
-        set @tablename = workshop;
+        declare tablename varchar(50);
+        set tablename = workshop;
         const shop = EXEC('SELECT * FROM ' + @tablename + 'WHERE name is not NULL');
         //const shop = "SELECT name FROM @tablename WHERE name is not NULL";
         console.log(shop);
