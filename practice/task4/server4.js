@@ -202,7 +202,7 @@ app.get("/fit", async (req, res) => {
     try {
         // TO DO: write the query below
         const query = "SELECT name, location, maxlength FROM campgrounds where maxlength < $1";
-        const dbresponse = await pool.query(query, [req.query.fit]);
+        const dbresponse = await pool.query(query, [req.query.length]);
 	let results = [];
      	let temp = {};
       	for(i = 0; i < dbresponse.rowCount; i++){
