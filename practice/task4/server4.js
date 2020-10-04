@@ -207,6 +207,7 @@ app.get("/fit", async (req, res) => {
 	let results = [];
      	let temp = {};
       	for(i = 0; i < dbresponse.rowCount; i++){
+	      temp = new Object;
 	      temp.campground = dbresponse.rows[i].name;
 	      temp.location = dbresponse.rows[i].location;
 	      temp.maxlength  = dbresponse.rows[i].maxlength;
