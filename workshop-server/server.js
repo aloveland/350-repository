@@ -43,6 +43,7 @@ app.get("/api",async (req, res) => {
         const results = response.rows.map((row) => {return (row.name)})
         res.json({result: results});
     } catch (err){
+        res.json({error: "workshop not found"});
         console.log(err);
     }
 
