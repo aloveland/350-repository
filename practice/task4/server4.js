@@ -198,7 +198,26 @@ app.get('/search', async (req, res) => {
 */
 
 // TO DO
+app.get("/fit", async (req, res) => {
+    try {
+        // TO DO: write the query below
+        const query = "SELECT name, location, maxlength FROM campgrounds where maxlength = $1";
+        const dbresponse = await pool.query(query);
+        const results = dbresponse.rows.map((row) => {return row.fit});
+	let results = [];
+     	let temp = {};
+      	for(i = 0; i < dbresponse.rowCount; i++){
+	      temp.campground = dbresponse.rows[i].name;
+	      temp.location = dbresponse.rows[i].location;
+	      temp.maxlength  = dbresponse.rows[i].maxlength;
+	       results.push(temp);
+     	 }
+        res.json({campgrounds: results})
 
+    } catch (err){
+        console.log(err);
+    }
+});
 
 
 /*
