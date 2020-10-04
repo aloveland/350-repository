@@ -33,7 +33,8 @@ app.get("/api",async (req, res) => {
     const workshop = req.query.workshop;
     console.log(workshop);
     try {
-        const shop = "SELECT name FROM hardworkers WHERE name is not NULL";
+        const shop = "SELECT name FROM $1 WHERE name is not NULL";
+        console.log(shop,[workshop]);
         const response = await pool.query(shop);
         const results = response.rows.map((row) => {return (row.name)})
         res.json({result: results});
