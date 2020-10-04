@@ -7,7 +7,7 @@ CREATE TABLE 'React Fundementals'{
        id SERIAL PRIMARY KEY,
        name TEXT NOT NULL,
 };
-INSERT INTO React Fundementals (name) VALUES
+INSERT INTO 'React Fundementals' (name) VALUES
 ('Ahmed Abdelali'),
 ('Ann Frank'),
 ('Ann Mulkern'),
