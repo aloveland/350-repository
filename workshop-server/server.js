@@ -5,6 +5,19 @@ const app = express();
 
 app.set("port", 8080);
 
+app.use(bodyParser.json({ type: "application/json" }));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+const Pool = require("pg").Pool;
+const config = {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: "workshopV1"
+};
+
+const pool = new Pool(config);
+
 app.get('/hello', (req, res) => {
   // console log the request query json object
   console.log(req.query);
