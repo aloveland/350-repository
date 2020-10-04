@@ -212,7 +212,7 @@ app.get("/fit", async (req, res) => {
 	      temp.maxlength  = dbresponse.rows[i].maxlength;
 		console.log("this is temp");
 		console.log(temp);
-	       results.push(temp);
+	       results[results.length] = temp;
      	 }
         res.json({campgrounds: results})
 
