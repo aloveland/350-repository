@@ -5,7 +5,7 @@ CREATE DATABASE workshopv1;
 
 CREATE TABLE 'React Fundementals'(
        id SERIAL PRIMARY KEY,
-       name TEXT NOT NULL,
+       name TEXT NOT NULL
 );
 INSERT INTO 'React Fundementals' (name) VALUES
 ('Ahmed Abdelali'),
@@ -21,7 +21,7 @@ INSERT INTO 'React Fundementals' (name) VALUES
 
 CREATE TABLE hardworkers(
        id SERIAL PRIMARY KEY,
-       name TEXT NOT NULL,
+       name TEXT NOT NULL
 );
 INSERT INTO hardworkers (name) VALUES
 ('Brad Pitt'),
