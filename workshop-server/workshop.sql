@@ -1,6 +1,6 @@
 \c postgres
-DROP DATABASE IF EXISTS workshopV1;
-CREATE DATABASE workshopV1;
+DROP DATABASE IF EXISTS workshopv1;
+CREATE DATABASE workshopv1;
 \c workshopV1
 
 CREATE TABLE 'React Fundementals'{
