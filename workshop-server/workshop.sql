@@ -23,7 +23,7 @@ CREATE TABLE HardWorkers{
        id SERIAL PRIMARY KEY,
        name TEXT NOT NULL,
 };
-INSERT INTO HrdWorkers (name) VALUES
+INSERT INTO HardWorkers (name) VALUES
 ('Brad Pitt'),
 ('Leo DiCaprio'),
 ('Ben Affleck'),
