@@ -18,3 +18,13 @@ INSERT INTO 'React Fundementals' (name) VALUES
 ('Roz Billingsley'),
 ('Samantha Eggert'),
 ('Tim Smith');
+
+CREATE TABLE HardWorkers{
+       id SERIAL PRIMARY KEY,
+       name TEXT NOT NULL,
+};
+INSERT INTO HrdWorkers (name) VALUES
+('Brad Pitt'),
+('Leo DiCaprio'),
+('Ben Affleck'),
+('George Clooney');
