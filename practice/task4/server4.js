@@ -127,7 +127,7 @@ app.get('/search', async (req, res) => {
       for(i = 0; i < dbresponse.rowCount; i++){
 	      
 
-	      {
+      }
 
 
       res.json({campgrounds: results});
