@@ -14,6 +14,20 @@ app.get('/hello', (req, res) => {
   res.json({response: `Hello, ${req.query.person}`});
 });
 
+app.get("/api",async (req, res) => {
+    const workshop = req.query.workshop;
+    console.log(workshop);
+    try {
+        const shop = "SELECT name FROM attractions WHERE name is not NULL";
+        const response = await pool.query(template, [workshop]);
+        const results = response.rows.map((row) => {return (row.name)})
+        res.json({result: results});
+    } catch (err){
+        console.log(err);
+    }
+
+});
+
 
 
 app.listen(app.get("port"), () => {
