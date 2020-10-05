@@ -74,7 +74,6 @@ app.post("/api", async (req, res) => {
             const response = await pool.query(template2, [attendee, workshop]);
             res.json({status: "added"});
         }
-     }
     } catch (err){
         // whoops
         console.log(err);
