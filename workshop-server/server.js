@@ -62,6 +62,11 @@ app.post("/api", async (req, res) => {
     const attendee = req.body.attendee;
     const workshop = req.body.workshop;
     try {
+        if(attendee == null || workshop == null || workshop == '' || attendee == ''){
+            res.json({error: "parameters not given"});
+        }
+        
+        
         const template = "SELECT * FROM workshop where name = $1 AND workshopgroup = $2";
         console.log('this is template');
         console.log(template);
@@ -75,7 +80,10 @@ app.post("/api", async (req, res) => {
             // else let's insert it
             const template1 = "INSERT INTO workshop (name, workshopgroup) VALUES ($1, $2)";
             const response = await pool.query(template1, [attendee, workshop]);
-            res.json({status: "added"});
+            let obj = {};
+            obj.attendee = attendee;
+            obj.workshop = workshop;
+            res.json({obj});
         }
     } catch (err){
         // whoops
