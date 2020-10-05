@@ -61,8 +61,6 @@ app.get("/api",async (req, res) => {
 app.post("/api", async (req, res) => {
     const attendee = req.body.attendee;
     const workshop = req.body.workshop;
-    //try
-    //attendee = attendee.replace("+","");
     console.log('this is attendee');
     console.log(attendee);
     try {
