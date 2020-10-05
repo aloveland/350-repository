@@ -80,9 +80,9 @@ app.post("/api", async (req, res) => {
             res.json({error: 'attendee already enrolled'});
              }
         
-    }else {
+        else {
             // else let's insert it
-            const template1 = "INSERT INTO workshop (name, workshopgroup) VALUES ($1, $2)";
+            const template1 = "INSERT INTO workshop (attendee, workshopgroup) VALUES ($1, $2)";
             const response = await pool.query(template1, [attendee, workshop]);
             res.json({attendee: attendee, workshop: workshop});
         }
