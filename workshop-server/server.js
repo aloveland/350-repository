@@ -59,7 +59,7 @@ app.get("/api",async (req, res) => {
 });
 
 app.post("/api", async (req, res) => {
-    let attendee = req.body.attendee;
+    const attendee = req.body.attendee;
     const workshop = req.body.workshop;
     //try
     //attendee = attendee.replace("+","");
