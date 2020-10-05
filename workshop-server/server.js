@@ -66,6 +66,7 @@ app.post("/api", async (req, res) => {
         console.log('this is template');
         console.log(template);
         const check = await pool.query(template, [attendee, workshop]);
+        console.log(check);
          if (check.rowCount != 0){
             res.json({error: 'attendee already enrolled'});
              }
