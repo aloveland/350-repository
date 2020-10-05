@@ -8,7 +8,7 @@ CREATE TABLE workshop(
        name TEXT NOT NULL,
        workshopgroup TEXT NOT NULL
 );
-INSERT INTO hardworkers (name, workshopgroup) VALUES
+INSERT INTO workshop (name, workshopgroup) VALUES
 ('Brad Pitt', 'hardworkers'),
 ('Leo DiCaprio','hardworkers'),
 ('Ben Affleck','hardworkers'),
