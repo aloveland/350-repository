@@ -33,6 +33,11 @@ app.get("/api",async (req, res) => {
     const workshop = req.query.workshop;
     console.log(workshop);
     try {
+        if(workshop == null || workshop == ''){
+            console.log('null');
+        }
+        
+        
         const tablename = workshop;
         const shop = "SELECT name FROM workshop WHERE workshopgroup = $1";
         console.log(shop,[workshop]);
