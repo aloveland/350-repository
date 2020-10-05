@@ -73,6 +73,7 @@ app.post("/api", async (req, res) => {
         console.log(template);
         const check = await pool.query(template, [attendee, workshop]);
         console.log('this is check by the way');
+        console.log(check);
         console.log(check.rows[0].name);
         console.log(check.rows[0].workshopgroup);
          if (check.rows[0].name == attendee && check.rows[0].workshopgroup == workshop){
