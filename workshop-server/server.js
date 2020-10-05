@@ -36,7 +36,7 @@ app.get("/api",async (req, res) => {
         const tablename = workshop;
         const shop = "SELECT name FROM workshop WHERE workshopgroup = $1";
         console.log(shop,[workshop]);
-        const response = await pool.query(shop);
+        const response = await pool.query(shop, [workshop]);
         if(response.rowCount == 0){
             res.json({error: "workshop not found"});
         }
