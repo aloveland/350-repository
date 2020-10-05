@@ -3,28 +3,13 @@ DROP DATABASE IF EXISTS workshopv1;
 CREATE DATABASE workshopv1;
 \c workshopv1
 
-CREATE TABLE 'React Fundementals'(
+CREATE TABLE workshop(
        id SERIAL PRIMARY KEY,
-       name TEXT NOT NULL
+       name TEXT NOT NULL,
+       workshop TEXT NOT NULL
 );
-INSERT INTO 'React Fundementals' (name) VALUES
-('Ahmed Abdelali'),
-('Ann Frank'),
-('Ann Mulkern'),
-('Clara Weick'),
-('James Archer'),
-('Linda Park'),
-('Lucy Smith'),
-('Roz Billingsley'),
-('Samantha Eggert'),
-('Tim Smith');
-
-CREATE TABLE hardworkers(
-       id SERIAL PRIMARY KEY,
-       name TEXT NOT NULL
-);
-INSERT INTO hardworkers (name) VALUES
-('Brad Pitt'),
-('Leo DiCaprio'),
-('Ben Affleck'),
-('George Clooney');
+INSERT INTO hardworkers (name, workshop) VALUES
+('Brad Pitt', 'hardworkers'),
+('Leo DiCaprio','hardworkers'),
+('Ben Affleck','hardworkers'),
+('George Clooney','hardworkers');
