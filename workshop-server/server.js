@@ -75,7 +75,7 @@ app.post("/api", async (req, res) => {
         console.log('this is check by the way');
         console.log(check.rows[0].name);
         console.log(check.workshopgroup);
-         if (check.name == attendee && check.workshopgroup == workshop){
+         if (check.rows[0].name == attendee && check.rows[0].workshopgroup == workshop){
             res.json({error: 'attendee already enrolled'});
              }
         
