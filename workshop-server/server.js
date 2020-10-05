@@ -74,8 +74,8 @@ app.post("/api", async (req, res) => {
         const check = await pool.query(template, [attendee, workshop]);
         console.log('this is check by the way');
         console.log(check);
-        console.log(check.rows[0].name);
-        console.log(check.rows[0].workshopgroup);
+        //console.log(check.rows[0].name);
+        //console.log(check.rows[0].workshopgroup);
          if (check.rows[0].name == attendee && check.rows[0].workshopgroup == workshop){
             res.json({error: 'attendee already enrolled'});
              }
