@@ -6,9 +6,9 @@ CREATE DATABASE workshopv1;
 CREATE TABLE workshop(
        id SERIAL PRIMARY KEY,
        name TEXT NOT NULL,
-       workshop TEXT NOT NULL
+       workshopgroup TEXT NOT NULL
 );
-INSERT INTO hardworkers (name, workshop) VALUES
+INSERT INTO hardworkers (name, workshopgroup) VALUES
 ('Brad Pitt', 'hardworkers'),
 ('Leo DiCaprio','hardworkers'),
 ('Ben Affleck','hardworkers'),
