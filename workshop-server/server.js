@@ -62,7 +62,7 @@ app.post("/api", async (req, res) => {
     const attendee = req.body.attendee;
     const workshop = req.body.workshop;
     try {
-        const template = "SELECT * FROM workshop where name = $1 AND workshop = $2";
+        const template = "SELECT * FROM workshop where name = $1 AND workshopgroup = $2";
         const check = await pool.query(template, [attendee, workshop]);
          if (check.rowCount != 0){
             res.json({error: 'attendee already enrolled'});
@@ -70,7 +70,7 @@ app.post("/api", async (req, res) => {
         
         else {
             // else let's insert it
-            const template1 = "INSERT INTO workshop (name, workshop) VALUES ($1, $2)";
+            const template1 = "INSERT INTO workshop (name, workshopgroup) VALUES ($1, $2)";
             const response = await pool.query(template2, [attendee, workshop]);
             res.json({status: "added"});
         }
