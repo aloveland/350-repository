@@ -35,7 +35,7 @@ app.get("/api",async (req, res) => {
     try {
         if(workshop == null || workshop == ''){
             console.log('null');
-            const shop = "SELECT workshopgroup FROM workshop WHERE workshopgroup is not NULL";
+            const shop = "SELECT DISTINCT workshopgroup FROM workshop WHERE workshopgroup is not NULL";
             const response = await pool.query(shop);
             const results = response.rows.map((row) => {return (row.workshopgroup)})
             res.json({result: results});
