@@ -9,7 +9,5 @@ CREATE TABLE workshop(
        workshopgroup TEXT NOT NULL
 );
 INSERT INTO workshop (name, workshopgroup) VALUES
-('Brad Pitt', 'hardworkers'),
-('Leo DiCaprio','hardworkers'),
-('Ben Affleck','hardworkers'),
-('George Clooney','hardwborker');
+('Brad Pitt', 'testShop'),
+('George Clooney','Oceans11');
