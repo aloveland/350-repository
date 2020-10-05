@@ -32,16 +32,10 @@ app.get('/hello', (req, res) => {
 app.get("/api",async (req, res) => {
     const workshop = req.query.workshop;
     console.log(workshop);
-    if(workshop == NULL){
-        const lists = "SELECT * FROM workshopv1 where type = table";
-        const response = await pool.query(lists);
-        const results = response.rows.map((row) => {return (row.name)})
-        res.json({result: results});
-    }
     try {
         const tablename = workshop;
-        const shop = "SELECT name FROM " + tablename + " WHERE name is not NULL";
-        console.log(shop);
+        const shop = "SELECT name FROM workshop WHERE workshopgroup = $1";
+        console.log(shop,[workshop]);
         const response = await pool.query(shop);
         if(response.rowCount == 0){
             res.json({error: "workshop not found"});
