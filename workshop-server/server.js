@@ -61,6 +61,8 @@ app.get("/api",async (req, res) => {
 app.post("/api", async (req, res) => {
     const attendee = req.body.attendee;
     const workshop = req.body.workshop;
+    //try
+    attendee = attendee.replace("+","");
     try {
         if(attendee == null || workshop == null || workshop == '' || attendee == ''){
             res.json({error: "parameters not given"});
