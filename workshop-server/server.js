@@ -64,6 +64,9 @@ app.post("/api", async (req, res) => {
     console.log('this is attendee');
     console.log(attendee);
     try {
+        if(attendee == null || workshop == null || workshop == '' || attendee == ''){
+            res.json({error: "parameters not given"});
+        }
         
         const template = "SELECT * FROM workshop where name = $1 AND workshopgroup = $2";
         console.log('this is template');
