@@ -83,7 +83,7 @@ app.post("/api", async (req, res) => {
             let obj = {};
             obj.attendee = attendee;
             obj.workshop = workshop;
-            res.json({obj});
+            res.json({attendee: attendee, workshop: workshop});
         }
     } catch (err){
         // whoops
