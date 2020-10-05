@@ -12,4 +12,4 @@ INSERT INTO workshop (name, workshopgroup) VALUES
 ('Brad Pitt', 'hardworkers'),
 ('Leo DiCaprio','hardworkers'),
 ('Ben Affleck','hardworkers'),
-('George Clooney','hardworkers');
+('George Clooney','hardwborker');
