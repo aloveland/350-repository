@@ -16,8 +16,8 @@ class Home extends React.Component {
           borderStyle: "groove",
         }}
       >
-        <h1>Template</h1>
-        <img src="/static/logo.svg" className="App-logo" />
+        <h1>National Park Search</h1>
+        <img src="/static/nationalPark1.jpg" className="App-logo" />
 
         <p>A generic template</p>
 
