@@ -1,6 +1,14 @@
 import {getParkInfo} from '../lib/utils'
 import React from "react";
 
+async handleSearch(evt) {
+    const parkInfo = "TODO"
+    console.log(parkInfo);
+     this.setState({user});
+     onClick={this.handleSearch.bind(this)
+    // add the information to the state
+  }
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
