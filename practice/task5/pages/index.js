@@ -4,7 +4,7 @@ import React from "react";
 async handleSearch(evt) {
     const parkInfo = await getParkInfo(this.state.search);
     console.log(parkInfo);
-     this.setState({parkInfo});
+     this.setState({search: evt.target.value});
      onClick={this.handleSearch.bind(this)
     // add the information to the state
   }
