@@ -2,7 +2,7 @@ import {getParkInfo} from '../lib/utils'
 import React from "react";
 
 async handleSearch(evt) {
-    const parkInfo = await getInfo(this.state.search);
+    const parkInfo = await getParkInfo(this.state.search);
     console.log(parkInfo);
      this.setState({parkInfo});
      onClick={this.handleSearch.bind(this)
