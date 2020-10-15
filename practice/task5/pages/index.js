@@ -1,3 +1,4 @@
+import {getParkInfo} from '../lib/utils'
 import React from "react";
 
 class Home extends React.Component {
