@@ -3,6 +3,7 @@ import React from "react";
 class Home extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { search: "" };
   }
 
   render() {
@@ -18,8 +19,20 @@ class Home extends React.Component {
       >
         <h1>National Park Search</h1>
         <img src="/static/nationalPark1.jpg" className="App-logo" />
+      
+        <p>
+          <input
+            className="input-style"
+            type="text"
+            value={this.state.search}
+          />
+        </p>
 
-        <p>A generic template</p>
+        <div className="button-style">
+          Submit
+        </div>
+
+        
 
         <br />
         <style jsx>{`
