@@ -5,6 +5,10 @@ class Home extends React.Component {
     super(props);
     this.state = { search: "" };
   }
+  
+  handleUpdate(evt){
+	this.setState({search: evt.target.value})
+ 	 }
 
   render() {
     return (
@@ -25,6 +29,7 @@ class Home extends React.Component {
             className="input-style"
             type="text"
             value={this.state.search}
+            onChange={this.handleUpdate.bind(this)}	
           />
         </p>
 
