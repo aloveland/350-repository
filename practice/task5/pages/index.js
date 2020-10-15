@@ -2,9 +2,9 @@ import {getParkInfo} from '../lib/utils'
 import React from "react";
 
 async handleSearch(evt) {
-    const parkInfo = "TODO"
+    const parkInfo = await getInfo(this.state.search);
     console.log(parkInfo);
-     this.setState({user});
+     this.setState({parkInfo});
      onClick={this.handleSearch.bind(this)
     // add the information to the state
   }
