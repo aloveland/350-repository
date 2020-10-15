@@ -121,6 +121,16 @@ app.get('/search', async (req, res) => {
       console.log('in the try catch block');
       const query = "SELECT name, location, maxlength FROM campgrounds where name = $1";
       const dbresponse = await pool.query(query, [req.query.name]);
+      let results = [];
+      let temp = {};
+      for(i = 0; i < dbresponse.rowCount; i++){
+	      temp.campground = dbresponse.rows[i].name;
+	      temp.location = dbresponse.rows[i].location;
+	      temp.maxlength  = dbresponse.rows[i].maxlength;
+	       results.push(temp);
+      }
+
+
       res.json({campgrounds: results});
        //const dbresponse = await pool.query(query);
       // const results = dbresponse.rows.map((row) => {return row.name});
@@ -188,7 +198,29 @@ app.get('/search', async (req, res) => {
 */
 
 // TO DO
+app.get("/fit", async (req, res) => {
+    try {
+        // TO DO: write the query below
+        const query = "SELECT name, location, maxlength FROM campgrounds where maxlength > $1";
+        const dbresponse = await pool.query(query, [req.query.length]);
+	console.log(dbresponse);
+	let results = [];
+     	let temp = {};
+      	for(i = 0; i < dbresponse.rowCount; i++){
+	      temp = new Object;
+	      temp.campground = dbresponse.rows[i].name;
+	      temp.location = dbresponse.rows[i].location;
+	      temp.maxlength  = dbresponse.rows[i].maxlength;
+		console.log("this is temp");
+		console.log(temp);
+	       results[results.length] = temp;
+     	 }
+        res.json({campgrounds: results})
 
+    } catch (err){
+        console.log(err);
+    }
+});
 
 
 /*
@@ -225,19 +257,29 @@ app.get('/search', async (req, res) => {
 */
 
 app.get('/elevation', async (req, res) => {
-    let query = '';
-    if (req.query.direction == 'lower'){
-        query = "TO DO";
-    } else {
-        query =  "TO DO";
+    altitude = req.query.altitude;
+    direction = req.query.direction;
+    var results = [];
+    if(direction == "higher"){
+	campgrounds.forEach(function(camp) {
+   	 if(camp.elevation > altitude){
+		var entry = { "campground": camp.name, "elevation": camp.elevation, "town": camp.town}
+		results.push(entry);
+	 }
+     });
+	    
+	    
     }
-    try {
-        // TO DO
-
-
-    } catch (err){
-         console.log(err);
-    }
+    if(direction == "lower"){
+	campgrounds.forEach(function(camp) {
+   	 if(camp.elevation < altitude){
+		var entry = { "campground": camp.name, "elevation": camp.elevation, "town": camp.town}
+		results.push(entry);
+	 }
+     });  
+	    
+    }  
+	res.json({campgrounds: results});
      
 });
 
@@ -258,7 +300,41 @@ app.get('/elevation', async (req, res) => {
 */
 
 // TO DO
+app.post("/api", async (req, res) => {
+    const name = req.body.name;
+    const location = req.body.location;
+    const maxlength = req.body.maxlength;
+    const elevation = req.body.elevation;
+    const sites = req.body.sites;
+    const pad = req.body.pad;
+    try {
+        
+        const template = "SELECT * FROM campgrounds where name = $1 AND location = $2";
+        console.log('this is template');
+        console.log(template);
+        const check = await pool.query(template, [name, location]);
+ 
+        //console.log(check.rows[0].name);
+        //console.log(check.rows[0].workshopgroup);
+         //if (check.rows[0].name == attendee && check.rows[0].workshopgroup == workshop){
+           // res.json({error: 'attendee already enrolled'});
+             //} ^prior attempt that gave errors.
+        if (check.rowCount > 0){
+            res.json({status: 'campground already in database'});
+             }
+        
+        else {
+            // else let's insert it
+            const template1 = "INSERT INTO workshop (name, location, maxlength, elevation, sites, pad) VALUES ($1, $2, $3, $4, $5, $6)";
+            const response = await pool.query(template1, [name, location, maxlength, elevation, sites, pad]);
+            res.json({status: 'added'});
+        }
+    } catch (err){
+        // whoops
+        console.log(err);
+    }
 
+})
 
 
 
