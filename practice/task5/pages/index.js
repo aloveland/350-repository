@@ -45,12 +45,6 @@ async handleSearch(evt) {
         <div className="button-style" onClick={this.handleSearch.bind(this)}>
           Submit
         </div>
-		
-	{this.state.parkInfo ?
-          <div>
-  		<h2>{this.state.park.name}</h2>
-	 	<h3>just print this</h3>
-          </div> : null}
 
         
 
@@ -94,6 +88,12 @@ async handleSearch(evt) {
           }
         `}</style>
       </div>
+	{this.state.parkInfo ?
+          <div>
+  		<h2>{this.state.park.name}</h2>
+	 	<h3>just print this</h3>
+          </div> : null}
+
     );
   }
 }
