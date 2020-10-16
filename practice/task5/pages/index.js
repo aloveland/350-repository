@@ -46,10 +46,10 @@ async handleSearch(evt) {
           Submit
         </div>
 		
-	this.state.parkInfo ? (
+	{this.state.parkInfo ?
           <div>
   
-          </div> ) : null}
+          </div> : null}
 
         
 
