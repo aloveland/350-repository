@@ -15,7 +15,7 @@ function handleError(error) {
 }
 
 module.exports = {
-  getInfo: function(park) {
+  getParkInfo: function(park) {
     return getParkInfo(park).catch(handleError);
   },
 };
