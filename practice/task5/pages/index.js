@@ -17,6 +17,7 @@ class Home extends React.Component {
   
   handleUpdate(evt){
 	this.setState({search: evt.target.value})
+	  onChange={this.handleUpdate.bind(this)}
  	 }
 
   render() {
