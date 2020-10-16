@@ -1,18 +1,18 @@
 import {getParkInfo} from '../lib/utils'
 import React from "react";
 
+class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { search: "" };
+  }
+	
 async handleSearch(evt) {
     const parkInfo = await getParkInfo(this.state.search);
     console.log(parkInfo);
      this.setState({search: evt.target.value});
      onClick={this.handleSearch.bind(this)
     // add the information to the state
-  }
-
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { search: "" };
   }
   
   handleUpdate(evt){
