@@ -92,7 +92,7 @@ async handleSearch(evt) {
     );
 	{this.state.parkInfo ?
           <div>
-  		<h2>{this.state.park.name}</h2>
+  		<h2>{this.state.Object.name}</h2>
 	 	<h3>just print this</h3>
           </div> : null}
   }
