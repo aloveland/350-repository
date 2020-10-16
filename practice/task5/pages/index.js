@@ -41,10 +41,16 @@ async handleSearch(evt) {
             onChange={this.handleUpdate.bind(this)}	
           />
         </p>
-
+		
         <div className="button-style" onClick={this.handleSearch.bind(this)}>
           Submit
         </div>
+		
+	this.state.parkInfo ? (
+          <div>
+		<h2>{this.state.campground.name}</h2>
+            ...
+          </div> ) : null}
 
         
 
