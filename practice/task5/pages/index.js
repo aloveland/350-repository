@@ -48,7 +48,7 @@ async handleSearch(evt) {
 		
 	{this.state.parkInfo ?
           <div>
-  		<h3>{this.state.park.campground.name}</h3>
+  		<h3>{this.state.park.name}</h3>
           </div> : null}
 
         
