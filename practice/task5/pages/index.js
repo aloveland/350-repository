@@ -16,8 +16,8 @@ async handleSearch(evt) {
   }
   
   async handleUpdate(evt){
-	this.setState({search: evt.target.value})
-	  onChange={this.handleUpdate.bind(this)}
+	this.setState({search: evt.target.value});
+	  onChange={this.handleUpdate.bind(this)};
  	 }
 
   render() {
