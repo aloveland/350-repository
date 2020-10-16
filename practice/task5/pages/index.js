@@ -11,7 +11,7 @@ async handleSearch(evt) {
     const parkInfo = await getParkInfo(this.state.search);
     console.log(parkInfo);
      this.setState({search: evt.target.value});
-     onClick={this.handleSearch.bind(this)
+     onClick={this.handleSearch.bind(this);
     // add the information to the state
   }
   
