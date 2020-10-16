@@ -43,6 +43,7 @@ async handleSearch(evt) {
         </p>
 
         <div className="button-style">
+		onClick={this.handleSearch.bind(this)}
           Submit
         </div>
 
