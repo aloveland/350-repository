@@ -49,7 +49,7 @@ async handleSearch(evt) {
 	{this.state.getParkInfo ?
           <div>
   		<h2>{this.state.park.name}</h2>
-	 	console.log(this.state.Object.name);
+	 	console.log(this.state.park.name);
 	 	<h3>just print this</h3>
           </div> : null}
 
