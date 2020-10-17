@@ -10,6 +10,7 @@ class Home extends React.Component {
 async handleSearch(evt) {
     const parkInfo = await getParkInfo(this.state.search);
     console.log(parkInfo);
+     this.setState({park});
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
     // add the information to the state
@@ -48,6 +49,7 @@ async handleSearch(evt) {
 
 	{this.state.getParkInfo ?
           <div>
+		<br />
   		<h2>{this.state.park.name}</h2>
 	 	console.log(this.state.park.name);
 	 	<h3>just print this</h3>
