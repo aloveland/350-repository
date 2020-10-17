@@ -20,9 +20,6 @@ async handleSearch(evt) {
 	this.setState({search: evt.target.value});
  	 }
 	
-	let size = parseInt('this.state.parkInfo.acres') * 100
-	size = size.toLocaleString();
-
   render() {
     return (
       <div
@@ -54,6 +51,9 @@ async handleSearch(evt) {
           <div>
 		<br />
   		<h2>{this.state.parkInfo.name}</h2>
+	 	let size = parseInt('this.state.parkInfo.acres') * 100
+		size = size.toLocaleString();
+
 	 	<h3>{this.state.parkInfo.state} <br/> <var>size</var></h3>
 	 	<h3>just print this</h3>
           </div> : null}
