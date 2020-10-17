@@ -53,7 +53,7 @@ async handleSearch(evt) {
           <div>
 		<br />
   		<h2>{this.state.parkInfo.name}</h2>
-	 	<h3>{this.state.parkInfo.state} <br/> size</h3>
+	 	<h3>{this.state.parkInfo.state} <br/> <var>size</var></h3>
 	 	<h3>just print this</h3>
           </div> : null}
 
