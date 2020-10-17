@@ -54,7 +54,7 @@ async handleSearch(evt) {
 	 	let size = parseInt('{this.state.parkInfo.acres}') * 100
 		size = size.toLocaleString();
 
-	 	<h3>{this.state.parkInfo.state} <br/> {size}</h3>
+	 	<h3>{this.state.parkInfo.state} <br/> {parseInt('{this.state.parkInfo.acres}') * 100.toLocaleString()}</h3>
 	 	<h3>just print this</h3>
           </div> : null}
 
