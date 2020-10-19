@@ -41,7 +41,7 @@ app.post("/create-user",async (req, res) => {
             res.json({status: 'username taken'});
              }
         else{
-           const template1 = "INSERT INTO users(firstname, lastname,username, email) VALUES ($1, $2, $3, $4);
+           const template1 = "INSERT INTO users(firstname, lastname,username, email) VALUES ($1, $2, $3, $4)";
            const response = await pool.query(template1, [firstname, lastname, username, email]);
             res.json({status: 'user added'})
         }
