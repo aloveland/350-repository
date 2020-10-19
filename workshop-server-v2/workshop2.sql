@@ -11,7 +11,7 @@ CREATE TABLE users(
        email TEXT
 );
 INSERT INTO users(firstname, lastname, username, email)VALUES
-('Alexander', 'Loveland', 'aloveland, 'aloveland@gmail.com'),
+('Alexander', 'Loveland', 'aloveland', 'aloveland@gmail.com'),
 ('Barry', 'Dylan', 'bdylan', 'ddylan@gmail.com');
 
 CREATE TABLE workshopinfo(
