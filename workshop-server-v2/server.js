@@ -29,30 +29,26 @@ app.get('/hello', (req, res) => {
   res.json({response: `Hello, ${req.query.person}`});
 });
 
-app.get("/api",async (req, res) => {
-    const workshop = req.query.workshop;
-    console.log(workshop);
+app.post("/create-user",async (req, res) => {
+    const firstname = req.query.firstname;
+    const lastname = req.query.lastname;
+    const username = req.query.username;
+    const email = req.query.email;
     try {
-        if(workshop == null || workshop == ''){
-            console.log('null');
-            const shop = "SELECT DISTINCT workshopgroup FROM workshop WHERE workshopgroup is not NULL";
-            const response = await pool.query(shop);
-            const results = response.rows.map((row) => {return (row.workshopgroup)})
-            res.json({workshops: results});
+        const template = "SELECT username FROM users WHERE username = $1;
+        const check = await pool.query(template, [username]);
+        if (check.rowCount > 0){
+            res.json({status: 'username taken'});
+             }
+        else{
+           const template1 = "INSERT INTO users(firstname, lastname,username, email) VALUES ($1, $2, $3, $4);
+           const response = await pool.query(template1, [firstname, lastname, username, email]);
+            res.json({status: 'user added'})
         }
         
-        
-        const tablename = workshop;
-        const shop = "SELECT name FROM workshop WHERE workshopgroup = $1";
-        console.log(shop,[workshop]);
-        const response = await pool.query(shop, [workshop]);
-        if(response.rowCount == 0){
-            res.json({error: "workshop not found"});
-        }
-        const results = response.rows.map((row) => {return (row.name)})
-        res.json({attendees: results});
+ 
     } catch (err){
-        res.json({error: "workshop not found"});
+        res.json({error: 'workshop not found'});
         console.log(err);
     }
 
