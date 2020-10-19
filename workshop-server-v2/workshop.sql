@@ -1,5 +1,5 @@
 \c postgres
-DROP DATABASE IF EXISTS workshopv1;
+DROP DATABASE IF EXISTS workshopv2;
 CREATE DATABASE workshopv2;
 \c workshopv2
 
