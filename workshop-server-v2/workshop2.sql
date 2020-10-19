@@ -22,7 +22,7 @@ CREATE TABLE workshopinfo(
       maxseats NUMERIC,
       instructor TEXT
  );
- INSERT INTO workshopinfo(title, date, location, maxseats, instructor)(
+ INSERT INTO workshopinfo(title, date, location, maxseats, instructor)VALUES
  ('Tensorflow', '2020-11-01', 'Albuquerque', '40', 'Fiona Helbron');
  
  CREATE TABLE attendees(
