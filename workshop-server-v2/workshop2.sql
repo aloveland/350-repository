@@ -3,14 +3,6 @@ DROP DATABASE IF EXISTS workshopv2;
 CREATE DATABASE workshopv2;
 \c workshopv2
 
-CREATE TABLE workshop(
-       id SERIAL PRIMARY KEY,
-       name TEXT NOT NULL,
-       workshopgroup TEXT NOT NULL
-);
-INSERT INTO workshopmembers (name, workshopgroup) VALUES
-('Brad Pitt', 'testShop'),
-('George Clooney','Oceans11');
 CREATE TABLE users(
        id SERIAL PRIMARY KEY,
        firstname TEXT,
@@ -32,3 +24,14 @@ CREATE TABLE workshopinfo(
  );
  INSERT INTO workshopinfo(title, date, location, maxseats, instructor)(
  ('Tensorflow', '2020-11-01', 'Albuquerque', '40', 'Fiona Helbron');
+ 
+ CREATE TABLE attendees(
+     id SERIAL PRIMARY KEY,   
+     username TEXT,
+     title TEXT,
+     date TEXT,
+ )
+ 
+ INSERT INTO attendees(username, title, date, attendees){
+    ('aloveland', Tensorflow, '2020-11-01', 'Albequerque');
+}
