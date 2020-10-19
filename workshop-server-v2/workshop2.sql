@@ -32,5 +32,5 @@ CREATE TABLE workshopinfo(
      date TEXT,
  )
  
- INSERT INTO attendees(username, title, date, attendees)(
+ INSERT INTO attendees(username, title, date, attendees)VALUES
     ('aloveland', 'Tensorflow', '2020-11-01', 'Albequerque');
