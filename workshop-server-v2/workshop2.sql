@@ -34,4 +34,3 @@ CREATE TABLE workshopinfo(
  
  INSERT INTO attendees(username, title, date, attendees){
     ('aloveland', Tensorflow, '2020-11-01', 'Albequerque');
-}
