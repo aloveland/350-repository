@@ -35,7 +35,7 @@ app.post("/create-user",async (req, res) => {
     const username = req.query.username;
     const email = req.query.email;
     try {
-        const template = "SELECT username FROM users WHERE username = $1;
+        const template = "SELECT username FROM users WHERE username = $1";
         const check = await pool.query(template, [username]);
         if (check.rowCount > 0){
             res.json({status: 'username taken'});
