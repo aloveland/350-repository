@@ -15,7 +15,7 @@ const config = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: "workshopv1"
+    database: "workshopv2"
 };
 
 const pool = new Pool(config);
