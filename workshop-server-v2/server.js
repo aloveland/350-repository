@@ -78,11 +78,20 @@ app.get("/list-users",async (req, res) => {
            }
            res.json({users: results});
                 }
-        if(type == "summary"){
-           const template = "SELECT firstname, lastname FROM users WHERE username is NOT NULL";
-           const response = await pool.query(template1);
-           const results = response.rows.map((row) => {return (row.workshopgroup)})
-           res.json({users: results}); 
+        else if(type == "summary"){
+          let results = [];
+           let temp = {};
+           for(i = 0;i < response.rowCount; i++){
+                let temp = {};
+                temp.username = response.rows[i].username;
+                temp.firstname = response.rows[i].firstname;
+                temp.lastname = response.rows[i].lastname;
+                temp.email = response.rows[i].email;
+                results.push(temp);
+                
+
+           }
+           res.json({users: results});
             
         }
         
