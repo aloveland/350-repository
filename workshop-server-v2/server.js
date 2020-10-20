@@ -113,7 +113,7 @@ app.post("/add-workshop", async (req, res) => {
         const template = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3";
         const response = await pool.query(template,[title, date, location]);
         if(response.rowCount > 0){
-            ress.json({ "status": "workshop already in database"});
+            ress.json({ status: 'workshop already in database'});
             }
         else{
             const template = "INSERT INTO (title, date, location, instructor) VALUES ($1, $2, $3, $4)";
