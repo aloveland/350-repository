@@ -79,6 +79,8 @@ app.get("/list-users",async (req, res) => {
            res.json({users: results});
                 }
         else if(type == "summary"){
+          const template = "SELECT * FROM users WHERE username is NOT NULL";
+          const response = await pool.query(template);
           let results = [];
            let temp = {};
            for(i = 0;i < response.rowCount; i++){
