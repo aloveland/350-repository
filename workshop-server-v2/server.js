@@ -186,6 +186,22 @@ app.post("/enroll", async (req, res) => {
         if(userinshopresponse.rowCount > 0){
             res.json({status: 'user already enrolled'});
         }
+        
+        //maxseats
+        const seatCheck = "SELECT * FROM attendees WHERE title = $1 AND date = $2 AND location = $3";
+        const SeatResponse = await pool.query(seatCheck,[title, date, location]);
+        const maxseatsCheck = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3" 
+        const maxseatsResponse = await pool.query(maxseatsCheck,[title, date, location]);
+        let seaters = {};
+        seaters.num = maxseatsResponse.rows[1].maxseats;
+        if(seatResponse.rowCount >= seaters.num){
+            res.json({status: 'no seats available'})
+        }
+        
+        //add user
+        const addToShop = "INSERT INTO attendees (username, title, date, location) VALUES($1, $2, $3, $4)";
+        const addToShopResponse = await pool.query(template, [title, date, location, maxseats, instructor]);
+        res.json({status: 'user added'});
   
     } catch (err){
         // whoops
