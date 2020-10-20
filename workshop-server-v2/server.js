@@ -60,6 +60,7 @@ app.get("/list-users",async (req, res) => {
     const type = req.query.type;
     try {
        if(type == "full"){
+           console.log("in full");
            const template = "SELECT * FROM users WHERE username is NOT NULL";
            const response = await pool.query(template);
            let results = [];
