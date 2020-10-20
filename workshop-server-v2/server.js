@@ -258,7 +258,22 @@ app.get("/attendees", async (req, res) => {
     }
 
 });
+app.delete("/delete-user",async (req, res) => {
+    const username = req.query.username;
+    
+    try{
+        const template = "DELETE FROM users WHERE username = $1";
+        const response = await pool.query(template,[username]);
+        const template2 = "DELETE FROM attendees WHERE username = $1";
+        const response2 = await pooolquery(template2,[username]);
+        res.json({status: 'deleted'});
+ 
+    } catch (err){
+        res.json({error: 'workshop not found'});
+        console.log(err);
+    }
 
+});
 
 app.listen(app.get("port"), () => {
   console.log(`Find the server at: http://localhost:${app.get("port")}/`); 
