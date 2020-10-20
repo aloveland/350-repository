@@ -145,9 +145,7 @@ app.get("/list-workships",async (req, res) => {
         results.push(temp);
 
      }
-         res.json({workshops: results});
-    }
-        
+         res.json({workshops: results});  
         
  
     } catch (err){
