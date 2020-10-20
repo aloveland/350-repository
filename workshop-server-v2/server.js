@@ -234,7 +234,8 @@ app.get("/attendees", async (req, res) => {
             temp.username = response2.rows[i].username;
             users.push(temp);
         }   
-        
+        console.log("this is users");
+        console.log(users);
         //pull users
         let temp2 = {};
         let results = [];
