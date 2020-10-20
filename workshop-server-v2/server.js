@@ -243,8 +243,8 @@ app.get("/attendees", async (req, res) => {
             temp2 = {};
             const template3 = "SELECT * FROM users WHERE username = $1";
             const response3 = await pool.query(template3,[users[i].username]);
-            temp2.firstname = response3.rows[i].firstname;
-            temp2.lastname = response3.rows[i].lastname;
+            temp2.firstname = response3.rows[0].firstname;
+            temp2.lastname = response3.rows[0].lastname;
             results.push(temp2);
         }
         res.json({attendees: results});
