@@ -225,7 +225,7 @@ app.get("/attendees", async (req, res) => {
             res.json({error: 'workshop doesnt exist'});
             }
         const template2 = "SELECT * FROM attendees WHERE title = $1 AND date = $2 AND location = $3";
-        const response2 = await pool.query(template,[title, date, location]);
+        const response2 = await pool.query(template2,[title, date, location]);
         let results = [];
         let temp = {};
         for(i = 0; i < response2.rowCount; i++){
