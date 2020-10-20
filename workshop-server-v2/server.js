@@ -172,6 +172,8 @@ app.post("/enroll", async (req, res) => {
             console.log("4");
             const useraddresponse = await pool.query(useradd,[username]);
             console.log("5");
+            added = {};
+            added.status = 'user added';
             res.json({status: 'user not in database'},{status: 'user added'});
         }
   
