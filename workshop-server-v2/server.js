@@ -166,7 +166,7 @@ app.post("/enroll", async (req, res) => {
         const userresponse = await pool.query(usertest,[username]);
         console.log("2");
         console.log(userresponse);
-        if(userresponse.rowCount > 0){
+        if(userresponse.rowCount == 0){
             console.log("3");
             const useradd = "INSERT INTO users (username) VALUES($1)";
             console.log("4");
