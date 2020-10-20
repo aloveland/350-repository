@@ -7,7 +7,7 @@ CREATE TABLE users(
        id SERIAL PRIMARY KEY,
        firstname TEXT,
        lastname TEXT,
-       username NOT NULL,
+       username TEXT NOT NULL,
        email TEXT
 );
 INSERT INTO users(firstname, lastname, username, email)VALUES
