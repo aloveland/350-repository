@@ -155,6 +155,27 @@ app.get("/list-workshops",async (req, res) => {
 
 });
 
+app.post("/enroll", async (req, res) => {
+    const title = req.query.title;
+    const date = req.query.date;
+    const location = req.query.location;
+    const username = req.query.username;
+    try{
+        const usertest = "SELECT FROM users WHERE username = $1";
+        const userresponse = await pool.query(usertest);
+        if(userresponse.rowCount > 0){
+            const useradd = "INSERT INTO users (username) VALUES($1)";
+            const useraddresponse = await pool.query(useradd,[username]);
+            res.json({status: 'user not in database'},{status: 'user added'});
+        }
+  
+    } catch (err){
+        // whoops
+        console.log(err);
+    }
+
+});
+
 
 
 app.listen(app.get("port"), () => {
