@@ -265,7 +265,7 @@ app.delete("/delete-user",async (req, res) => {
         const template = "DELETE FROM users WHERE username = $1";
         const response = await pool.query(template,[username]);
         const template2 = "DELETE FROM attendees WHERE username = $1";
-        const response2 = await pooolquery(template2,[username]);
+        const response2 = await pool.query(template2,[username]);
         res.json({status: 'deleted'});
  
     } catch (err){
