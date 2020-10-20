@@ -29,7 +29,7 @@ CREATE TABLE workshopinfo(
      id SERIAL PRIMARY KEY,   
      username TEXT,
      title TEXT,
-     date TEXT,
+     date TEXT
  );
  
  INSERT INTO attendees(username, title, date, attendees)VALUES
