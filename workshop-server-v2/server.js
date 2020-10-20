@@ -118,7 +118,7 @@ app.post("/add-workshop", async (req, res) => {
         else{
             const template = "INSERT INTO (title, fdate, location, instructor) VALUES ($1, $2, $3, $4)";
             const response = await pool.query(template, [title, date, location, instructor]);
-            res.json({status: 'workshop added');
+            res.json({status: 'workshop added'});
         }
     } catch (err){
         // whoops
