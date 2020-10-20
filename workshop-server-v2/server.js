@@ -161,7 +161,7 @@ app.post("/enroll", async (req, res) => {
     const location = req.query.location;
     const username = req.query.username;
     try{
-        const usertest = "SELECT FROM users WHERE username = $1";
+        const usertest = "SELECT * FROM users WHERE username = $1";
         const userresponse = await pool.query(usertest,[username]);
         if(userresponse.rowCount > 0){
             const useradd = "INSERT INTO users (username) VALUES($1)";
