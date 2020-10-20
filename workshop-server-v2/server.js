@@ -236,6 +236,7 @@ app.get("/attendees", async (req, res) => {
         }   
         console.log("this is users");
         console.log(users);
+        
         //pull users
         let temp2 = {};
         let results = [];
@@ -243,6 +244,8 @@ app.get("/attendees", async (req, res) => {
             temp2 = {};
             const template3 = "SELECT * FROM users WHERE username = $1";
             const response3 = await pool.query(template3,[users[i].username]);
+            console.log("response3");
+            console.log(response3);
             temp2.firstname = response3.rows[0].firstname;
             temp2.lastname = response3.rows[0].lastname;
             results.push(temp2);
