@@ -79,7 +79,7 @@ app.post("/create-user",async (req, res) => {
 
 });
 
-app.GET("/list-users",async (req, res) => {
+app.get("/list-users",async (req, res) => {
     console.log("here");
     const type = req.query.type;
     try {
