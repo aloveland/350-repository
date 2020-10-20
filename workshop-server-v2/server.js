@@ -164,9 +164,9 @@ app.post("/enroll", async (req, res) => {
         const usertest = "SELECT * FROM users WHERE username = $1";
         const userresponse = await pool.query(usertest,[username]);
         if(userresponse.rowCount > 0){
+            console.log("almost there");
             const useradd = "INSERT INTO users (username) VALUES($1)";
             const useraddresponse = await pool.query(useradd,[username]);
-            console.log("almost there");
             res.json({status: 'user not in database'},{status: 'user added'});
         }
   
