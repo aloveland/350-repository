@@ -85,7 +85,7 @@ app.get("/list-users",async (req, res) => {
     try {
        if(type == "full"){
            const template = "SELECT * FROM users WHERE username is NOT NULL";
-           const response = await pool.query(template1);
+           const response = await pool.query(template);
            const results = response.rows.map((row) => {return (row.workshopgroup)})
            res.json({users: results});
                 }
