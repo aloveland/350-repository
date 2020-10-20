@@ -226,15 +226,26 @@ app.get("/attendees", async (req, res) => {
             }
         const template2 = "SELECT * FROM attendees WHERE title = $1 AND date = $2 AND location = $3";
         const response2 = await pool.query(template2,[title, date, location]);
-        let results = [];
+        let users = [];
         let temp = {};
         console.log(response2);
         for(i = 0; i < response2.rowCount; i++){
             temp = {};
-            temp.firstname = response2.rows[i].firstname;
-            temp.lastname = response2.rows[i].lastname;
-            results.push(temp);
+            temp.username = response2.rows[i].username;
+            users.push(temp);
         }   
+        
+        //pull users
+        let temp2 = {};
+        let results = [];
+        for(i = 0; i < response2.rowCount;i++){
+            temp2 = {};
+            const template3 = "SELECT * FROM users WHERE username = $1";
+            const response3 = await pool.query(template3,[users[i].username]);
+            temp2.firstname = response3.rows[i].firstname;
+            temp2.lastname = response3.rows[i].lastname;
+            results.push(temp2);
+        }
         res.json({attendees: results});
      
     } catch (err){
