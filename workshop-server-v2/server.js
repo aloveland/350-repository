@@ -196,7 +196,7 @@ app.post("/enroll", async (req, res) => {
         console.log(title);
         console.log(date);
         console.log(location);
-        console.log(maxseatsResponse);
+        console.log(maxseatsResponse.rows[0]);
         let seaters = {};
         seaters.num = maxseatsResponse.rows[1].maxseats;
         if(seatResponse.rowCount >= seaters.num){
