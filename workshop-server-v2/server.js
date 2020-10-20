@@ -214,7 +214,34 @@ app.post("/enroll", async (req, res) => {
     }
 
 });
+app.get("/attendees", async (req, res) => {
+    const title = req.query.title;
+    const date = req.query.date;
+    const location = req.query.location;
+    try{
+        const template = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3";
+        const response = await pool.query(template,[title, date, location]);
+        if(response.rowCount == 0){
+            ress.json({error: 'workshop doesnt exist'});
+            }
+        const template2 = "SELECT * FROM attendees WHERE title = $1 AND date = $2 AND location = $3";
+        const response2 = await pool.query(template,[title, date, location]);
+        let results = [];
+        let temp = {};
+        for(i = 0; i < response2.rowCount; i++){
+            temp = {};
+            temp.firstname = response.rows[i].firstname;
+            temp.lastname = response.rows[i].lastname;
+            results.push(temp);
+        }   
+        res.json({attendees: results});
+     
+    } catch (err){
+        // whoops
+        console.log(err);
+    }
 
+});
 
 
 app.listen(app.get("port"), () => {
