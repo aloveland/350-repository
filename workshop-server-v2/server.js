@@ -104,36 +104,12 @@ app.get("/list-users",async (req, res) => {
 
 });
 
-app.post("/api", async (req, res) => {
-    const attendee = req.body.attendee;
-    const workshop = req.body.workshop;
-    console.log('this is attendee');
-    console.log(attendee);
-    try {
-        if(attendee == null || workshop == null || workshop == '' || attendee == ''){
-            res.json({error: "parameters not given"});
-        }
-        
-        const template = "SELECT * FROM workshop where name = $1 AND workshopgroup = $2";
-        console.log('this is template');
-        console.log(template);
-        const check = await pool.query(template, [attendee, workshop]);
-        console.log('this is check by the way');
-        console.log(check);
-        //console.log(check.rows[0].name);
-        //console.log(check.rows[0].workshopgroup);
-         //if (check.rows[0].name == attendee && check.rows[0].workshopgroup == workshop){
-           // res.json({error: 'attendee already enrolled'});
-             //} ^prior attempt that gave errors.
-        if (check.rowCount > 0){
-            res.json({error: 'attendee already enrolled'});
-             }
-        
-        else {
-            // else let's insert it
-            const template1 = "INSERT INTO workshop (name, workshopgroup) VALUES ($1, $2)";
-            const response = await pool.query(template1, [attendee, workshop]);
-            res.json({attendee: attendee, workshop: workshop});
+app.post("/add-workshop", async (req, res) => {
+    const title = req.query.title;
+    const date = req.query.date;
+    const location = req.query.location;
+    const instructor = req.query.instructor;
+   
         }
     } catch (err){
         // whoops
