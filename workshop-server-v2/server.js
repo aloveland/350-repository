@@ -30,9 +30,9 @@ app.get('/hello', (req, res) => {
 });
 
 app.post("/create-user",async (req, res) => {
+    const username = req.query.username;
     const firstname = req.query.firstname;
     const lastname = req.query.lastname;
-    const username = req.query.username;
     const email = req.query.email;
     try {
         const template = "SELECT username FROM users WHERE username = $1";
@@ -41,8 +41,8 @@ app.post("/create-user",async (req, res) => {
             res.json({status: 'username taken'});
              }
         else{
-           const template1 = "INSERT INTO users(firstname, lastname,username, email) VALUES ($1, $2, $3, $4)";
-           const response = await pool.query(template1, [firstname, lastname, username, email]);
+           const template1 = "INSERT INTO users(username, firstname, lastname, email) VALUES ($1, $2, $3, $4)";
+           const response = await pool.query(template1, [username, firstname, lastname, email]);
             res.json({status: 'user added'})
         }
         

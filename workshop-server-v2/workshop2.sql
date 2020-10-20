@@ -5,14 +5,14 @@ CREATE DATABASE workshopv2;
 
 CREATE TABLE users(
        id SERIAL PRIMARY KEY,
+       username TEXT NOT NULL,
        firstname TEXT,
        lastname TEXT,
-       username TEXT NOT NULL,
        email TEXT
 );
-INSERT INTO users(firstname, lastname, username, email)VALUES
-('Alexander', 'Loveland', 'aloveland', 'aloveland@gmail.com'),
-('Barry', 'Dylan', 'bdylan', 'ddylan@gmail.com');
+INSERT INTO users( username, firstname, lastname,email)VALUES
+('aloveland', 'Alexander', 'Loveland', 'aloveland@gmail.com'),
+('bdylan','Barry', 'Dylan', 'ddylan@gmail.com');
 
 CREATE TABLE workshopinfo(
       id SERIAL PRIMARY KEY,
