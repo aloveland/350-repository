@@ -175,12 +175,12 @@ app.post("/enroll", async (req, res) => {
             res.json({status: 'user not in database, user added'});
         }
         const workshoptest = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3";
-        const workshopresponse= await pool.query(template,[title, date, location]);
+        const workshopresponse= await pool.query(workshoptest,[title, date, location]);
         if(workshopresponse.rowCount == 0){
             res.json({status: 'workshop does not exist'});
         }
         const userinshop = "SELECT * FROM attendees WHERE username = $1 AND title = $2 AND date = $3 AND location = $4";
-        const userinshopresponse = await pool.query(template,[username, title, date, location]);
+        const userinshopresponse = await pool.query(userinshop,[username, title, date, location]);
         if(userrinshopresponse.rowCount > 0){
             res.json({status: 'user already enrolled'});
         }
