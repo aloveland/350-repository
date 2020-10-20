@@ -228,6 +228,7 @@ app.get("/attendees", async (req, res) => {
         const response2 = await pool.query(template2,[title, date, location]);
         let results = [];
         let temp = {};
+        console.log(response2);
         for(i = 0; i < response2.rowCount; i++){
             temp = {};
             temp.firstname = response2.rows[i].firstname;
