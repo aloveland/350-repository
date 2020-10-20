@@ -205,7 +205,7 @@ app.post("/enroll", async (req, res) => {
         
         //add user
         const addToShop = "INSERT INTO attendees (username, title, date, location) VALUES($1, $2, $3, $4)";
-        const addToShopResponse = await pool.query(template, [title, date, location, maxseats, instructor]);
+        const addToShopResponse = await pool.query(addToShop, [title, date, location, maxseats, instructor]);
         res.json({status: 'user added'});
   
     } catch (err){
