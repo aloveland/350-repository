@@ -86,13 +86,13 @@ app.post("/list-users",async (req, res) => {
            const template = "SELECT * FROM users WHERE username is NOT NULL";
            const response = await pool.query(template1);
            const results = response.rows.map((row) => {return (row.workshopgroup)})
-           res.json(users: results);
+           res.json({users: results});
                 }
         if(type == "summary"){
            const template = "SELECT firstname, lastname FROM users WHERE username is NOT NULL";
            const response = await pool.query(template1);
            const results = response.rows.map((row) => {return (row.workshopgroup)})
-           res.json(users: results); 
+           res.json({users: results}); 
             
         }
         
