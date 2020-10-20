@@ -127,7 +127,7 @@ app.post("/add-workshop", async (req, res) => {
     }
 
 });
-app.get("/list-workships",async (req, res) => {
+app.get("/list-workshops",async (req, res) => {
     
     
     try{
