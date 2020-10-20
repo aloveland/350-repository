@@ -181,7 +181,7 @@ app.post("/enroll", async (req, res) => {
         }
         const userinshop = "SELECT * FROM attendees WHERE username = $1 AND title = $2 AND date = $3 AND location = $4";
         const userinshopresponse = await pool.query(userinshop,[username, title, date, location]);
-        if(userrinshopresponse.rowCount > 0){
+        if(userinshopresponse.rowCount > 0){
             res.json({status: 'user already enrolled'});
         }
   
