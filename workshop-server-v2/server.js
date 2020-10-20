@@ -108,6 +108,7 @@ app.post("/add-workshop", async (req, res) => {
     const title = req.query.title;
     const date = req.query.date;
     const location = req.query.location;
+    const maxseats = req.query.maxseats;
     const instructor = req.query.instructor;
     try{
         const template = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3";
@@ -116,8 +117,8 @@ app.post("/add-workshop", async (req, res) => {
             ress.json({ status: 'workshop already in database'});
             }
         else{
-            const template = "INSERT INTO workshopinfo (title, date, location, instructor) VALUES ($1, $2, $3, $4)";
-            const response = await pool.query(template, [title, date, location, instructor]);
+            const template = "INSERT INTO workshopinfo (title, date, location, instructor) VALUES ($1, $2, $3, $4, $5)";
+            const response = await pool.query(template, [title, date, location, maxseats, instructor]);
             res.json({status: 'workshop added'});
         }
     } catch (err){
