@@ -96,10 +96,6 @@ app.post("/list-users",async (req, res) => {
             
         }
         
-             }
-        else{
-            res.json({status: 'error'})
-        }
         
  
     } catch (err){
