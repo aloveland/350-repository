@@ -85,10 +85,8 @@ app.get("/list-users",async (req, res) => {
            let temp = {};
            for(i = 0;i < response.rowCount; i++){
                 let temp = {};
-                temp.username = response.rows[i].username;
                 temp.firstname = response.rows[i].firstname;
                 temp.lastname = response.rows[i].lastname;
-                temp.email = response.rows[i].email;
                 results.push(temp);
                 
 
