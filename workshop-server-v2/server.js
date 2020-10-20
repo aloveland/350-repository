@@ -192,6 +192,7 @@ app.post("/enroll", async (req, res) => {
         const SeatResponse = await pool.query(seatCheck,[title, date, location]);
         const maxseatsCheck = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3" 
         const maxseatsResponse = await pool.query(maxseatsCheck,[title, date, location]);
+        console.log(maxseatsResponse);
         let seaters = {};
         seaters.num = maxseatsResponse.rows[1].maxseats;
         if(seatResponse.rowCount >= seaters.num){
