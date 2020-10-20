@@ -128,6 +128,9 @@ app.post("/add-workshop", async (req, res) => {
 
 });
 app.get("/list-workships",async (req, res) => {
+    
+    
+    try{
     const template = "SELECT * FROM workshopinfo where title is NOT NULL";
     const response = await pool.query(template);
     let results = [];
@@ -141,8 +144,9 @@ app.get("/list-workships",async (req, res) => {
         temp.instructor = response.rows[i].instructor;
         results.push(temp);
 
+     }
+         res.json({workshops: results});
     }
-    res.json({workshops: results});
         
         
  
