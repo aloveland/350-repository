@@ -127,6 +127,33 @@ app.post("/add-workshop", async (req, res) => {
     }
 
 });
+app.get("/list-workships",async (req, res) => {
+    const template = "SELECT * FROM workshopinfo where title is NOT NULL";
+    const response = await pool.query(template);
+    let results = [];
+    let temp = {};
+    for(i = 0; i < rowCount; i++){
+        let temp = {};
+        temp.title = response.rows[i].title;
+        temp.date= response.rows[i].date;
+        temp.location = response.rows[i].location;
+        temp.maxseats = response.rows[i].maxseats;
+        temp.instructor = response.rows[i].instructor;
+        results.push(temp);
+
+    }
+    res.json({workshops: results});
+        
+        
+ 
+    } catch (err){
+        res.json({error: 'workshop not found'});
+        console.log(err);
+    }
+
+});
+
+
 
 app.listen(app.get("port"), () => {
   console.log(`Find the server at: http://localhost:${app.get("port")}/`); 
