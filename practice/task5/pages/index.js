@@ -51,7 +51,7 @@ async handleSearch(evt) {
           <div>
 		<br />
   		<h2>{this.state.parkInfo.name}</h2>
-	 	<h3>{this.state.parkInfo.state} <br/>{(parseInt(this.state.parkInfo.acres) * 100.toLocaleString())} acres</h3>
+	 	<h3>{this.state.parkInfo.state} <br/>{((parseInt(this.state.parkInfo.acres) * 100).toLocaleString())} acres</h3>
           </div> : null}
 
         
