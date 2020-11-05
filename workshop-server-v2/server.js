@@ -30,7 +30,7 @@ app.get('/hello', (req, res) => {
 });
 
 app.post("/create-user",async (req, res) => {
-    const username = req.query.username;
+    const username = req.body.username;
     console.log("this is username");
     console.log(username);
     const firstname = req.query.firstname;
