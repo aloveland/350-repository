@@ -9,4 +9,4 @@ CREATE TABLE users(
   screenName TEXT NOT NULL,
 );
 INSERT INTO users(password, screenName)VALUES
-  ('user1', 'userpass34', 'user example');
+  ('userpass34', 'user example');
