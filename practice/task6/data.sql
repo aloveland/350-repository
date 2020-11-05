@@ -8,5 +8,5 @@ CREATE TABLE users(
   password TEXT NOT NULL,
   screenName TEXT NOT NULL,
 );
-INSERT INTO users(username, password, screenName)VALUES
+INSERT INTO users(password, screenName)VALUES
   ('user1', 'userpass34', 'user example');
