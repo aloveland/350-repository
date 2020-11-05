@@ -1,6 +1,6 @@
 \c postgres
-DROP DATABASE IF EXISTS taskSix;
-CREATE DATABASE taskSix;
+DROP DATABASE IF EXISTS tasksix;
+CREATE DATABASE tasksix;
 \c taskSix
 
 CREATE TABLE users(
