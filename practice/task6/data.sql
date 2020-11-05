@@ -4,9 +4,9 @@ CREATE DATABASE tasksix;
 \c taskSix
 
 CREATE TABLE users(
-  username SERIAL PRIMARY KEY,
+  username TEXT NOT NULL UNIQUE,
   password TEXT NOT NULL,
-  screenName TEXT NOT NULL,
+  screenName TEXT NOT NULL
 );
-INSERT INTO users(password, screenName)VALUES
-  ('userpass34', 'user example');
+INSERT INTO users(username, password, screenName)VALUES
+  ('userpass34', 'user45g&', 'usertest');
