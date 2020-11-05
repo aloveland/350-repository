@@ -33,9 +33,9 @@ app.post("/create-user",async (req, res) => {
     const username = req.body.username;
     console.log("this is username");
     console.log(username);
-    const firstname = req.query.firstname;
-    const lastname = req.query.lastname;
-    const email = req.query.email;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email = req.body.email;
     try {
         const template = "SELECT username FROM users WHERE username = $1";
         const check = await pool.query(template, [username]);
