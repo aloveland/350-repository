@@ -1,7 +1,7 @@
 \c postgres
 DROP DATABASE IF EXISTS tasksix;
 CREATE DATABASE tasksix;
-\c taskSix
+\c tasksix
 
 CREATE TABLE users(
   username TEXT NOT NULL UNIQUE,
