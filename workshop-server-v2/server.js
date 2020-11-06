@@ -107,11 +107,11 @@ app.get("/list-users",async (req, res) => {
 });
 
 app.post("/add-workshop", async (req, res) => {
-    const title = req.query.title;
-    const date = req.query.date;
-    const location = req.query.location;
-    const maxseats = req.query.maxseats;
-    const instructor = req.query.instructor;
+    const title = req.body.title;
+    const date = req.body.date;
+    const location = req.body.location;
+    const maxseats = req.body.maxseats;
+    const instructor = req.body.instructor;
     try{
         const template = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3";
         const response = await pool.query(template,[title, date, location]);
