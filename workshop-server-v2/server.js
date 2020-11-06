@@ -274,7 +274,7 @@ app.delete("/delete-user",async (req, res) => {
         res.json({status: 'deleted'});
  
     } catch (err){
-        res.json({error: 'error user not in db'});
+        res.json({error: 'error/user not in db'});
         console.log(err);
     }
 
