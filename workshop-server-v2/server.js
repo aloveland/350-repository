@@ -203,6 +203,7 @@ app.post("/enroll", async (req, res) => {
         seaters.num = maxseatsResponse.rows[0].maxseats;
         if(SeatResponse.rowCount >= (seaters.num)){
             res.json({status: 'no seats available'})
+            reutrn;
         }
         
         //add user
