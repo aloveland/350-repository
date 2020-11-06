@@ -158,10 +158,10 @@ app.get("/list-workshops",async (req, res) => {
 });
 
 app.post("/enroll", async (req, res) => {
-    const title = req.query.title;
-    const date = req.query.date;
-    const location = req.query.location;
-    const username = req.query.username;
+    const title = req.body.title;
+    const date = req.body.date;
+    const location = req.body.location;
+    const username = req.body.username;
     try{
         console.log("1");
         const usertest = "SELECT * FROM users WHERE username = $1";
