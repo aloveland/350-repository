@@ -201,7 +201,7 @@ app.post("/enroll", async (req, res) => {
         console.log(maxseatsResponse);
         let seaters = {};
         seaters.num = maxseatsResponse.rows[0].maxseats;
-        if(SeatResponse.rowCount >= (seaters.num - 1)){
+        if(SeatResponse.rowCount >= (seaters.num)){
             res.json({status: 'no seats available'})
         }
         
