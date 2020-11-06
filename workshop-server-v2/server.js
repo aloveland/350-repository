@@ -250,6 +250,9 @@ app.get("/attendees", async (req, res) => {
             console.log(response3);
             temp2.firstname = response3.rows[0].firstname;
             temp2.lastname = response3.rows[0].lastname;
+            console.log("heres rows btw8888888888");
+            console.log(response3.rows[0].firstname);
+            console.log(response3.roows[0].lastname);
             results.push(temp2);
         }
         res.json({attendees: results});
