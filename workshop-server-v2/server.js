@@ -264,7 +264,7 @@ app.get("/attendees", async (req, res) => {
 
 });
 app.delete("/delete-user",async (req, res) => {
-    const username = req.query.username;
+    const username = req.body.username;
     
     try{
         const template = "DELETE FROM users WHERE username = $1";
