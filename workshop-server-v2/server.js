@@ -33,9 +33,9 @@ app.post("/create-user",async (req, res) => {
     const username = req.body.username;
     console.log("this is username");
     console.log(username);
-    const firstname = req.query.firstname;
-    const lastname = req.query.lastname;
-    const email = req.query.email;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email = req.body.email;
     try {
         const template = "SELECT username FROM users WHERE username = $1";
         const check = await pool.query(template, [username]);
@@ -107,11 +107,11 @@ app.get("/list-users",async (req, res) => {
 });
 
 app.post("/add-workshop", async (req, res) => {
-    const title = req.query.title;
-    const date = req.query.date;
-    const location = req.query.location;
-    const maxseats = req.query.maxseats;
-    const instructor = req.query.instructor;
+    const title = req.body.title;
+    const date = req.body.date;
+    const location = req.body.location;
+    const maxseats = req.body.maxseats;
+    const instructor = req.body.instructor;
     try{
         const template = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3";
         const response = await pool.query(template,[title, date, location]);
@@ -158,10 +158,10 @@ app.get("/list-workshops",async (req, res) => {
 });
 
 app.post("/enroll", async (req, res) => {
-    const title = req.query.title;
-    const date = req.query.date;
-    const location = req.query.location;
-    const username = req.query.username;
+    const title = req.body.title;
+    const date = req.body.date;
+    const location = req.body.location;
+    const username = req.body.username;
     try{
         console.log("1");
         const usertest = "SELECT * FROM users WHERE username = $1";
