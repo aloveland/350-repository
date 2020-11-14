@@ -13,7 +13,7 @@ function handleError(error) {
 }
 
 module.exports = {
-  getParkInfo: function(park) {
-    return getParkInfo(park).catch(handleError);
+  getCampInfo: function(camp) {
+    return getCampInfo(camp).catch(handleError);
   },
 };
