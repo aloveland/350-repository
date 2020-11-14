@@ -30,12 +30,12 @@ app.get('/hello', (req, res) => {
 });
 
 app.post("/create-user",async (req, res) => {
-    const username = req.query.username;
+    const username = req.body.username;
     console.log("this is username");
     console.log(username);
-    const firstname = req.query.firstname;
-    const lastname = req.query.lastname;
-    const email = req.query.email;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email = req.body.email;
     try {
         const template = "SELECT username FROM users WHERE username = $1";
         const check = await pool.query(template, [username]);
@@ -107,16 +107,16 @@ app.get("/list-users",async (req, res) => {
 });
 
 app.post("/add-workshop", async (req, res) => {
-    const title = req.query.title;
-    const date = req.query.date;
-    const location = req.query.location;
-    const maxseats = req.query.maxseats;
-    const instructor = req.query.instructor;
+    const title = req.body.title;
+    const date = req.body.date;
+    const location = req.body.location;
+    const maxseats = req.body.maxseats;
+    const instructor = req.body.instructor;
     try{
         const template = "SELECT * FROM workshopinfo WHERE title = $1 AND date = $2 AND location = $3";
         const response = await pool.query(template,[title, date, location]);
         if(response.rowCount > 0){
-            ress.json({ status: 'workshop already in database'});
+            res.json({ status: 'workshop already in database'});
             }
         else{
             const template = "INSERT INTO workshopinfo (title, date, location, maxseats, instructor) VALUES ($1, $2, $3, $4, $5)";
@@ -158,10 +158,10 @@ app.get("/list-workshops",async (req, res) => {
 });
 
 app.post("/enroll", async (req, res) => {
-    const title = req.query.title;
-    const date = req.query.date;
-    const location = req.query.location;
-    const username = req.query.username;
+    const title = req.body.title;
+    const date = req.body.date;
+    const location = req.body.location;
+    const username = req.body.username;
     try{
         console.log("1");
         const usertest = "SELECT * FROM users WHERE username = $1";
@@ -198,11 +198,12 @@ app.post("/enroll", async (req, res) => {
         console.log(title);
         console.log(date);
         console.log(location);
-        console.log(maxseatsResponse.rows[0]);
+        console.log(maxseatsResponse);
         let seaters = {};
         seaters.num = maxseatsResponse.rows[0].maxseats;
-        if(SeatResponse.rowCount >= seaters.num){
+        if(SeatResponse.rowCount >= (seaters.num)){
             res.json({status: 'no seats available'})
+            reutrn;
         }
         
         //add user
@@ -250,6 +251,9 @@ app.get("/attendees", async (req, res) => {
             console.log(response3);
             temp2.firstname = response3.rows[0].firstname;
             temp2.lastname = response3.rows[0].lastname;
+            console.log("heres rows btw8888888888");
+            console.log(response3.rows[0].firstname);
+            console.log(response3.rows[0].lastname);
             results.push(temp2);
         }
         res.json({attendees: results});
@@ -261,7 +265,7 @@ app.get("/attendees", async (req, res) => {
 
 });
 app.delete("/delete-user",async (req, res) => {
-    const username = req.query.username;
+    const username = req.body.username;
     
     try{
         const template = "DELETE FROM users WHERE username = $1";
@@ -271,7 +275,7 @@ app.delete("/delete-user",async (req, res) => {
         res.json({status: 'deleted'});
  
     } catch (err){
-        res.json({error: 'workshop not found'});
+        res.json({error: 'error/user not in db'});
         console.log(err);
     }
 
