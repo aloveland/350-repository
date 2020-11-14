@@ -6,7 +6,7 @@ export default function CampSearch() {
     <Layout>
       <p>This is the search page</p>
     </Layout>
-  )
+  );
 }
 
 
