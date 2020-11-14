@@ -1,7 +1,7 @@
 
 import Layout from '../components/MyLayout.js'
 
-export default function CampSearch() {
+export default function campsearch() {
   return (
     <Layout>
       <p>This is the search page</p>
