@@ -13,8 +13,8 @@ export default function Header() {
       <Link href="/about">
         <a style={linkStyle}>About</a>
       </Link>
-      <Link href="/Find a Campground">
-        <a style={linkStyle}>CampSearch</a>
+      <Link href="/CampSearchd">
+        <a style={linkStyle}>Find a Campground</a>
       </Link>
     </div>
   )
