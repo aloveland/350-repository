@@ -55,6 +55,62 @@ export default function Camps() {
             </div>
           </div>
         ) : null}
+         {"campground" in this.state && this.state.campground == undefined ? (
+          <p>{this.state.search} Camptround Not Found</p>
+        ) : null}
+        <style jsx>{`
+          h1,
+          h2,
+          h3,
+          h4,
+          a,
+          p {
+            font-family: "Arial";
+            color: #006600;
+          }
+          .button-style {
+            margin: auto auto;
+            cursor: pointer;
+            background-color: #228b22;
+            color: #ffffff;
+            width: 100px;
+            font-family: "Arial";
+          }
+          .text-style {
+            margin: auto auto;
+            width: 200px;
+          }
+          input {
+            margin: auto auto;
+            width: 200px;
+          }
+          .description {
+            font-family: "Arial";
+            font-size: "10px";
+          }
+          ul {
+            padding: 0;
+          }
+          li {
+            list-style: none;
+            margin: 5px 0;
+          }
+          a {
+            text-decoration: none;
+            color: blue;
+          }
+          a:hover {
+            opacity: 0.6;
+          }
+        `}</style>
+      </Layout>
+    );
+  }
+}
+
+        
+        
+        
   
   return (
    <Layout>
