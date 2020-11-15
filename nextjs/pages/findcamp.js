@@ -9,5 +9,5 @@ export default function Camps() {
   )
 }
 
-export default camps; 
+
 
