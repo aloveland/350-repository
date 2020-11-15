@@ -8,7 +8,7 @@ export default function Camps() {
         constructor(props) {
         super(props);
         this.state = { search: "" };
-        }
+        };
         
         
         
