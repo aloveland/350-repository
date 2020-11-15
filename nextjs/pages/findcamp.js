@@ -110,17 +110,23 @@ export default function Camps() {
 
         
         
-        
-  
+   handleOnInputChange = ( event ) => {
+       const query = event.target.value;
+       this.setState(state:{ query } );
+   }
+  const { query } = this.state;
+  const query = this.state.query;
   return (
    <Layout>
     <div classname="container">
       <p>This is the search page</p>
         <input
             type = "text"
-            value = ""
+            name = "query"
+            value = {query}
             id = "search-input"
             placeholder= "search"
+            onChange ={this.handleOnInputChange}
         />
     </div>
     </Layout>
