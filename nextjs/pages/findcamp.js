@@ -14,7 +14,7 @@ export default function Camps() {
         
        handleUpdate(evt) {
               this.setState({ search: evt.target.value });
-            }
+            };
         
       async handleSearch(evt) {
             const campground = await getInfo(this.state.search);
