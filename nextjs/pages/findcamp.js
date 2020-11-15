@@ -117,10 +117,10 @@ export default function Camps() {
     <div classname="container">
       <p>This is the search page</p>
         <input
-            type = "text";
-            value = "";
+            type = "text"
+            value = ""
             id = "search-input"
-            placeholder= "search";
+            placeholder= "search"
         />
     </div>
     </Layout>
