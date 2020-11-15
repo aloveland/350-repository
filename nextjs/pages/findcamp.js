@@ -113,7 +113,7 @@ export default function Camps() {
    handleOnInputChange = ( event ) => {
        const query = event.target.value;
        this.setState( state:{ query: query } );
-   }
+   };
   const { query } = this.state;
   const query = this.state.query;
   return (
