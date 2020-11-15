@@ -55,7 +55,7 @@ export default function Camps() {
             </div>
           </div>
         ) : null}
-         {"campground" in this.state && this.state.campground == undefined ? (
+         {"campground" in this.state && this.state.camp == undefined ? (
           <p>{this.state.search} Camptround Not Found</p>
         ) : null}
         <style jsx>{`
@@ -116,6 +116,12 @@ export default function Camps() {
    <Layout>
     <div classname="container">
       <p>This is the search page</p>
+        <input
+            type = "text";
+            value = "";
+            id = "search-input"
+            placeholder= "search";
+        />
     </div>
     </Layout>
   )
