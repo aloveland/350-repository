@@ -21,8 +21,7 @@ export default function Camps() {
             console.log(campground);
             this.setState({ campground });
           }
-  const { query } = this.state;
-  const query = this.state.query;
+
   return (
    <Layout>
     <div classname="container">
