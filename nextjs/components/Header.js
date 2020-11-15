@@ -13,7 +13,7 @@ export default function Header() {
       <Link href="/about">
         <a style={linkStyle}>About</a>
       </Link>
-      <Link href="/camps">
+      <Link href="/findcamp">
         <a style={linkStyle}>Find</a>
       </Link>
     </div>
