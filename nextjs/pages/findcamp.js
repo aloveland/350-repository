@@ -20,7 +20,7 @@ export default function Camps() {
             const campground = await getInfo(this.state.search);
             console.log(campground);
             this.setState({ campground });
-          }
+          };
 
   return (
    <Layout>
