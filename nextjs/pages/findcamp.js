@@ -5,7 +5,7 @@ import React from "react";
 
     
 
-  return (
+  
     class Home extends React.Component {
         constructor(props) {
         super(props);
@@ -23,7 +23,6 @@ import React from "react";
           this.setState(site});
           }
     
-    
     <div classname="container">
      <div style={{ margin: "auto atuo", width: "600px, textAlign: "center"}}
       <p>This is the search page</p>
@@ -34,7 +33,6 @@ import React from "react";
         />
     </div>
     <div className="button-style" onCLick={this.handleSearch.bind(this)}>Search</div>
-  )
 
  export default function Camps;
 
