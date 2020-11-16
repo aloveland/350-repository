@@ -17,7 +17,7 @@ export default function Camps() {
             }
         
       async handleSearch(evt) {
-          const site =  awwait getCampInfo(this.state.search);
+          const site =  await getCampInfo(this.state.search);
           this.setState(site})
           }
 
