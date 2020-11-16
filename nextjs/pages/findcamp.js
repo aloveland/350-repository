@@ -6,7 +6,7 @@ import {getCampInfo} from '../lib/utils.js';
   
     
     <div classname="container"
-     <div style={{ margin: "auto atuo", width: "600px, textAlign: "center"}}
+    // <div style={{ margin: "auto atuo", width: "600px, textAlign: "center"}}
       <p>This is the search page</p>
         <input
             type = "text"
