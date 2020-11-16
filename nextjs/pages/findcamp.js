@@ -17,7 +17,7 @@ import {getCampInfo} from '../lib/utils.js';
     </div>
     <div className="button-style" onCLick={this.handleSearch.bind(this)}>Search</div>
 
- export default function Camps;
+
 
 
 
