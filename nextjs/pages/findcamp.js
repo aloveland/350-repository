@@ -14,7 +14,7 @@ import {getCampInfo} from '../lib/utils.js';
         
        handleUpdate(evt) {
               this.setState({ search: evt.target.value });
-            }
+            };
         
       async handleSearch(evt) {
           const site =  await getCampInfo(this.state.search);
