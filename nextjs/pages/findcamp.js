@@ -3,7 +3,6 @@ import Layout from '../components/MyLayout.js'
 import {getCampInfo} from '../lib/utils.js';
 import React from "react";
 
-export default function Camps() {
     class Home extends React.Component {
         constructor(props) {
         super(props);
@@ -31,9 +30,10 @@ export default function Camps() {
             onChange ={this.handleUpdate.bind(this)}
         />
     </div>
-    <div className="button-style" onCLick={this.handleSearch.bind(this)}</div>
+    <div className="button-style" onCLick={this.handleSearch.bind(this)}>Search</div>
   )
-}
+
+ export default function Camps;
 
 
 
