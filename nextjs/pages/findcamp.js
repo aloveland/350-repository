@@ -4,22 +4,6 @@ import {getCampInfo} from '../lib/utils.js';
     
 
   
-    class Home extends React.Component {
-        constructor(props) {
-        super(props);
-        this.state = { search: "" };
-        }
-        
-        
-        
-       handleUpdate(evt) {
-              this.setState({ search: evt.target.value });
-            };
-        
-      async handleSearch(evt) {
-          const site =  await getCampInfo(this.state.search);
-          this.setState(site});
-          }
     
     <div classname="container">
      <div style={{ margin: "auto atuo", width: "600px, textAlign: "center"}}
