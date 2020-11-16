@@ -8,19 +8,18 @@ export default function Camps() {
         constructor(props) {
         super(props);
         this.state = { search: "" };
-        };
+        }
         
         
         
        handleUpdate(evt) {
               this.setState({ search: evt.target.value });
-            };
+            }
         
       async handleSearch(evt) {
-            const campground = await getInfo(this.state.search);
-            console.log(campground);
-            this.setState({ campground });
-          };
+          const site =  awwait getCampInfo(this.state.search);
+          this.setState(site})
+          }
 
   return (
    <Layout>
@@ -28,11 +27,8 @@ export default function Camps() {
       <p>This is the search page</p>
         <input
             type = "text"
-            name = "query"
-            value = {query}
-            id = "search-input"
-            placeholder= "search"
-            onChange ={this.handleOnInputChange}
+            value = {this.state.search} 
+            onChange ={this.handleUpdate.bind(this)}
         />
     </div>
     </Layout>
