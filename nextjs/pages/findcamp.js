@@ -22,8 +22,8 @@ export default function Camps() {
           }
 
   return (
-   <Layout>
     <div classname="container">
+     <div style={{ margin: "auto atuo", width: "600px, textAlign: "center"}}
       <p>This is the search page</p>
         <input
             type = "text"
@@ -31,7 +31,7 @@ export default function Camps() {
             onChange ={this.handleUpdate.bind(this)}
         />
     </div>
-    </Layout>
+    <div className="button-style" onCLick={this.handleSearch.bind(this)}</div>
   )
 }
 
