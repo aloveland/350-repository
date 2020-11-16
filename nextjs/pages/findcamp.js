@@ -4,7 +4,7 @@ import {getCampInfo} from '../lib/utils.js';
     
 
   
-    
+    render(
     <div classname="container"
     // <div style={{ margin: "auto atuo", width: "600px, textAlign: "center"}}
       <p>This is the search page</p>
@@ -16,7 +16,7 @@ import {getCampInfo} from '../lib/utils.js';
     </div>
     </div>
     <div className="button-style" onCLick={this.handleSearch.bind(this)}>Search</div>
-
+        )
 
 
 
