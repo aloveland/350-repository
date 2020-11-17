@@ -51,7 +51,7 @@ async handleSearch(evt) {
           <div>
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
-	 	<h3>{this.state.campInfo.state} <br/>{((parseInt(this.state.campInfo.acres) * 100).toLocaleString())} acres</h3>
+	 	<h3>{this.state.campInfo.closest_town} <br/>{((parseInt(this.state.campInfo.description)  acres</h3>
           </div> : null}
 
         
@@ -90,7 +90,7 @@ async handleSearch(evt) {
           .App-logo {
             height: 400px;
           }
-        `}</style>
+        }</style>
       </div>
 
     );
