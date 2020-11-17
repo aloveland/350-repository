@@ -31,8 +31,8 @@ async handleSearch(evt) {
           borderStyle: "groove",
         }}
       >
-        <h1>National Park Search</h1>
-        <img src="/static/nationalPark1.jpg" className="App-logo" />
+        <h1>Nnew Mexico Campgorund Search</h1>
+        <img src="/static/newmexico.jpg" className="App-logo" />
       
         <p>
           <input
