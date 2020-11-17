@@ -3,11 +3,11 @@ import {getCampInfo} from '../lib/utils.js';
 const searchBar = document.getElementById('searchBar');
 
 
-
+if(searchBar){
 searchBar.addEventListener("keyup", e =>{
 	const searchString = e.target.value;
 	
-});
+});}
 
 
  export default function SearchBox(props){
