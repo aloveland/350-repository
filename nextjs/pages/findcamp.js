@@ -8,8 +8,8 @@ class Home extends React.Component {
   }
 	
 async handleSearch(evt) {
-    const parkInfo = await getParkInfo(this.state.search);
-    console.log(parkInfo);
+    const campInfo = await getCampInfo(this.state.search);
+    console.log(campInfo);
      this.setState({parkInfo});
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
@@ -50,8 +50,8 @@ async handleSearch(evt) {
 	{this.state.parkInfo ?
           <div>
 		<br />
-  		<h2>{this.state.parkInfo.name}</h2>
-	 	<h3>{this.state.parkInfo.state} <br/>{((parseInt(this.state.parkInfo.acres) * 100).toLocaleString())} acres</h3>
+  		<h2>{this.state.campInfo.name}</h2>
+	 	<h3>{this.state.campInfo.state} <br/>{((parseInt(this.state.campInfo.acres) * 100).toLocaleString())} acres</h3>
           </div> : null}
 
         
