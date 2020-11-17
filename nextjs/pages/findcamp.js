@@ -47,7 +47,7 @@ async handleSearch(evt) {
           Submit
         </div>
 
-	{this.state.parkInfo ?
+	{this.state.campInfo ?
           <div>
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
