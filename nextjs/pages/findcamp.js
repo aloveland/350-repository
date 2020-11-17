@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from 'react-dom';
 import {getCampInfo} from '../lib/utils.js';
 ReactDOM.render(searchBar, document.getElementById('searchBar'));
 
