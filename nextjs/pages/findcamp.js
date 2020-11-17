@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import {getCampInfo} from '../lib/utils.js';
 var searchBar;
+if(document){
 ReactDOM.render(searchBar, document.getElementById('searchBar'));
-
+}
 
 if(searchBar){
 searchBar.addEventListener("keyup", e =>{
