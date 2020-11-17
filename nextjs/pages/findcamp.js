@@ -3,31 +3,33 @@ import ReactDOM from 'react-dom';
 import {getCampInfo} from '../lib/utils.js';
 var searchBar;
 
-if (typeof document !== 'undefined') {
-  ReactDOM.render(searchBar, document.getElementById('searchBar'));
-}
 
-if(searchBar){
-searchBar.addEventListener("keyup", e =>{
-	const searchString = e.target.value;
+
+
+class App extends Component{
 	
-});}
+	state = {
+		search : "";
+	}
 
-console.log(searchBar);
 console.log("test");
-
- export default function SearchBox(props){
+const {search} = this.state;
+console.log(search);
 	
 	return(
 		<input type='text'
 		placeholder='search'
 		id='searchBar'
+		onChange={this.onchange}
 		/>
+		
+		
+		onchange = e =>{
+			this.setState({ search : e.target.value });
+		}	
 
 
 	)
 
-
-
- }
+}
 
