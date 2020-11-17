@@ -88,7 +88,7 @@ async handleSearch(evt) {
             font-size: 1.4rem;
           }
           .App-logo {
-            height: 500px;
+            height: 400px;
           }
         `}</style>
       </div>
