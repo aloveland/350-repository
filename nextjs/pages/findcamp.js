@@ -27,11 +27,11 @@ async handleSearch(evt) {
           margin: "auto auto",
           width: "1600x",
           textAlign: "center",
-          background: "#daf6db",
+          background: "#0000ff",
           borderStyle: "groove",
         }}
       >
-        <h1>Nnew Mexico Campground Search</h1>
+        <h1>New Mexico Campground Search</h1>
         <img src="/static/newmexico.jpg" className="App-logo" />
       
         <p>
