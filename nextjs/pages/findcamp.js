@@ -1,4 +1,4 @@
-import {getParkInfo} from '../lib/utils.js';
+import {getCampInfo} from '../lib/utils.js';
 import React from "react";
 
 class Home extends React.Component {
