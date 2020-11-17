@@ -3,7 +3,7 @@ require("isomorphic-fetch");
 function getCampInfo(name) {
   console.log("Fetching");
   return fetch('http://35.190.190.219/api/info?q=${name}').then(function(name) {
-    return res.json();
+    return name.json();
   });
 }
 
