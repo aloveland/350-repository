@@ -1,7 +1,7 @@
 import React from "react";
 import {getCampInfo} from '../lib/utils.js';
 const searchBar = document.getElementById('searchBar');
-
+ReactDOM.render(searchBar, document.getElementById('searchBar'));
 
 
 if(searchBar){
