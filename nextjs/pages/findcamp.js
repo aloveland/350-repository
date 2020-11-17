@@ -1,4 +1,3 @@
-
 import React from "react";
 import {getCampInfo} from '../lib/utils.js';
 
@@ -15,5 +14,4 @@ import {getCampInfo} from '../lib/utils.js';
 
 
  }
-
 
