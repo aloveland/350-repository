@@ -86,11 +86,11 @@ async handleSearch(evt) {
           h3 {
             font-family: "Arial";
             font-size: 1.4rem;
-          '}
+          }
           .App-logo {
             height: 400px;
           }
-        }</style>
+        `}</style>
       </div>
 
     );
