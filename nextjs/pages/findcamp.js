@@ -8,6 +8,7 @@ class Home extends React.Component {
   }
 	
 async handleSearch(evt) {
+   console.log("here");
     const campInfo = await getCampInfo(this.state.search);
     console.log(campInfo);
      this.setState({campInfo});
@@ -44,7 +45,6 @@ async handleSearch(evt) {
         </p>
 		
         <div className="button-style" onClick={this.handleSearch.bind(this)}>
-		console.log("here");
           Submit
         </div>
 
