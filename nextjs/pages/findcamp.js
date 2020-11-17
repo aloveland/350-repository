@@ -9,6 +9,7 @@ searchBar.addEventListener("keyup", e =>{
 	
 });}
 
+console.log(searchBar);
 
  export default function SearchBox(props){
 	
