@@ -10,7 +10,7 @@ class Home extends React.Component {
 async handleSearch(evt) {
     const campInfo = await getCampInfo(this.state.search);
     console.log(campInfo);
-     this.setState({parkInfo});
+     this.setState({campInfo});
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
     // add the information to the state
