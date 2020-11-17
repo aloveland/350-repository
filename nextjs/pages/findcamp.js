@@ -51,7 +51,7 @@ async handleSearch(evt) {
           <div>
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
-	 	<h3>{this.state.campInfo.closest_town} <br/>{((parseInt(this.state.campInfo.description)  acres</h3>
+	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description</h3>
           </div> : null}
 
         
