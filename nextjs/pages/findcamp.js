@@ -27,7 +27,7 @@ async handleSearch(evt) {
           margin: "auto auto",
           width: "1600x",
           textAlign: "center",
-          background: "#0000ff",
+          background: "#Add8E6",
           borderStyle: "groove",
         }}
       >
