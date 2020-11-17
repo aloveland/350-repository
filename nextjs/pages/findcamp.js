@@ -2,7 +2,7 @@ import React from "react";
 import {getCampInfo} from '../lib/utils.js';
 
  
-  const SearchBox = (props) =>{
+  export default function SearchBox = (props) =>{
     
     return(
       <input type='search'
