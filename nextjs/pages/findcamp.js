@@ -31,7 +31,7 @@ async handleSearch(evt) {
           borderStyle: "groove",
         }}
       >
-	var pictureONE = /static/newmexico.jpg;	
+	var pictureONE = "/static/newmexico.jpg";	
         <h1>New Mexico Campground Search</h1>
         <img src= pictureONE className="App-logo" />
       
