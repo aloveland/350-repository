@@ -30,10 +30,9 @@ async handleSearch(evt) {
           background: "#Add8E6",
           borderStyle: "groove",
         }}
-      >
-	var pictureONE = "/static/newmexico.jpg";	
+      >	
         <h1>New Mexico Campground Search</h1>
-        <img src= (pictureONE)  className="App-logo" />
+        <img src= /static/newmexico.jpg className="App-logo" />
       
         <p>
           <input
@@ -53,7 +52,7 @@ async handleSearch(evt) {
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
-	 	pcitureONE = this.state.campInfo.image_url;
+	 	<img src=  state.campInfo.image_url "App-logo" />
           </div> : null}
 
         
