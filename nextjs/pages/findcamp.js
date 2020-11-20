@@ -20,7 +20,7 @@ async handleSearch(evt) {
   async handleUpdate(evt){
 	this.setState({search: evt.target.value});
  	 }
-	
+  var picture = /static/newmexico.jpg;	
   render() {
     return (
       <div
@@ -33,7 +33,7 @@ async handleSearch(evt) {
         }}
       >
         <h1>New Mexico Campground Search</h1>
-        <img src="/static/newmexico.jpg" className="App-logo" />
+        <img src= picture className="App-logo" />
       
         <p>
           <input
