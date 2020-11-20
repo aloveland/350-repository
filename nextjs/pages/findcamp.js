@@ -52,7 +52,7 @@ async handleSearch(evt) {
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
-	 	<img src=  state.campInfo.image_url "App-logo" />
+	 	<img src=  this.state.campInfo.image_url "App-logo" />
           </div> : null}
 
         
