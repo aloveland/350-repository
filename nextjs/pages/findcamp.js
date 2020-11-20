@@ -33,7 +33,7 @@ async handleSearch(evt) {
       >
 	var pictureONE = "/static/newmexico.jpg";	
         <h1>New Mexico Campground Search</h1>
-        <img src= pictureONE className="App-logo" />
+        <img src= String(pictureONE) className="App-logo" />
       
         <p>
           <input
