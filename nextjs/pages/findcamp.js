@@ -20,7 +20,6 @@ async handleSearch(evt) {
   async handleUpdate(evt){
 	this.setState({search: evt.target.value});
  	 }
-  var picture = /static/newmexico.jpg;	
   render() {
     return (
       <div
@@ -32,8 +31,9 @@ async handleSearch(evt) {
           borderStyle: "groove",
         }}
       >
+	var pictureONE = /static/newmexico.jpg;	
         <h1>New Mexico Campground Search</h1>
-        <img src= picture className="App-logo" />
+        <img src= pictureONE className="App-logo" />
       
         <p>
           <input
@@ -53,6 +53,7 @@ async handleSearch(evt) {
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
+	 	pcitureONE = this.state.campInfo.image_url;
           </div> : null}
 
         
