@@ -25,6 +25,7 @@ async handleSearch(evt) {
       <div
         style={{
           margin: "auto auto",
+	  margin-bottom: "100px",
           width: "800px",
           textAlign: "center",
           background: "#daf6db",
