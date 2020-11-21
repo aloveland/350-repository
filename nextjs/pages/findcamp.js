@@ -23,13 +23,6 @@ async handleSearch(evt) {
   render() {
     return (
       <div
-        style={{
-          margin: "auto auto",
-          width: "1600x",
-          textAlign: "center",
-          background: "#Add8E6",
-          borderStyle: "groove",
-        }}
       >	
         <h1>New Mexico Campground Search</h1>
         <img src= "/static/newmexico.jpg" className ="App-logo" />
