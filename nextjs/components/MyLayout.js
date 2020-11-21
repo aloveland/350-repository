@@ -2,6 +2,7 @@ import Header from './Header'
 
 const layoutStyle = {
   margin: 'auto auto',
+  textAlign: 'center',
   padding: 20,
   border: '1px solid #DDD'
 }
