@@ -5,6 +5,7 @@ const layoutStyle = {
   textAlign: 'center',
   padding: 20,
   border: '1px solid #DDD'
+  fontSize: 15px;
 }
 
 export default function Layout(props) {
