@@ -4,7 +4,7 @@ const layoutStyle = {
   margin: 'auto auto',
   textAlign: 'center',
   padding: 20,
-  border: '1px solid #DDD'
+  border: '1px solid #DDD',
   font-size: 15px,
 }
 
