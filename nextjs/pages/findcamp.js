@@ -27,7 +27,6 @@ async handleSearch(evt) {
           margin: "auto auto",
           width: "1600x",
           textAlign: "center",
-          borderStyle: "groove",
         }}
       >	
         <h1>New Mexico Campground Search</h1>
