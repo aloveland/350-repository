@@ -28,7 +28,7 @@ async handleSearch(evt) {
           width: "1600x",
           textAlign: "center",
 	  borderStyle: "groove",
-	  border-color: "#166d17",
+	  borderColor: "#166d17",
         }}
       >	
         <h1>New Mexico Campground Search</h1>
