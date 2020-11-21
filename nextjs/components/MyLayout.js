@@ -3,8 +3,8 @@ import Header from './Header'
 const layoutStyle = {
   margin: 'auto auto',
   textAlign: 'center',
-  padding: 20,
-  border: '10px solid #DDD',
+  padding: 40,
+  border: '1px solid #DDD',
   size: 30,
 }
 
