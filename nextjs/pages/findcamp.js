@@ -1,4 +1,5 @@
 import {getCampInfo} from '../lib/utils.js';
+import Layout from '../components/MyLayout.js'
 import React from "react";
 
 class Home extends React.Component {
@@ -22,6 +23,7 @@ async handleSearch(evt) {
  	 }
   render() {
     return (
+       <Layout>
       <div
 	  style={{
           margin: "auto auto",
@@ -93,7 +95,7 @@ async handleSearch(evt) {
           }
         `}</style>
       </div>
-
+    </Layout>
     );
   }
 }
