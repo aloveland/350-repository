@@ -1,7 +1,8 @@
 import Link from 'next/link'
 
 const linkStyle = {
-  marginRight: 30
+  marginRight: 30,
+  font-size: 30px,
 }
 
 export default function Header() {
