@@ -8,6 +8,8 @@ class Home extends React.Component {
     this.state = { search: "" };
   }
 	
+let videos = ['Apache', 'https://www.youtube.com/watch?v=FttsMtXyqo4&ab_channel=TripleJ%E2%80%99sTravels'];
+	
 async handleSearch(evt) {
    console.log("here");
     const campInfo = await getCampInfo(this.state.search);
