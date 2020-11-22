@@ -1,3 +1,4 @@
+import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
@@ -33,7 +34,7 @@ async handleSearch(evt) {
         }}
       >	
         <h1>New Mexico Campground Search</h1>
-        <img src= "/static/newmexico.jpg" className ="App-logo" />
+        <src= "https://www.youtube.com/watch?v=0la-Rk6wqP8&feature=youtu.be&ab_channel=Inquiryum" >
       
         <p>
           <input
@@ -51,9 +52,9 @@ async handleSearch(evt) {
 	{this.state.campInfo ?
           <div>
 		<br />
-  		<iframe width="420" height="315"
-      src="https://www.youtube.com/watch?v=0la-Rk6wqP8&feature=youtu.be&ab_channel=Inquiryum">
-      </iframe>
+  		<h2>{this.state.campInfo.name}</h2>
+	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
+	 	<img src=  {this.state.campInfo.image_url} className = "App-logo" />
           </div> : null}
 
         
