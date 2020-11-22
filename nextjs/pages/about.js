@@ -55,9 +55,9 @@ async handleSearch(evt) {
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
-	 	<YouTubePlayer
-		  url='https://www.youtube.com/watch?v=d46Azg3Pm4c'
-		/>
+	 	<iframe width="400" height="300"
+   		 src="https://www.youtube.com/embed/a3ICNMQW7Ok?controls=0">
+		</iframe>
           </div> : null}
 
         
