@@ -1,6 +1,7 @@
 import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
+import ReactPlayer from "react-player"
 
 class Home extends React.Component {
   constructor(props) {
@@ -54,7 +55,9 @@ async handleSearch(evt) {
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
-	 	<src=  {this.state.campInfo.image_url} className = "App-logo" />
+	 	 <ReactPlayer
+        		url="https://www.youtube.com/watch?v=ug50zmP9I7s"
+      			/>
           </div> : null}
 
         
