@@ -1,7 +1,7 @@
 import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player";
 
 class Home extends React.Component {
   constructor(props) {
