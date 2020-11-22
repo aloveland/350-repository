@@ -1,7 +1,7 @@
 import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
-import YouTubePlayer from “react-player/lib/players/YouTube”;
+import YouTubePlayer from "react-player/lib/players/YouTube";
 
 class Home extends React.Component {
   constructor(props) {
