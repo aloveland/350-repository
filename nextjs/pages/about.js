@@ -57,7 +57,7 @@ async handleSearch(evt) {
         
 
         <br />
-        <style jsx>{`
+        <style jsx>{
           .button-style {
             margin: auto auto;
             margin-top: 35px;
