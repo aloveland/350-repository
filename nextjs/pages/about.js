@@ -57,7 +57,7 @@ async handleSearch(evt) {
         
 
         <br />
-        <style jsx>{
+        <style jsx>{`
           .button-style {
             margin: auto auto;
             margin-top: 35px;
@@ -90,7 +90,7 @@ async handleSearch(evt) {
           .App-logo {
             height: 400px;
           }
-        }</style>
+        `}</style>
       </div>
     </Layout>
     );
