@@ -47,7 +47,7 @@ async handleSearch(evt) {
         }}
       >	
         <h1>New Mexico Campground Videos</h1>
-        <img src= "/static/newmexico.jpg" className ="App-logo" />
+        <img src= "/static/newmexicopart2.jpg" className ="App-logo" />
       
  
 		
