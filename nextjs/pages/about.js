@@ -24,7 +24,16 @@ async handleSearch(evt) {
  	 }
   render() {
     let videos = [['Apache', ' https://www.youtube.com/watch?v=IBwIF3V-6gA&feature=emb_title&ab_channel=thedavidrushtravelshow'], 
-		   ['Apache Creek', 'https://www.youtube.com/watch?v=FttsMtXyqo4&ab_channel=TripleJ%E2%80%99sTravels']];
+		   ['Apache Creek', 'https://www.youtube.com/watch?v=FttsMtXyqo4&ab_channel=TripleJ%E2%80%99sTravels'], 
+		  ['Armijo Springs', 'https://www.youtube.com/watch?v=5VOwUF5mkiw&ab_channel=TripleJ%E2%80%99sTravels'],
+		   ['Baca', 'https://www.youtube.com/watch?v=jkeGMaDYFZE&ab_channel=FrugalRVGal'],
+		    ['James Canyon', 'Not available'],
+		    ['Oak Grove','https://www.youtube.com/watch?v=3TafiJEwLG8&feature=emb_title&ab_channel=MichaelNoker'],
+		     ['Piñon','https://thedyrt.com/camping/new-mexico/new-mexico-pinon-campground/review/60360/media/425132?autoplay=true'],
+		     ['Pueblo Park','not available'],
+		      ['Railroad Canyon', 'not available'],
+		  	
+		     ;
     return (
        <Layout>
       <div
