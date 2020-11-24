@@ -90,7 +90,7 @@ async handleSearch(evt) {
           .App-logo {
             height: 400px;
           }
-        `}</style>
+        }</style>
       </div>
     </Layout>
     );
