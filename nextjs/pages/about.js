@@ -51,7 +51,12 @@ async handleSearch(evt) {
         <h2> Apache Campground </h2>
 	    <iframe width="560" height="315" src="https://www.youtube.com/embed/IBwIF3V-6gA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  
-		
+	
+	    
+	    
+	 <img src= "/static/newmexicopart2.jpg" className ="App-logo" />
+        <h2> Apache Campground 2</h2>
+	    <iframe width="560" height="315" src="https://www.youtube.com/embed/IBwIF3V-6gA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      
 
 	
