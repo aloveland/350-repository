@@ -46,7 +46,7 @@ async handleSearch(evt) {
 	  borderColor: "#166d17",
         }}
       >	
-        <h1>New Mexico Campground Vdieos/h1>
+        <h1>New Mexico Campground Vdieos</h1>
         <img src= "/static/newmexico.jpg" className ="App-logo" />
       
  
