@@ -53,7 +53,7 @@ async handleSearch(evt) {
           <div>
 		<br />
 		if(this.state.campInfo.name == null){
-		    <h2>{value} Campground not found</h2>
+		    <h2>{this.state.search} Campground not found</h2>
 			}
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
