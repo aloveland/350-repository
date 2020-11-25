@@ -16,7 +16,7 @@ async handleSearch(evt) {
       console.log("here");
       console.log(this.state.search + "test");
       if(campInfo == null){
-	<h2> { this.state.search campground not found</h2>      
+	<h2>this.state.search campground not found</h2>      
       }
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
