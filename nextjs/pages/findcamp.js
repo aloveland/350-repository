@@ -12,16 +12,17 @@ class Home extends React.Component {
 async handleSearch(evt) {
    console.log("here");
     const campInfo = await getCampInfo(this.state.search);
-    console.log(campInfo);
-     this.setState({campInfo});
-      console.log("here");
-      console.log(this.state.search + "test");
-      if(campInfo == null){
+     if(campInfo == null){
 	globalString = this.state.search + " campground not found";    
       }
 	else{
 		globalString = "";
 	}
+    console.log(campInfo);
+     this.setState({campInfo});
+      console.log("here");
+      console.log(this.state.search + "test");
+ 
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
     // add the information to the state
@@ -58,9 +59,6 @@ async handleSearch(evt) {
           Submit
 	<h2>{globalString}</h2>
         </div>
-	if(campInfo == null){
-		console.log("bartholomew johnson");
-	}
 	{this.state.campInfo ?
 		
 	<div>
