@@ -58,7 +58,7 @@ async handleSearch(evt) {
           Submit
 	<h2>{globalString}</h2>
         </div>
-	if{campInfo == null){
+	if(campInfo == null){
 		console.log("bartholomew johnson");
 	}
 	{this.state.campInfo ?
