@@ -1,16 +1,28 @@
-import {getParkInfo} from '../lib/utils.js';
+import {getCampInfo} from '../lib/utils.js';
+import Layout from '../components/MyLayout.js'
 import React from "react";
 
+
+var globalString = "";
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { search: "" };
-  }
-	
+  }	
 async handleSearch(evt) {
-    const parkInfo = await getParkInfo(this.state.search);
-    console.log(parkInfo);
-     this.setState({parkInfo});
+   console.log("here");
+    const campInfo = await getCampInfo(this.state.search);
+     if(campInfo == null){
+	globalString = this.state.search + " campground not found";    
+      }
+	else{
+		globalString = "";
+	}
+    console.log(campInfo);
+     this.setState({campInfo});
+      console.log("here");
+      console.log(this.state.search + "test");
+ 
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
     // add the information to the state
@@ -19,41 +31,43 @@ async handleSearch(evt) {
   async handleUpdate(evt){
 	this.setState({search: evt.target.value});
  	 }
-  var picture = "/static/nationalPark1.jpg";
   render() {
     return (
+       <Layout>
       <div
-        style={{
-          margin: "40px",
-	  margin-bottom: "100px",
-          width: "800px",
+	  style={{
+          margin: "auto auto",
+          width: "1600x",
           textAlign: "center",
-          background: "#daf6db",
-          borderStyle: "groove",
+	  borderStyle: "groove",
+	  borderColor: "#166d17",
         }}
-      >
-        <h1>National Park Search</h1>
-        <img src= picture className="App-logo" />
+      >	
+        <h1>New Mexico Campground Search</h1>
+        <img src= "/static/newmexico.jpg" className ="App-logo" />
       
         <p>
           <input
             className="input-style"
             type="text"
             value={this.state.search}
-            onChange={this.handleUpdate.bind(this)}	
+            onChange={this.handleUpdate.bind(this)}
           />
         </p>
 		
         <div className="button-style" onClick={this.handleSearch.bind(this)}>
           Submit
+	<h2>{globalString}</h2>
         </div>
-
-	{this.state.parkInfo ?
-          <div>
+	{this.state.campInfo ?
+		
+	<div>
 		<br />
-  		<h2>{this.state.parkInfo.name}</h2>
-	 	<h3>{this.state.parkInfo.state} <br/>{((parseInt(this.state.parkInfo.acres) * 100).toLocaleString())} acres</h3>
-          </div> : null}
+  		<h2>{this.state.campInfo.name}</h2>
+	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
+	 	<img src=  {this.state.campInfo.image_url} className = "App-logo" />
+          </div> : <h2>{globalString}</h2>}
+	
 
         
 
@@ -71,12 +85,10 @@ async handleSearch(evt) {
             line-height: 1.9;
             font-size: 1.4rem;
           }
-
           .input-style {
             font-size: 1.4rem;
             line-height: 1.6;
           }
-
           h1 {
             font-size: 2.1rem;
             font-family: "Arial";
@@ -86,20 +98,19 @@ async handleSearch(evt) {
             font-family: "Arial";
             font-size: 1.6rem;
           }
-
           h3 {
             font-family: "Arial";
             font-size: 1.4rem;
           }
-
           .App-logo {
-            height: 500px;
+            height: 400px;
           }
         `}</style>
       </div>
-
+    </Layout>
     );
   }
 }
 
 export default Home;
+
