@@ -37,7 +37,7 @@ async handleSearch(evt) {
       <div
 	  style={{
           margin: "auto auto",
-          width: "1800x",
+          width: "1600x",
           textAlign: "center",
 	  borderStyle: "groove",
 	  borderColor: "#166d17",
