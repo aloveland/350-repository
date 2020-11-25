@@ -17,7 +17,7 @@ async handleSearch(evt) {
       console.log("here");
       console.log(this.state.search + "test");
       if(campInfo == null){
-	globalString = this.state.search + "campground not found";    
+	globalString = this.state.search + " campground not found";    
       }
 	else{
 		globalString = "";
