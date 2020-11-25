@@ -50,13 +50,14 @@ async handleSearch(evt) {
         </div>
 
 	{this.state.campInfo ?
-        if(this.state.search != null){  
+		console.log("here");
+		console.log(this.state.campInfo);
 	<div>
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
 	 	<img src=  {this.state.campInfo.image_url} className = "App-logo" />
-          </div> : null}}
+          </div> : null}
 	
 
         
