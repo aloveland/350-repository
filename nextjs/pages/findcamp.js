@@ -2,12 +2,13 @@ import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
+
+var globalString = "";
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { search: "" };
-  }
-var globalString = "";	
+  }	
 async handleSearch(evt) {
    console.log("here");
     const campInfo = await getCampInfo(this.state.search);
