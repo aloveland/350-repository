@@ -46,10 +46,9 @@ async handleSearch(evt) {
 	  borderColor: "#166d17",
         }}
       >	
-        <h1>New Mexico Campground Videos</h1>
+        <h1>New Mexico Campgrounds</h1>
         <img src= "/static/newmexicopart2.jpg" className ="App-logo" />
-        <h2> New Mexico Campgrounds </h2>
-        <h3> Find the best way to recconect with nature and take a break from the hectic life in the city. Use our database of campgrounds to find the best site for you! Navigate to our search page or the about page to find more information.</h3>
+        <h2>Find the best way to recconect with nature and take a break from the hectic life in the city. Use our database of campgrounds to find the best site for you! Navigate to our search page or the about page to find more information.</h2>
 	 
         <br />
         <style jsx>{`
