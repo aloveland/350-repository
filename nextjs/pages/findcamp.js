@@ -7,7 +7,7 @@ class Home extends React.Component {
     super(props);
     this.state = { search: "" };
   }
-	
+var globalString = "";	
 async handleSearch(evt) {
    console.log("here");
     const campInfo = await getCampInfo(this.state.search);
@@ -16,8 +16,11 @@ async handleSearch(evt) {
       console.log("here");
       console.log(this.state.search + "test");
       if(campInfo == null){
-	<h2>this.state.search campground not found</h2>      
+	globalString = this.state.search + "campground not found";    
       }
+	else{
+		globalString = "";
+	}
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
     // add the information to the state
@@ -58,6 +61,7 @@ async handleSearch(evt) {
 		
 	<div>
 		<br />
+		<h2>globalString</h2>
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
 	 	<img src=  {this.state.campInfo.image_url} className = "App-logo" />
