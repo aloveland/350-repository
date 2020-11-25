@@ -41,7 +41,9 @@ async handleSearch(evt) {
             className="input-style"
             type="text"
             value={this.state.search}
-            onChange={this.handleUpdate.bind(this)}	
+            onChange={this.handleUpdate.bind(this)}
+	    console.log("here");
+	    console.log(this.state.campInfo);
           />
         </p>
 		
@@ -50,8 +52,7 @@ async handleSearch(evt) {
         </div>
 
 	{this.state.campInfo ?
-		console.log("here");
-		console.log(this.state.campInfo);
+		
 	<div>
 		<br />
   		<h2>{this.state.campInfo.name}</h2>
