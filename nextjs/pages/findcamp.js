@@ -50,15 +50,14 @@ async handleSearch(evt) {
         </div>
 
 	{this.state.campInfo ?
-          <div>
+        if(this.state.search != null){  
+	<div>
 		<br />
-		if(this.state.campInfo.name == null){
-		    <h2>{this.state.search} Campground not found</h2>
-			}
   		<h2>{this.state.campInfo.name}</h2>
 	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
 	 	<img src=  {this.state.campInfo.image_url} className = "App-logo" />
-          </div> : null}
+          </div> : null}}
+	
 
         
 
