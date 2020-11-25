@@ -20,6 +20,8 @@ async handleSearch(evt) {
   
   async handleUpdate(evt){
 	this.setState({search: evt.target.value});
+	  console.log("here");
+	    console.log(this.state.campInfo);
  	 }
   render() {
     return (
@@ -42,8 +44,6 @@ async handleSearch(evt) {
             type="text"
             value={this.state.search}
             onChange={this.handleUpdate.bind(this)}
-	    console.log("here");
-	    console.log(this.state.campInfo);
           />
         </p>
 		
