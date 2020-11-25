@@ -47,7 +47,7 @@ async handleSearch(evt) {
         }}
       >	
         <h1>New Mexico Campgrounds</h1>
-        <img src= "/static/newmexicopart2.jpg" className ="App-logo" />
+        <img src= "/static/newmexicocamper.jpg" className ="App-logo" />
         <h2>Find the best way to recconect with nature and take a break from the hectic life in the city. Use our database of campgrounds to find the best site for you! Navigate to our search page or the about page to find more information.</h2>
 	 
         <br />
