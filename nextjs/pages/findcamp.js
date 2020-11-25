@@ -14,7 +14,8 @@ async handleSearch(evt) {
     console.log(campInfo);
      this.setState({campInfo});
       console.log("here");
-      console.log(this.state.campInfo);
+      console.log(this.state.search);
+      
      //this.setState({search: evt.target.value});
      //onClick={this.handleSearch.bind(this);
     // add the information to the state
