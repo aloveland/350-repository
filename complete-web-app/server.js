@@ -26,7 +26,7 @@ app.get("/get", async (req, res) =>{
     const response = await pool.query(template,[term]);
     let results = [];
     let temp = {};
-    res.json{result: response};
+    res.json({result: response});
     console.log(response);
   
   }
