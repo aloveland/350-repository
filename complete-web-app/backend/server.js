@@ -7,7 +7,7 @@ app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-
+const pool = new Pool(config);
 app.get("/hello", (req, res) => {
 	res.json({msg: "Hello, World!"});
 });
