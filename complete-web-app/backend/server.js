@@ -6,7 +6,7 @@ app.set("port", 8080);
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({extended: true}));
 
-
+const Pool = require("pg").Pool;
 const pool = new Pool(config);
 app.get("/hello", (req, res) => {
 	res.json({msg: "Hello, World!"});
