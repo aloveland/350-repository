@@ -7,6 +7,12 @@ app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({extended: true}));
 
 const Pool = require("pg").Pool;
+const config = {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: "food_nutrition"
+};
 const pool = new Pool(config);
 app.get("/hello", (req, res) => {
 	res.json({msg: "Hello, World!"});
