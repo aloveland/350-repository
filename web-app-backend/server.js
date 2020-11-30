@@ -35,7 +35,7 @@ app.get("/search",async (req, res) => {
     const term = req.query.term;
     console.log(term);
     try {
-       const template = "SELECT * FROM entries WHERE description LIKE $1";
+       const template = "SELECT * FROM entries WHERE description LIKE $1 LIMIT 25";
        const check = await pool.query(template,["%" + term + "%"]);
         console.log(check);
         res.json({result: check});
