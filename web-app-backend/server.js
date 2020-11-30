@@ -52,6 +52,7 @@ app.get("/search",async (req, res) => {
             if(isNaN(fat) == false){ 
                  fat = fat.toFixed(2);
             }
+            fat = str.replace("null", "");
             obj.fat = fat;
             results.push(obj);
         }
