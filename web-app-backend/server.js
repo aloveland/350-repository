@@ -38,7 +38,18 @@ app.get("/search",async (req, res) => {
        const template = "SELECT * FROM entries WHERE description LIKE $1 LIMIT 25";
        const check = await pool.query(template,["%" + term + "%"]);
         console.log(check);
-        res.json({result: check});
+        let results = [];
+        let obj = {};
+        for(i = 0; i < check.rowCount; i++){
+            let obj = {};
+            obj.desc = check.rows[i].description;
+            obj.kcal = check.rows[i].kcal;
+            obj.protein = check.rows[i].protein_g;
+            \\obj.fat =
+             obj.carbs = check.rows[i].carbohydrate_g;
+            results.push(obj);
+        }
+        res.json({result: results});
         
     } catch (err){
         res.json({error: 'query failed'});
