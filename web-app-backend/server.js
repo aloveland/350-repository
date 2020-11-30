@@ -40,6 +40,7 @@ app.get("/search",async (req, res) => {
         console.log(check);
         let results = [];
         let obj = {};
+        var fat = 0;
         for(i = 0; i < check.rowCount; i++){
             let obj = {};
             obj.desc = check.rows[i].description;
@@ -47,6 +48,8 @@ app.get("/search",async (req, res) => {
             obj.protein = check.rows[i].protein_g;
             //obj.fat =
              obj.carbs = check.rows[i].carbohydrate_g;
+            fat = fat + check.rows[i].fa_sat_g + check.rows[i].fa_mono_g + check.rows[i].fa_poly_g;
+            obj.fat = fat;
             results.push(obj);
         }
         res.json({result: results});
