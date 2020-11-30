@@ -34,15 +34,13 @@ app.get("/search",async (req, res) => {
     console.log("here");
     const term = req.query.term;
     try {
-       const template = "SELECT * FROM entries WHERE description LIKE %" + "$1" + "%";
+       const template = "SELECT * FROM entries WHERE CONTAINS(description, $1)";
        const check = await pool.query(template,[term]);
         console.log(check);
         res.json({result: check});
         
     } catch (err){
-        console.log(check);
         res.json({error: 'query failed'});
-  
         console.log(err);
     }
 
