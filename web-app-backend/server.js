@@ -45,7 +45,7 @@ app.get("/search",async (req, res) => {
             obj.desc = check.rows[i].description;
             obj.kcal = check.rows[i].kcal;
             obj.protein = check.rows[i].protein_g;
-            \\obj.fat =
+            //obj.fat =
              obj.carbs = check.rows[i].carbohydrate_g;
             results.push(obj);
         }
