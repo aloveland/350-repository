@@ -40,7 +40,9 @@ app.get("/search",async (req, res) => {
         res.json({result: check});
         
     } catch (err){
+        console.log(check);
         res.json({error: 'query failed'});
+  
         console.log(err);
     }
 
