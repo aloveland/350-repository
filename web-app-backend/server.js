@@ -52,7 +52,7 @@ app.get("/search",async (req, res) => {
             if(isNaN(fat) == false){ 
                  fat = fat.toFixed(2);
             }
-            for(i = 0; i < 10; i++){
+            for(i = 0; i < 5; i++){
                 fat = fat.replace("null", "");
             }
             obj.fat = fat;
