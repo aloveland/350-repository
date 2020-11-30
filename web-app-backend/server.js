@@ -49,7 +49,9 @@ app.get("/search",async (req, res) => {
             //obj.fat =
              obj.carbs = check.rows[i].carbohydrate_g;
             fat = fat + check.rows[i].fa_sat_g + check.rows[i].fa_mono_g + check.rows[i].fa_poly_g;
-            fat = fat.toFixed(2);
+            if(isNaN(fat) == false){ 
+                 fat = fat.toFixed(2);
+            }
             obj.fat = fat;
             results.push(obj);
         }
