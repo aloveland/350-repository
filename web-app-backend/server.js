@@ -53,11 +53,8 @@ app.get("/search",async (req, res) => {
                  fat = fat.toFixed(2);
             }
             var fatsplit = fat.split(".");
+            fat = fatsplit[0] + fatsplit[1];
             console.log(fatsplit[0] + "K" + fatsplit[1]);
-            
-            for(i = 0; i < 5; i++){
-                fat = fat.replace("null", "");
-            }
             obj.fat = fat;
             results.push(obj);
         }
