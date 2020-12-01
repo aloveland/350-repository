@@ -56,6 +56,7 @@ app.get("/search",async (req, res) => {
             fatsplit[1] = fatsplit[1].substr(0, 2);
             fat = fatsplit[0] + fatsplit[1];
             console.log(fatsplit[0] + "CHECK HERERERER" + fatsplit[1]);
+            console.log("FAAT FULL THING HERE " + fat);
             obj.fat = fat;
             results.push(obj);
         }
