@@ -52,6 +52,9 @@ app.get("/search",async (req, res) => {
             if(isNaN(fat) == false){ 
                  fat = fat.toFixed(2);
             }
+            var fatsplit = fat.split(".");
+            console.log(fatsplit[0] + "K" + fatsplit[1]);
+            
             for(i = 0; i < 5; i++){
                 fat = fat.replace("null", "");
             }
