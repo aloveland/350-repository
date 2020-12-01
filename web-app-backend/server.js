@@ -53,8 +53,9 @@ app.get("/search",async (req, res) => {
                  fat = fat.toFixed(2);
             }
             var fatsplit = fat.split(".");
+            fatsplit = fatsplit.substring(0, 2);
             fat = fatsplit[0] + fatsplit[1];
-            console.log(fatsplit[0] + "K" + fatsplit[1]);
+            console.log(fatsplit[0] + "CHECK HERERERER" + fatsplit[1]);
             obj.fat = fat;
             results.push(obj);
         }
