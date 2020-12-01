@@ -49,14 +49,9 @@ app.get("/search",async (req, res) => {
             //obj.fat =
              obj.carbs = check.rows[i].carbohydrate_g;
             fat = fat + check.rows[i].fa_sat_g + check.rows[i].fa_mono_g + check.rows[i].fa_poly_g;
-            if(isNaN(fat) == false){ 
-                 fat = fat.toFixed(2);
-            }
-            var fatsplit = fat.split(".");
+             var fatsplit = fat.split(".");
             fatsplit[1] = fatsplit[1].substr(0, 2);
-            fat = fatsplit[0] + fatsplit[1];
-            console.log(fatsplit[0] + "CHECK HERERERER" + fatsplit[1]);
-            console.log("FAAT FULL THING HERE " + fat);
+            fat = fatsplit[0] + "." + fatsplit[1];
             obj.fat = fat;
             results.push(obj);
         }
