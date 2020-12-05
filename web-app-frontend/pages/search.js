@@ -12,4 +12,4 @@ const Search = (props) => {
 		this.setState({
 			inputValue: event.target.value
 		})
-]
+	}
