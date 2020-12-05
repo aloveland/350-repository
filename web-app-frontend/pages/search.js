@@ -21,16 +21,6 @@ class Home extends React.Component {
  	 }
    render() {
     return (
-       <Layout>
-      <div
-	  style={{
-          margin: "auto auto",
-          width: "1600x",
-          textAlign: "center",
-	  borderStyle: "groove",
-	  borderColor: "#166d17",
-        }}
-      >	
         <h1>New Mexico Campground Search</h1>
         <img src= "/static/newmexico.jpg" className ="App-logo" />
       
