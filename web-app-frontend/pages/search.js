@@ -21,7 +21,7 @@ class Home extends React.Component {
  	 }
    render() {
     return (
-      
+      <>
         <p>
           <input
             className="input-style"
