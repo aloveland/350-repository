@@ -19,7 +19,6 @@ class Home extends React.Component {
    async handleUpdate(evt){
 	this.setState({search: evt.target.value});
  	 }
-   render() {
     return (
       <>
         <p>
@@ -85,7 +84,6 @@ class Home extends React.Component {
       </div>
     </Layout>
     );
-  }
 }
 
 export default Home;
