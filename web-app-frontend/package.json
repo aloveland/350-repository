@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "search.js",
+  "type": "module",
   "scripts": {
     "dev": "next",
     "build": "next build",
