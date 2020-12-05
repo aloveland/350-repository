@@ -1,13 +1,11 @@
 {
-  "name": "hello-next",
-  "type": "module",
+  "name": "web-app-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "The first node rudiment",
+  "main": "server.js",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
