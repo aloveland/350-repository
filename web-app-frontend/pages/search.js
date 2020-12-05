@@ -21,8 +21,6 @@ class Home extends React.Component {
  	 }
    render() {
     return (
-        <h1>New Mexico Campground Search</h1>
-        <img src= "/static/newmexico.jpg" className ="App-logo" />
       
         <p>
           <input
