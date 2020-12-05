@@ -1,4 +1,4 @@
-import {getCampInfo} from '../lib/utils.js';
+import {getNutritionInfo} from '../lib/utils.js';
 import React from "react";
 class Home extends React.Component {
   constructor(props) {
