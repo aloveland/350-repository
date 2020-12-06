@@ -10,7 +10,7 @@ class Home extends React.Component {
     this.state = { search: "" };
   }	
 async handleSearch(evt) {
-   console.log("here");
+   console.log("being queried");
     const campInfo = await getCampInfo(this.state.search);
      if(campInfo == null){
 	globalString = this.state.search + " campground not found";    
@@ -30,7 +30,7 @@ async handleSearch(evt) {
   
   async handleUpdate(evt){
 	console.log(this.state.search);
-	 this.handleSearch.bind(this);
+	 this.handleSearch.bind(this.state.search);
 	this.setState({search: evt.target.value});
  	 }
   render() {
