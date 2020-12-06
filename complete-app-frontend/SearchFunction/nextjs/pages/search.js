@@ -32,6 +32,9 @@ async handleSearch(evt) {
 	console.log(this.state.search);
 	 this.handleSearch.bind(this.state.search);
 	this.setState({search: evt.target.value});
+	  const campInfo = await getCampInfo(this.state.search);
+	  this.setState({campInfo});
+	  console.log(this.state.campInfo.description);
  	 }
   render() {
     return (
