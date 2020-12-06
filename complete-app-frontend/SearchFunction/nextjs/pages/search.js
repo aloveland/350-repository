@@ -63,9 +63,7 @@ async handleSearch(evt) {
 		
 	<div>
 		<br />
-  		<h2>{this.state.campInfo.name}</h2>
-	 	<h3>{this.state.campInfo.closest_town} <br/>{this.state.campInfo.description}</h3>
-	 	<img src=  {this.state.campInfo.image_url} className = "App-logo" />
+  		<h2>{this.state.campInfo.description}</h2>
           </div> : <h2>{globalString}</h2>}
 	
 
