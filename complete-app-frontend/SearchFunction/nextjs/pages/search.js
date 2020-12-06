@@ -43,8 +43,7 @@ async handleSearch(evt) {
 	  borderColor: "#166d17",
         }}
       >	
-        <h1>New Mexico Campground Search</h1>
-        <img src= "/static/newmexico.jpg" className ="App-logo" />
+        <h1>Food Search</h1>
       
         <p>
           <input
