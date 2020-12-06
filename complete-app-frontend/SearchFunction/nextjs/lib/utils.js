@@ -1,11 +1,5 @@
 require("isomorphic-fetch");
 
-fetch(request, {mode: 'no-cors'})
-.then(function(response) {
-  console.log(response); 
-}).catch(function(error) {  
-  console.log('Request failed', error)  
-});
 
 
 
