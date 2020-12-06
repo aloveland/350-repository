@@ -30,6 +30,7 @@ async handleSearch(evt) {
   
   async handleUpdate(evt){
 	console.log(this.state.search);
+	 this.handleSearch.bind(this);
 	this.setState({search: evt.target.value});
  	 }
   render() {
