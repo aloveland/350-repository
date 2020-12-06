@@ -29,6 +29,7 @@ async handleSearch(evt) {
   }
   
   async handleUpdate(evt){
+	console.log(this.state.search);
 	this.setState({search: evt.target.value});
  	 }
   render() {
