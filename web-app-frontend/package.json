@@ -1,0 +1,22 @@
+{
+  "name": "web-app-frontend",
+  "version": "1.0.0",
+  "description": "front end for complete web app",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "react-scripts": "^4.0.1",
+    "webpack": "^5.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "aloveland",
+  "license": "ISC"
+}
