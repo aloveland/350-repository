@@ -33,7 +33,7 @@ app.get('/hello', (req, res) => {
 });
 
 
-app.get("/search",async (req, res) => {
+app.get("/api/search",async (req, res) => {
     console.log("here");
     const term = req.query.term;
     console.log(term);
