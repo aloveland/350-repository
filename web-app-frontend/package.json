@@ -1,23 +1,22 @@
 {
-  "name": "hello-next",
+  "name": "web-app-frontend",
   "version": "1.0.0",
-  "description": "",
-  "main": "search.js",
+  "description": "front end for complete web app",
+  "main": "index.js",
   "type": "module",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "react-scripts": "^4.0.1",
+    "webpack": "^5.10.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "dev": "next",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "next build",
     "start": "next start"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "isomorphic-fetch": "^3.0.0",
-    "next": "^9.0.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-scripts": "^4.0.1",
-    "webpack": "^5.10.0"
-  }
+  "author": "aloveland",
+  "license": "ISC"
 }
