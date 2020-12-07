@@ -55,7 +55,7 @@ async handleSearch(evt) {
 	    let answer = {};
 	    for(x = 0; x <24; x++){
 		answer = {};
-		if(this.state.campInfo.results[x].desc != null){
+		if(this.state.campInfo.results[x] != null){
 			answer.desc = this.state.campInfo.results[x].desc;
 			answer.kcal = this.state.campInfo.results[x].kcal;
 			answer.protein = this.state.campInfo.results[x].protein;
