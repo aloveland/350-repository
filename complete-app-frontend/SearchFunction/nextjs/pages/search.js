@@ -7,7 +7,7 @@ var globalString = "";
 let answer = {};
 var h = 0;
 for(h = 0;h <25;h++){
-	if(typeof holdReslts[h] == undefined){
+	if(typeof holdResults[h] == undefined){
 		answer.desc = " ";
 		answer.kcal = " ";
 		 answer.protein = " ";
