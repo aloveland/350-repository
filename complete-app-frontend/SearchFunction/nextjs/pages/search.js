@@ -87,6 +87,7 @@ async handleSearch(evt) {
 			      <th>Description</th>
 			      <th>kcal</th>
 			      <th>Protein(g)</th>
+	 		      <th>Fat(g)</th>
 	 		      <th>Carbs(g)</th>
 			    </tr>
 			  </thead>
