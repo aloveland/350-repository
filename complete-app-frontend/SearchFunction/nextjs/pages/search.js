@@ -4,6 +4,16 @@ import React from "react";
 
 var holdResults = [];
 var globalString = "";
+let answer = {};
+if(typeof answer = undefined){
+	answer.desc = "";
+        answer.kcal = "";
+         answer.protein = "";
+	answer.carbs = "";
+	 answer.fat = "";
+      holdResults.push(answer);
+}
+	
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -59,7 +69,6 @@ async handleSearch(evt) {
 	  }
 	  
 	  var x = 0;
-	  let answer = {};
 	  for(x = 0; x < lenx ; x++){
 		  answer = {};
 		  answer.desc = this.state.campInfo.result[x].desc;
