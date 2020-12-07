@@ -2,7 +2,7 @@ import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
-
+var test = "";
 var globalString = "";
 class Home extends React.Component {
   constructor(props) {
@@ -50,6 +50,7 @@ async handleSearch(evt) {
 	    obj1 = campInfo;
 	    console.log("777");
 	    console.log(obj1.result[1]);
+	   test = this.state.campInfo.result[1].desc;
  	 }
   render() {
     return (
@@ -79,10 +80,7 @@ async handleSearch(evt) {
 	<div>
 	{this.state.campInfo ?
 	 
-	 {var i;
-	 	for(i =0; i < 10; i++){
-	 	console.log("h65");
-	}
+
 		
 	<div>
 		<br />
@@ -98,7 +96,7 @@ async handleSearch(evt) {
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>{this.state.campInfo.result[1].desc}</td>
+			      <td>{test}</td>
 			      <td>{this.state.campInfo.result[1].kcal}</td>
 			      <td>{this.state.campInfo.result[1].protein}</td>
 	 		      <td>{this.state.campInfo.result[1].carbs}</td>
