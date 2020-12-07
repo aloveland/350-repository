@@ -5,14 +5,16 @@ import React from "react";
 var holdResults = [];
 var globalString = "";
 let answer = {};
-if(this.state.search == ""){
-	console.log("its happening JJ");
-	
-}
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { search: "" };
+    if(this.state.search == ""){
+	console.log("its happening JJ");
+	
+}  
+	  
   }	
 async handleSearch(evt) {
    console.log("being queried");
