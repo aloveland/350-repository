@@ -58,7 +58,7 @@ async handleSearch(evt) {
 	  	var lenx = this.state.campInfo.result.length;
 	  }
 	  var x = 0;
-	  for(x = 0; x < lenx ; i++){
+	  for(x = 0; x < lenx ; x++){
 		  answer = {};
 		  answer.desc = this.state.campInfo.result[x].desc;
 		  answer.kcal = this.state.campInfo.result[x].kcal;
@@ -68,7 +68,7 @@ async handleSearch(evt) {
 		  holdResults.push(answer);
 	  }
 	  var y = 0;
-	  for(y = lenx + 1; y < 25; i++){
+	  for(y = lenx + 1; y < 25; y++){
 		answer = {};
 		 answer.desc = "";
 		 answer.kcal = "";
