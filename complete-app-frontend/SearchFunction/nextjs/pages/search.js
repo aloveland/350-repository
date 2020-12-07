@@ -28,16 +28,17 @@ async handleSearch(evt) {
 	
     async printThing(){
 	  console.log("would fetch");
-  	}
-  for(i = 0; i < 20; i++0){
-  	setTimeout(printThing, 2000);
-  }
-
+    }
 	
   
   async handleUpdate(evt){
 	console.log(this.state.search);
-	// this.handleSearch.bind(this.state.search);
+	 console.log("35");
+	    for(i = 0; i < 20; i++0){
+  		setTimeout(printThing, 2000);
+  		}
+
+	//this.handleSearch.bind(this.state.search);
 	//this.setState({search: evt.target.value});
 	  const campInfo = await getCampInfo(this.state.search);
 	  this.setState({campInfo});
