@@ -1,4 +1,4 @@
-import Header from './Header'
+
 
 const layoutStyle = {
   margin: 'auto auto',
@@ -11,7 +11,7 @@ const layoutStyle = {
 export default function Layout(props) {
   return (
     <div style={layoutStyle}>
-      <Header />
+     
       {props.children}
     </div>
   )
