@@ -6,11 +6,11 @@ var holdResults = [];
 var globalString = "";
 let answer = {};
 if(typeof answer == undefined){
-	answer.desc = "";
-        answer.kcal = "";
-         answer.protein = "";
-	answer.carbs = "";
-	 answer.fat = "";
+	answer.desc = " ";
+        answer.kcal = " ";
+         answer.protein = " ";
+	answer.carbs = " ";
+	 answer.fat = " ";
       holdResults.push(answer);
 }
 	
