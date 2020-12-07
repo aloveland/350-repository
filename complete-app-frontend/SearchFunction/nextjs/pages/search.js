@@ -64,6 +64,7 @@ async handleSearch(evt) {
 	  
 	    var x = 0;
 	    console.log("this is valuable information");
+	    console.log(holdResults[]);
 	  if(campInfo != null){
 	  	var lenx = this.state.campInfo.result.length;
 	  }
