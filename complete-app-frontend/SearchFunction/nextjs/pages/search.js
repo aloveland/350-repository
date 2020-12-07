@@ -5,7 +5,7 @@ import React from "react";
 var holdResults = [];
 var globalString = "";
 let answer = {};
-	
+console.log(this.state.campInfo.result[0]);
 class Home extends React.Component {
   constructor(props) {
     super(props);
