@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const cors = require("cors");
 
 const app = express();
 
@@ -10,6 +10,7 @@ app.set("port", 8080);
 
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 
 const Pool = require("pg").Pool;
 const config = {
