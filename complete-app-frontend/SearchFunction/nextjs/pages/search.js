@@ -100,8 +100,10 @@ async handleSearch(evt) {
 	    console.log(obj1.result[1]);
 	     console.log(this.state.campInfo.result.length);
 	  if(this.state.search == ""){
-	     console.log("bad gwan");
+	     const campInfo = await getCampInfo("efeveeveveerrrr");
+	     this.setState({campInfo});
 	  } 
+	  
 	    var x = 0;
 	    console.log("this is valuable information");
 	    console.log(holdResults[0]);
