@@ -217,6 +217,7 @@ async handleSearch(evt) {
             line-height: 1.6;
           }
 	  table {
+          margin: auto auto;
 	  border-collapse: collapse;
 	}
 
