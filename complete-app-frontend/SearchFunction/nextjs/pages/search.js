@@ -14,7 +14,7 @@ async handleSearch(evt) {
    console.log("being queried");
  
     const campInfo = await getCampInfo(this.state.search);
-     if(tpyepf campInfo.result == undefined){
+     if(typeof campInfo.result == undefined){
 		  let temp = {};
 		  for(r = 0; r < 25; r++){
 			  campInfo.result = [];
