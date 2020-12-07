@@ -55,7 +55,7 @@ async handleSearch(evt) {
 	    let answer = {};
 	    console.log("this is valuable information");
 	  if(campInfo != null){
-	  	var lenx = this.state.campInfo.result.length);
+	  	var lenx = this.state.campInfo.result.length;
 	  }
 	  var x = 0;
 	  for(x = 0; x < lenx ; i++){
