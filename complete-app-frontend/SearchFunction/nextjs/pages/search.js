@@ -85,44 +85,20 @@ async handleSearch(evt) {
   		<h2>{this.state.campInfo.result[1].desc}</h2>
           </div> : <h2>{globalString}</h2>}
 	
-	<br />
-	<style>
-	table, th, td {
-	  border: 1px solid black;
-	  border-collapse: collapse;
-	}
-	th, td {
-	  padding: 5px;
-	  text-align: left;
-	}
-	</style>
-	</head>
-	<body>
-
-	<h2>Table Caption</h2>
-	<p>To add a caption to a table, use the caption tag.</p>
-
-	<table style="width:100%">
-	  <caption>Monthly savings</caption>
-	  <tr>
-	    <th>Month</th>
-	    <th>Savings</th>
-	  </tr>
-	  <tr>
-	    <td>January</td>
-	    <td>$100</td>
-	  </tr>
-	  <tr>
-	    <td>February</td>
-	    <td>$50</td>
-	  </tr>
-	  <tr>
-		<td>Month</td>
-	    <td>Savings</td>
-	  </tr>
-	</table>
-
-	
+	<TABLE>
+	   <TR>
+	      <TD>Data 1</TD>
+	      <TD>Data 2</TD>
+	   </TR>
+	   <TR>
+	      <TD>Data 3</TD>
+	      <TD>Data 4</TD>
+	   </TR>
+	   <TR>
+	      <TD>Data 5</TD>
+	      <TD>Data 6</TD>
+	   </TR>
+	</TABLE>
 
         
 
