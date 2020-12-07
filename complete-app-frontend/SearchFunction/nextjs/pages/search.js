@@ -99,6 +99,17 @@ async handleSearch(evt) {
 	    console.log("777");
 	    console.log(obj1.result[1]);
 	     console.log(this.state.campInfo.result.length);
+	  if(this.state.search == ""){
+		var g = 0;
+		 let gh = {};
+		  for(g = 0; g < 25; g++){
+			 campInfo.result = [];
+			  campInfo.result.length = 25;
+			  campInfo.result[r] = gh;
+			  campInfo.result[r].desc = "";
+		  }
+
+	  }
 	  
 	    var x = 0;
 	    console.log("this is valuable information");
