@@ -55,12 +55,12 @@ async handleSearch(evt) {
 	    let answer = {};
 	    for(x = 0; i <24; i++){
 		answer = {};
-		if(this.state.campInfo.results[i].desc != null){
-			answer.desc = this.state.campInfo.results[i].desc;
-			answer.kcal = this.state.campInfo.results[i].kcal;
-			answer.protein = this.state.campInfo.results[i].protein;
-			answer.carbs = this.state.campInfo.results[i].carbs;
-			answer.fat = this.state.campInfo.results[i].fat;
+		if(this.state.campInfo.results[x].desc != null){
+			answer.desc = this.state.campInfo.results[x].desc;
+			answer.kcal = this.state.campInfo.results[x].kcal;
+			answer.protein = this.state.campInfo.results[x].protein;
+			answer.carbs = this.state.campInfo.results[x].carbs;
+			answer.fat = this.state.campInfo.results[x].fat;
 		}
 		else{
 			answer.desc = "";
