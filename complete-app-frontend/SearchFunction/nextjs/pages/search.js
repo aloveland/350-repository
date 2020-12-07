@@ -5,7 +5,7 @@ import React from "react";
 var holdResults = [];
 var globalString = "";
 let answer = {};
-if(typeof answer = undefined){
+if(typeof answer == undefined){
 	answer.desc = "";
         answer.kcal = "";
          answer.protein = "";
