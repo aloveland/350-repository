@@ -57,6 +57,16 @@ async handleSearch(evt) {
 	  if(campInfo != null){
 	  	var lenx = this.state.campInfo.result.length;
 	  }
+	  var z = 0;
+	  for( z = 0; z < 25; z++){
+		  answer = {};
+		  answer.desc = "";
+		  answer.kcal = "";
+		  answer.protein = "";
+		  answer.carbs = "";
+	          answer.fat = "";
+		  holdResults.push(answer);
+	  }
 	  var x = 0;
 	  for(x = 0; x < lenx ; x++){
 		  answer = {};
