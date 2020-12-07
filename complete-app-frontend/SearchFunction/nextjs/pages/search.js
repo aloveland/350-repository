@@ -39,8 +39,8 @@ async handleSearch(evt) {
 	setTimeout(this.handleSearch.bind(this.state.search), 10000);
   		
 
-	//this.handleSearch.bind(this.state.search);
-	//this.setState({search: evt.target.value});
+	this.handleSearch.bind(this.state.search);
+	this.setState({search: evt.target.value});
 	  const campInfo = await getCampInfo(this.state.search);
 	  this.setState({campInfo});
 	  if(campInfo != null){
