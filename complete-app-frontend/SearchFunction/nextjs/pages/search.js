@@ -55,21 +55,13 @@ async handleSearch(evt) {
 	    let answer = {};
 	    for(x = 0; x <24; x++){
 		answer = {};
-		if(this.state.campInfo.results[x] != null){
+		
 			answer.desc = this.state.campInfo.results[x].desc;
 			answer.kcal = this.state.campInfo.results[x].kcal;
 			answer.protein = this.state.campInfo.results[x].protein;
 			answer.carbs = this.state.campInfo.results[x].carbs;
 			answer.fat = this.state.campInfo.results[x].fat;
-		}
-		else{
-			answer.desc = "";
-			answer.kcal = "";
-			answer.protein = "";
-			answer.carbs = "";
-			answer.fat = "";
 
-		}
 		holdResults.push(answer);
 	    }
 
