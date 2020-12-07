@@ -16,7 +16,6 @@ async handleSearch(evt) {
     const campInfo = await getCampInfo(this.state.search);
      if(campInfo.result == null){
 		  let temp = {};
-		  var r = campInfo.result.length;
 		  for(r = 0; r < 25; r++){
 			  campInfo.result[r] = temp;
 			  campInfo.result[r].desc = "";
@@ -66,7 +65,6 @@ async handleSearch(evt) {
 	  const campInfo = await getCampInfo(this.state.search);
 	    if(campInfo.result == null){
 		  let temp = {};
-		  var r = campInfo.result.length;
 		  for(r = 0; r < 25; r++){
 			  campInfo.result[r] = temp;
 			  campInfo.result[r].desc = "";
