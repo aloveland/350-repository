@@ -93,11 +93,11 @@ async handleSearch(evt) {
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>this.state.campInfo.resut[1].desc</td>
-			      <td>this.state.campInfo.resut[1].kcal</td>
-			      <td>this.state.campInfo.resut[1].protein</td>
-	 		      <td>this.state.campInfo.resut[1].carbs</td>
-	 		      <td>this.state.campInfo.resut[1].fat</td>
+			      <td>this.state.campInfo.result[1].desc</td>
+			      <td>this.state.campInfo.result[1].kcal</td>
+			      <td>this.state.campInfo.result[1].protein</td>
+	 		      <td>this.state.campInfo.result[1].carbs</td>
+	 		      <td>this.state.campInfo.result[1].fat</td>
 			    </tr>
 			    <tr>
 			      <td>Sue</td>
