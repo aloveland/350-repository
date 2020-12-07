@@ -14,7 +14,7 @@ async handleSearch(evt) {
    console.log("being queried");
  
     const campInfo = await getCampInfo(this.state.search);
-     if(campInfo.result == null){
+     if(tpyepf campInfo.result == undefined){
 		  let temp = {};
 		  for(r = 0; r < 25; r++){
 			  campInfo.result = [];
@@ -65,7 +65,7 @@ async handleSearch(evt) {
 	this.handleSearch.bind(this.state.search);
 	this.setState({search: evt.target.value});
 	  const campInfo = await getCampInfo(this.state.search);
-	    if(campInfo.result == null){
+	    if(typeof campInfo.result == undefined){
 		  let temp = {};
 		  for(r = 0; r < 25; r++){
 			  campInfo.result = [];
