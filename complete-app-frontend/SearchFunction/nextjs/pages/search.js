@@ -12,8 +12,13 @@ class Home extends React.Component {
   }	
 async handleSearch(evt) {
    console.log("being queried");
-	
-    const campInfo = await getCampInfo(this.state.search);
+    const campInfo = {};
+     var f = 0;
+    for(f = 0; f < 25;f++){
+	    campInfo.result[i] = {};
+	    campInfo.result[i].desc = "";
+    }
+    campInfo = await getCampInfo(this.state.search);
      if(campInfo == null){
 	globalString = this.state.search + " campground not found";    
       }
