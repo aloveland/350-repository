@@ -33,8 +33,8 @@ app.get('/hello', (req, res) => {
 
 app.post("/restaurant",async (req, res) => {
     const name = req.body.name;
-    console.log("this is username");
-    console.log(username);
+    console.log("this is name");
+    console.log(name);
     const city = req.body.city;
     const state = req.body.state;
     const zip = req.body.zip;
@@ -54,6 +54,34 @@ app.post("/restaurant",async (req, res) => {
  
     } catch (err){
         res.json({error: 'restaurant not found'});
+        console.log(err);
+    }
+
+});
+
+app.get("/restaurant",async (req, res) => {
+      const name = req.body.name;
+    console.log("this is name");
+    console.log(name);
+    const city = req.body.city;
+    const state = req.body.state;
+    const zip = req.body.zip;
+    const dollars = req.body.dollars;
+    try {
+        const template = "SELECT username FROM users WHERE username = $1";
+        const check = await pool.query(template, [username]);
+        if (check.rowCount > 0){
+            res.json({status: 'username taken'});
+             }
+        else{
+           const template1 = "INSERT INTO users(username, firstname, lastname, email) VALUES ($1, $2, $3, $4)";
+           const response = await pool.query(template1, [name, city, state, zip, dollars]);
+            res.json({status: 'user added'})
+        }
+        
+ 
+    } catch (err){
+        res.json({error: 'workshop not found'});
         console.log(err);
     }
 
