@@ -76,6 +76,7 @@ async handleSearch(evt) {
 		
         
         </div>
+	<div>
 	{this.state.campInfo ?
 		
 	<div>
