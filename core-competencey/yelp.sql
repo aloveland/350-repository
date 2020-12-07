@@ -20,7 +20,7 @@ CREATE TABLE reviews(
       zip TEXT,
       reviewer TEXT,
       rating TEXT,
-      review TEXT,
+      review TEXT
       
  );
   INSERT INTO reviews(name, zip, reviewer, rating, review)VALUES
