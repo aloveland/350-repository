@@ -81,7 +81,33 @@ async handleSearch(evt) {
 		
 	<div>
 		<br />
-  		<h2>{this.state.campInfo.result[1].desc}</h2>
+			<h2><table>
+			  <thead>
+			    <tr>
+			      <th>Name</th>
+			      <th>ID</th>
+			      <th>Favorite Color</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Jim</td>
+			      <td>00001</td>
+			      <td>Blue</td>
+			    </tr>
+			    <tr>
+			      <td>Sue</td>
+			      <td>00002</td>
+			      <td>Red</td>
+			    </tr>
+			    <tr>
+			      <td>Barb</td>
+			      <td>00003</td>
+			      <td>Green</td>
+			    </tr>
+			  </tbody>
+			</table></h2>
+	 
           </div> : <h2>{globalString}</h2>}
 	
 
@@ -105,6 +131,15 @@ async handleSearch(evt) {
             font-size: 1.4rem;
             line-height: 1.6;
           }
+	  table {
+	  border-collapse: collapse;
+	}
+
+	td, th {
+	  border: 1px solid #999;
+	  padding: 0.5rem;
+	  text-align: left;
+	}
           h1 {
             font-size: 2.1rem;
             font-family: "Arial";
