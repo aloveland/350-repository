@@ -108,17 +108,6 @@ async handleSearch(evt) {
 	{this.state.campInfo ?
 	 
 	 
-	 {
-	 let answer = {};
-          var z = 0;
-	  for( z = 0; z < 25; z++){
-		  answer.desc = answer.desc + "";
-		  answer.kcal = answer.desc + "";
-		  answer.protein = answer.desc + "";
-		  answer.carbs = answer.desc + "";
-	          answer.fat = answer.desc + "";
-		  holdResults.push(answer);
-	  }
 	 
 	 
 	}
