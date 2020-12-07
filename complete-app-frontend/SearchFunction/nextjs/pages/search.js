@@ -17,6 +17,8 @@ async handleSearch(evt) {
      if(campInfo.result == null){
 		  let temp = {};
 		  for(r = 0; r < 25; r++){
+			  campInfo.result = [];
+			  campInfo.result.length = 25;
 			  campInfo.result[r] = temp;
 			  campInfo.result[r].desc = "";
 		  }
@@ -66,6 +68,8 @@ async handleSearch(evt) {
 	    if(campInfo.result == null){
 		  let temp = {};
 		  for(r = 0; r < 25; r++){
+			  campInfo.result = [];
+			  campInfo.result.length = 25;
 			  campInfo.result[r] = temp;
 			  campInfo.result[r].desc = "";
 		  }
