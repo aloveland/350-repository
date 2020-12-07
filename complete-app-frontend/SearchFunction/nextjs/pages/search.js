@@ -8,11 +8,11 @@ let answer = {};
 var z = 0;
 	  for( z = 0; z < 25; z++){
 		  answer = {};
-		  answer.desc = "";
-		  answer.kcal = "";
-		  answer.protein = "";
-		  answer.carbs = "";
-	          answer.fat = "";
+		  answer.desc = answer.desc + "";
+		  answer.kcal = answer.desc + "";
+		  answer.protein = answer.desc + "";
+		  answer.carbs = answer.desc + "";
+	          answer.fat = answer.desc + "";
 		  holdResults.push(answer);
 	  }
 class Home extends React.Component {
@@ -117,8 +117,7 @@ async handleSearch(evt) {
 	<div>
 	{this.state.campInfo ?
 	 
-
-		
+	
 	<div>
 		<br />
 			<h2><table>
