@@ -49,7 +49,7 @@ async handleSearch(evt) {
 	    var obj1 = {};
 	    obj1 = campInfo;
 	    console.log("777");
-	    console.log(obj1);
+	    console.log(obj1.result[1]);
  	 }
   render() {
     return (
