@@ -5,7 +5,6 @@ import React from "react";
 var holdResults = [];
 var globalString = "";
 let answer = {};
-console.log(this.state.campInfo.result[0]);
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -62,13 +61,9 @@ async handleSearch(evt) {
 	  
 	  var x = 0;
 	  for(x = 0; x < lenx ; x++){
-		  answer = {};
-		  answer.desc = this.state.campInfo.result[x].desc;
-		  answer.kcal = this.state.campInfo.result[x].kcal;
-		  answer.protein = this.state.campInfo.result[x].protein;
-		  answer.carbs = this.state.campInfo.result[x].carbs;
-	          answer.fat = this.state.campInfo.result[x].fat;
-		  holdResults.push(answer);
+		if(typeof this.state.campInfo.result[x] == undefined){
+			this.state.campInfo.result[x] = "x";	
+		}
 	  }
 	  var y = 0;
 	  for(y = lenx + 1; y < 25; y++){
