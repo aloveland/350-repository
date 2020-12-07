@@ -53,21 +53,8 @@ async handleSearch(evt) {
 	  
 	    var x = 0;
 	    let answer = {};
-	    for(x = 0; x <24; x++){
-		answer = {};
-		try{
-			answer.desc = this.state.campInfo.results[x].desc;
-			answer.kcal = this.state.campInfo.results[x].kcal;
-			answer.protein = this.state.campInfo.results[x].protein;
-			answer.carbs = this.state.campInfo.results[x].carbs;
-			answer.fat = this.state.campInfo.results[x].fat;
-		}
-		    catch(err){
-			    console.log("null");
-		    }
-
-		holdResults.push(answer);
-	    }
+	    console.log("this is valuable information");
+	  console.log(this.state.campInfo.results.length;
 
  	 }
   render() {
