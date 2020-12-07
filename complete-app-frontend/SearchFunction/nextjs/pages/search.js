@@ -74,10 +74,14 @@ async handleSearch(evt) {
           />
         </p>
 		
-     
+        
+        </div>
+	{this.state.campInfo ?
+		
+	<div>
 		<br />
   		<h2>{this.state.campInfo.result[1].desc}</h2>
-      
+          </div> : <h2>{globalString}</h2>}
 	
 
 
@@ -124,4 +128,3 @@ async handleSearch(evt) {
 }
 
 export default Home;
-
