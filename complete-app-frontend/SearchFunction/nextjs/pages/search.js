@@ -12,21 +12,8 @@ class Home extends React.Component {
   }	
 async handleSearch(evt) {
    console.log("being queried");
-    const campInfo = {};
-     var f = 0;
-    for(f = 0; f < 25;f++){
-	    if(typeof campInfo.result[i] == undefined){
-	    campInfo.result[i] = {};
-	    campInfo.result[i].desc = "";
-	    }
-    }
-    campInfo = await getCampInfo(this.state.search);
-     if(campInfo == null){
-	globalString = this.state.search + " campground not found";    
-      }
-	else{
-		globalString = "";
-	}
+ 
+    const ampInfo = await getCampInfo(this.state.search);
     console.log(campInfo);
      this.setState({campInfo});
       console.log("here");
@@ -38,6 +25,7 @@ async handleSearch(evt) {
 		if(typeof this.state.campInfo.result[x] == undefined){
 			this.state.campinfo.result[x] = answer;
 			this.state.campInfo.result[x].desc = "x";	
+			console.log(this.state.campInfo[x].desc);
 		}
 	  }
  
@@ -82,7 +70,8 @@ async handleSearch(evt) {
 		  answer  = {};
 		if(typeof this.state.campInfo.result[x] == undefined){
 			this.state.campinfo.result[x] = answer;
-			this.state.campInfo.result[x].desc = "x";	
+			this.state.campInfo.result[x].desc = "x";
+			console.log(this.state.campInfo[x].desc);
 		}
 	  }
 	  var y = 0;
