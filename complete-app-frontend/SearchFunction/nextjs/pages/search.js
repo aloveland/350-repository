@@ -132,7 +132,7 @@ async handleSearch(evt) {
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>{holdResults[0].desc}</td>
+			      <td>{this.state.campInfo.result[24].desc}</td>
 			      <td>{holdResults[0].kcal}</td>
 			      <td>{holdResults[0].protein}</td>
 	 		      <td>{holdResults[0].carbs}</td>
