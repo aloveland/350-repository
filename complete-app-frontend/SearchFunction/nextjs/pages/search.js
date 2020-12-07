@@ -27,7 +27,7 @@ async handleSearch(evt) {
    	 var x = 0;
 	  for(x = 0; x < lenx ; x++){
 		if(typeof this.state.campInfo.result[x] == undefined){
-			this.state.campInfo.result[x] = "x";	
+			this.state.campInfo.result[x].desc = "x";	
 		}
 	  }
  
@@ -69,7 +69,7 @@ async handleSearch(evt) {
 	  var x = 0;
 	  for(x = 0; x < lenx ; x++){
 		if(typeof this.state.campInfo.result[x] == undefined){
-			this.state.campInfo.result[x] = "x";	
+			this.state.campInfo.result[x].desc = "x";	
 		}
 	  }
 	  var y = 0;
