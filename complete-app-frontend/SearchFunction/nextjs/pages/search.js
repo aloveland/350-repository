@@ -34,7 +34,7 @@ async handleSearch(evt) {
   async handleUpdate(evt){
 	console.log(this.state.search);
 	 console.log("35");
-	    for(i = 0; i < 20; i++0){
+	    for(i = 0; i < 20; i++){
   		setTimeout(printThing, 2000);
   		}
 
