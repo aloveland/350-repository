@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 
-app.set("port", 3000);
+app.set("port", 5432);
 
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,7 +15,10 @@ const config = {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
-    database: "food_nutrition"
+    database: "food_nutrition",
+    port: 5432,
+    idleTimeoutMillis: 0,
+    connectionTimeoutMillis: 0,
 };
 
 const pool = new Pool(config);
@@ -30,7 +33,7 @@ app.get('/hello', (req, res) => {
 });
 
 
-app.get("/search",async (req, res) => {
+app.get("/api/search",async (req, res) => {
     console.log("here");
     const term = req.query.term;
     console.log(term);
