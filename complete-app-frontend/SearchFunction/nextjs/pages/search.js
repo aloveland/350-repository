@@ -53,7 +53,7 @@ async handleSearch(evt) {
 	  
 	    var x = 0;
 	    let answer = {};
-	    for(x = 0; i <24; i++){
+	    for(x = 0; x <24; x++){
 		answer = {};
 		if(this.state.campInfo.results[x].desc != null){
 			answer.desc = this.state.campInfo.results[x].desc;
