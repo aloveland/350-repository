@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 
-app.set("port", 3750);
+app.set("port", 8080);
 
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,7 +27,7 @@ app.get('/hello', (req, res) => {
   // console log the person parameter
   console.log(req.query.person);
   // now send a response back to the client
-  res.json({response: `Hello, ${req.query.person}`});
+  res.json({response: `HHHHHello, ${req.query.person}`});
 });
 
 
