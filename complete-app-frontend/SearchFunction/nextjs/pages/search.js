@@ -146,7 +146,7 @@ async handleSearch(evt) {
             className="input-style"
             type="text"
             value={this.state.search}
-            onkeyUp={this.handleUpdate.bind(this)}
+            onKeyUp={this.handleUpdate.bind(this)}
           />
         </p>
 		
