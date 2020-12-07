@@ -44,6 +44,7 @@ async handleSearch(evt) {
   async handleUpdate(evt){
 	console.log(this.state.search);
 	 console.log("35");
+	 console.log(this.state.campInfo.result.length);
 	console.log("no"); 
   	//setTimeout(this.handleSearch.bind(this.state.search), 10000);
 	//setTimeout(this.handleSearch.bind(this.state.search), 10000);
