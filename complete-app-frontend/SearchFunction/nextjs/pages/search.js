@@ -2,7 +2,7 @@ import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
-var holdResults = [];
+var holdResults = [{desc: "", kcal: "" , protein: "", carbs: "", fat: ""}];
 var globalString = "";
 let answer = {};
 if(typeof answer == undefined){
