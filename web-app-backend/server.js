@@ -61,7 +61,8 @@ app.get("/api/search",async (req, res) => {
         res.json({result: results});
         
     } catch (err){
-        res.json({error: 'query failed'});
+        let results2 = [];
+        res.json({result: results2});
         console.log(err);
     }
 
