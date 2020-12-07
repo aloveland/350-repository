@@ -5,17 +5,6 @@ import React from "react";
 var holdResults = [];
 var globalString = "";
 let answer = {};
-var h = 0;
-for(h = 0;h <25;h++){
-	if(typeof holdResults[h] == undefined){
-		answer.desc = " ";
-		answer.kcal = " ";
-		 answer.protein = " ";
-		answer.carbs = " ";
-		 answer.fat = " ";
-		holdResults.push(answer);
-		}
-	}
 	
 class Home extends React.Component {
   constructor(props) {
@@ -135,11 +124,11 @@ async handleSearch(evt) {
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>{holdResults[0].desc}</td>
-			      <td>{holdResults[0].kcal}</td>
-			      <td>{holdResults[0].protein}</td>
-	 		      <td>{holdResults[0].carbs}</td>
-	 		      <td>{holdResults[0].fat}</td>
+			      <td>{this.state.campInfo.result[0].desc}</td>
+			      <td>{this.state.campInfo.result[0].kcal}</td>
+			      <td>{this.state.campInfo.result[0].protein}</td>
+	 		      <td>{this.state.campInfo.result[0].carbs}</td>
+	 		      <td>{this.state.campInfo.result[0].fat}</td>
 			    </tr>
 			    <tr>
 			      <td>Sue</td>
