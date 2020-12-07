@@ -9,7 +9,7 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { search: "" };
-    this.setState({search: evt.target.value}); if(this.state.search == ""){ 
+   if(this.state.search == ""){ 
 	    console.log("its happening JJ"); 
     }
   }	
