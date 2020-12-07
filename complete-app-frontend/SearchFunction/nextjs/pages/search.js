@@ -59,7 +59,6 @@ async handleSearch(evt) {
 	
   
   async handleUpdate(evt){
-	 this.state.campInfo.result = null;
 	console.log(this.state.search);
 	 console.log("35");
 	console.log("no"); 
