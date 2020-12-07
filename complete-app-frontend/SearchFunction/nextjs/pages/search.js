@@ -11,7 +11,7 @@ class Home extends React.Component {
   }	
 async handleSearch(evt) {
    console.log("being queried");
-    const campInfo = await getCampInfo(this.state.search);
+    //const campInfo = await getCampInfo(this.state.search);
      if(campInfo == null){
 	globalString = this.state.search + " campground not found";    
       }
@@ -34,10 +34,10 @@ async handleSearch(evt) {
   async handleUpdate(evt){
 	console.log(this.state.search);
 	 console.log("35");
-	  var i;
-	    for(i = 0; i < 20; i++){
-  		setTimeout(console.log("yes");, 2000);
-  		}
+	console.log("no"); 
+  	setTimeout(this.handleSearch.bind(this.state.search), 10000);
+	setTimeout(this.handleSearch.bind(this.state.search), 10000);
+  		
 
 	//this.handleSearch.bind(this.state.search);
 	//this.setState({search: evt.target.value});
