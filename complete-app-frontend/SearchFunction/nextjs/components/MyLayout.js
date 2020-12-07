@@ -1,4 +1,4 @@
-import Header from './Header'
+
 
 const layoutStyle = {
   margin: 'auto auto',
