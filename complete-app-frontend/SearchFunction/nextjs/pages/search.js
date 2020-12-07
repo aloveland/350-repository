@@ -9,9 +9,6 @@ class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = { search: "" };
-   if(this.state.search == ""){ 
-	    console.log("its happening JJ"); 
-    }
   }	
 async handleSearch(evt) {
    console.log("being queried");
@@ -71,6 +68,10 @@ async handleSearch(evt) {
 
 	this.handleSearch.bind(this.state.search);
 	this.setState({search: evt.target.value});
+	  if(this.state.search == ""){ 
+	    console.log("its happening JJ"); 
+  	  }
+	  
 	  const campInfo = await getCampInfo(this.state.search);
 	    if(campInfo.error == "query failed"){
 	     console.log("its happening");
