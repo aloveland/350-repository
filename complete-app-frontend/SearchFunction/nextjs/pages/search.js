@@ -84,9 +84,10 @@ async handleSearch(evt) {
 			<h2><table>
 			  <thead>
 			    <tr>
-			      <th>Name</th>
-			      <th>ID</th>
-			      <th>Favorite Color</th>
+			      <th>Description</th>
+			      <th>kcal</th>
+			      <th>Protein(g)</th>
+	 		      <th>Carbs(g)</th>
 			    </tr>
 			  </thead>
 			  <tbody>
