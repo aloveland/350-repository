@@ -23,5 +23,5 @@ CREATE TABLE reviews(
       review TEXT,
       
  );
-  INSERT INTO workshopinfo(name, zip, reviewer, rating, review)VALUES
+  INSERT INTO reviews(name, zip, reviewer, rating, review)VALUES
  ('example review', '94203', 'Don Johnson', '5', 'very good restaurant');
