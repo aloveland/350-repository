@@ -35,8 +35,8 @@ async handleSearch(evt) {
 	console.log(this.state.search);
 	 console.log("35");
 	console.log("no"); 
-  	setTimeout(this.handleSearch.bind(this.state.search), 10000);
-	setTimeout(this.handleSearch.bind(this.state.search), 10000);
+  	//setTimeout(this.handleSearch.bind(this.state.search), 10000);
+	//setTimeout(this.handleSearch.bind(this.state.search), 10000);
   		
 
 	this.handleSearch.bind(this.state.search);
