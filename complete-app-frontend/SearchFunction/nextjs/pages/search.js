@@ -184,9 +184,25 @@ async handleSearch(evt) {
 	 		      <td>{this.state.campInfo.result[1].fat}</td>
 			    </tr>
 			    <tr>
-			      <td>Barb</td>
-			      <td>00003</td>
-			      <td>Green</td>
+			      <td>{this.state.campInfo.result[2].desc}</td>
+			      <td>{this.state.campInfo.result[2].kcal}</td>
+			      <td>{this.state.campInfo.result[2].protein}</td>
+	 		      <td>{this.state.campInfo.result[2].carbs}</td>
+	 		      <td>{this.state.campInfo.result[2].fat}</td>
+			    </tr>
+			    <tr>
+			      <td>{this.state.campInfo.result[3].desc}</td>
+			      <td>{this.state.campInfo.result[3].kcal}</td>
+			      <td>{this.state.campInfo.result[3].protein}</td>
+	 		      <td>{this.state.campInfo.result[3].carbs}</td>
+	 		      <td>{this.state.campInfo.result[3].fat}</td>
+			    </tr>
+			    <tr>
+			      <td>{this.state.campInfo.result[4].desc}</td>
+			      <td>{this.state.campInfo.result[4].kcal}</td>
+			      <td>{this.state.campInfo.result[4].protein}</td>
+	 		      <td>{this.state.campInfo.result[4].carbs}</td>
+	 		      <td>{this.state.campInfo.result[4].fat}</td>
 			    </tr>
 			  </tbody>
 			</table></h2>
