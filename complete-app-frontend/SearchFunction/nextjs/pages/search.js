@@ -14,7 +14,7 @@ async handleSearch(evt) {
    console.log("being queried");
  
     const campInfo = await getCampInfo(this.state.search);
-     if(typeof campInfo.result == undefined || campInfo.error == "query failed" || typeof campInfo.result[23].desc == undefined){
+     if(typeof campInfo.result == undefined || campInfo.error == "query failed"){
 		  let temp = {};
 		  for(r = 0; r < 25; r++){
 			  campInfo.result = [];
@@ -65,7 +65,7 @@ async handleSearch(evt) {
 	this.handleSearch.bind(this.state.search);
 	this.setState({search: evt.target.value});
 	  const campInfo = await getCampInfo(this.state.search);
-	    if(typeof campInfo.result == undefined || campInfo.error == "query failed" || typeof campInfo.result[23].desc == undefined){
+	    if(typeof campInfo.result == undefined || campInfo.error == "query failed"){
 		  let temp = {};
 		  for(r = 0; r < 25; r++){
 			  campInfo.result = [];
