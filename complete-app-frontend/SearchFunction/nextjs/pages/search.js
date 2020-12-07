@@ -14,6 +14,8 @@ async handleSearch(evt) {
     const campInfo = await getCampInfo(this.state.search);
     var obj1 = {};
     obj1 = campInfo;
+    console.log("777");
+    console.log(obj1[1].desc);
      if(campInfo == null){
 	globalString = this.state.search + " campground not found";    
       }
@@ -46,7 +48,7 @@ async handleSearch(evt) {
 	  const campInfo = await getCampInfo(this.state.search);
 	  this.setState({campInfo});
 	  if(campInfo != null){
-	  	console.log(this.state.campInfo[1].desc);
+	  	console.log(this.state.campInfo.desc);
 	  }
  	 }
   render() {
