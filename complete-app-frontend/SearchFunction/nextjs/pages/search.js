@@ -82,7 +82,7 @@ async handleSearch(evt) {
 		
 	<div>
 		<br />
-  		<h2>{this.state.campInfo.desc}</h2>
+  		<h2>{this.state.campInfo.result[1].desc}</h2>
           </div> : <h2>{globalString}</h2>}
 	
 
