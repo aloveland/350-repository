@@ -2,20 +2,20 @@ import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
-var holdResults = [{desc: "", kcal: "" , protein: "", carbs: "", fat: ""}];
+var holdResults = [];
 var globalString = "";
 let answer = {};
-if(typeof answer == undefined){
-	var h = 0;
-	for(h = 0;h <25;h++){
-	answer.desc = " ";
-        answer.kcal = " ";
-         answer.protein = " ";
-	answer.carbs = " ";
-	 answer.fat = " ";
-	holdResults.push(answer);
+var h = 0;
+for(h = 0;h <25;h++){
+	if(typeof holdReslts[h] == undefined){
+		answer.desc = " ";
+		answer.kcal = " ";
+		 answer.protein = " ";
+		answer.carbs = " ";
+		 answer.fat = " ";
+		holdResults.push(answer);
+		}
 	}
-}
 	
 class Home extends React.Component {
   constructor(props) {
