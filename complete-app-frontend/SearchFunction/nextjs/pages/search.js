@@ -12,7 +12,7 @@ class Home extends React.Component {
   }	
 async handleSearch(evt) {
    console.log("being queried");
-    const campInfo;
+    const campInfo = {};
      var f = 0;
     for(f = 0; f < 25;f++){
 	    if(typeof campInfo.result[i] == undefined){
