@@ -85,22 +85,27 @@ async handleSearch(evt) {
   		<h2>{this.state.campInfo.result[1].desc}</h2>
           </div> : <h2>{globalString}</h2>}
 	
-	<TABLE>
-	   <TR>
-	      <TD>Data 1</TD>
-	      <TD>Data 2</TD>
-	   </TR>
-	   <TR>
-	      <TD>Data 3</TD>
-	      <TD>Data 4</TD>
-	   </TR>
-	   <TR>
-	      <TD>Data 5</TD>
-	      <TD>Data 6</TD>
-	   </TR>
-	</TABLE>
+	<table style="width:100%">
+	  <caption>Monthly savings</caption>
+	  <tr>
+	    <th>Month</th>
+	    <th>Savings</th>
+	  </tr>
+	  <tr>
+	    <td>January</td>
+	    <td>$100</td>
+	  </tr>
+	  <tr>
+	    <td>February</td>
+	    <td>$50</td>
+	  </tr>
+	  <tr>
+		<td>Month</td>
+	    <td>Savings</td>
+	  </tr>
+	</table>
 
-        
+
 
         <br />
         <style jsx>{`
