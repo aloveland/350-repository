@@ -23,6 +23,13 @@ async handleSearch(evt) {
      this.setState({campInfo});
       console.log("here");
       console.log(this.state.search + "test");
+	
+   	 var x = 0;
+	  for(x = 0; x < lenx ; x++){
+		if(typeof this.state.campInfo.result[x] == undefined){
+			this.state.campInfo.result[x] = "x";	
+		}
+	  }
  
 
   }
