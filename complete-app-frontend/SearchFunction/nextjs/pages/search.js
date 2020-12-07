@@ -2,7 +2,7 @@ import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
-var test = "";
+var holdResults = [];
 var globalString = "";
 class Home extends React.Component {
   constructor(props) {
@@ -50,7 +50,29 @@ async handleSearch(evt) {
 	    obj1 = campInfo;
 	    console.log("777");
 	    console.log(obj1.result[1]);
-	   test = this.state.campInfo.result[1].desc;
+	  
+	    var x = 0;
+	    let answer = {};
+	    for(x = 0; i <24; i++){
+		answer = {};
+		if(this.state.campInfo.results[i].desc != null){
+			answer.desc = this.state.campInfo.results[i].desc;
+			answer.kcal = this.state.campInfo.results[i].kcal;
+			answer.protein = this.state.campInfo.results[i].protein;
+			answer.carbs = this.state.campInfo.results[i].carbs;
+			answer.fat = this.state.campInfo.results[i].fat;
+		}
+		else{
+			answer.desc = "";
+			answer.kcal = "";
+			answer.protein = "";
+			answer.carbs = "";
+			answer.fat = "";
+
+		}
+		holdResults.push(answer);
+	    }
+
  	 }
   render() {
     return (
@@ -96,8 +118,8 @@ async handleSearch(evt) {
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>{test}</td>
-			      <td>{this.state.campInfo.result[1].kcal}</td>
+			      <td>{holdResults[1].desc}</td>
+			      <td>{holdResults[1].kcal}</td>
 			      <td>{this.state.campInfo.result[1].protein}</td>
 	 		      <td>{this.state.campInfo.result[1].carbs}</td>
 	 		      <td>{this.state.campInfo.result[1].fat}</td>
