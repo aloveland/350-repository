@@ -7,7 +7,6 @@ var globalString = "";
 let answer = {};
 var z = 0;
 	  for( z = 0; z < 25; z++){
-		  answer = {};
 		  answer.desc = answer.desc + "";
 		  answer.kcal = answer.desc + "";
 		  answer.protein = answer.desc + "";
