@@ -31,7 +31,7 @@ app.get('/hello', (req, res) => {
 });
 
 
-app.post("/create-user",async (req, res) => {
+app.post("/restaurant",async (req, res) => {
     const name = req.body.name;
     console.log("this is username");
     console.log(username);
@@ -40,20 +40,20 @@ app.post("/create-user",async (req, res) => {
     const zip = req.body.zip;
     const dollars = req.body.dollars;
     try {
-        const template = "SELECT name FROM restaurant WHERE name = $1 AND zpi";
-        const check = await pool.query(template, [username]);
+        const template = "SELECT name FROM restaurant WHERE name = $1 AND zip = $2";
+        const check = await pool.query(template, [name, zip]);
         if (check.rowCount > 0){
-            res.json({status: 'username taken'});
+            res.json({status: 'restaurant already registered'});
              }
         else{
-           const template1 = "INSERT INTO users(username, firstname, lastname, email) VALUES ($1, $2, $3, $4)";
-           const response = await pool.query(template1, [username, firstname, lastname, email]);
-            res.json({status: 'user added'})
+           const template1 = "INSERT INTO restuarant(name, city, state, zip, dollars) VALUES ($1, $2, $3, $4, $5)";
+           const response = await pool.query(template1, [name, city, state, zip, dollars]);
+            res.json({status: 'restaurant added'})
         }
         
  
     } catch (err){
-        res.json({error: 'workshop not found'});
+        res.json({error: 'restaurant not found'});
         console.log(err);
     }
 
