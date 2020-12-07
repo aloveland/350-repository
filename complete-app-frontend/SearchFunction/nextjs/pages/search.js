@@ -12,6 +12,7 @@ class Home extends React.Component {
   }	
 async handleSearch(evt) {
    console.log("being queried");
+	
     const campInfo = await getCampInfo(this.state.search);
      if(campInfo == null){
 	globalString = this.state.search + " campground not found";    
@@ -44,7 +45,6 @@ async handleSearch(evt) {
   async handleUpdate(evt){
 	console.log(this.state.search);
 	 console.log("35");
-	 console.log(this.state.campInfo.result.length);
 	console.log("no"); 
   	//setTimeout(this.handleSearch.bind(this.state.search), 10000);
 	//setTimeout(this.handleSearch.bind(this.state.search), 10000);
@@ -61,6 +61,7 @@ async handleSearch(evt) {
 	    obj1 = campInfo;
 	    console.log("777");
 	    console.log(obj1.result[1]);
+	     console.log(this.state.campInfo.result.length);
 	  
 	    var x = 0;
 	    console.log("this is valuable information");
