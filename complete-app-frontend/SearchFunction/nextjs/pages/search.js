@@ -107,10 +107,6 @@ async handleSearch(evt) {
 	<div>
 	{this.state.campInfo ?
 	 
-	 
-	 
-	 
-	}
 	
 	<div>
 		<br />
