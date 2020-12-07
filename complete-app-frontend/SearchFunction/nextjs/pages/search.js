@@ -74,16 +74,10 @@ async handleSearch(evt) {
           />
         </p>
 		
-        <div className="button-style" onInput={this.handleSearch.bind(this)}>
-          Submit
-	<h2>{globalString}</h2>
-        </div>
-	{this.state.campInfo ?
-		
-	<div>
+     
 		<br />
   		<h2>{this.state.campInfo.result[1].desc}</h2>
-          </div> : <h2>{globalString}</h2>}
+      
 	
 
 
