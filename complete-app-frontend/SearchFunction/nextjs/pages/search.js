@@ -14,6 +14,14 @@ async handleSearch(evt) {
    console.log("being queried");
  
     const campInfo = await getCampInfo(this.state.search);
+      if(campInfo.result.length != 25){
+		  let temp = {};
+		  var r = campInfo.result.length;
+		  for(r = campInfo.result.length; r < 25; r++){
+			  campInfo.result[r] = temp;
+			  campInfo.result[r].desc = "";
+		  }
+	  }
     console.log(campInfo);
      this.setState({campInfo});
       console.log("here");
@@ -47,7 +55,16 @@ async handleSearch(evt) {
 
 	this.handleSearch.bind(this.state.search);
 	this.setState({search: evt.target.value});
-	  //const campInfo = await getCampInfo(this.state.search);
+	  const campInfo = await getCampInfo(this.state.search);
+	  if(campInfo.result.length != 25){
+		  let temp = {};
+		  var r = campInfo.result.length;
+		  for(r = campInfo.result.length; r < 25; r++){
+			  campInfo.result[r] = temp;
+			  campInfo.result[r].desc = "";
+		  }
+	  }
+	  
 	  this.setState({campInfo});
 	  if(campInfo != null){
 	  	console.log(this.state.campInfo.desc);
