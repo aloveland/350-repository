@@ -85,26 +85,6 @@ async handleSearch(evt) {
   		<h2>{this.state.campInfo.result[1].desc}</h2>
           </div> : <h2>{globalString}</h2>}
 	
-	<div className="table-style">
-	<table style="width:100%">
-	  <caption>Monthly savings</caption>
-	  <tr>
-	    <th>Month</th>
-	    <th>Savings</th>
-	  </tr>
-	  <tr>
-	    <td>January</td>
-	    <td>$100</td>
-	  </tr>
-	  <tr>
-	    <td>February</td>
-	    <td>$50</td>
-	  </tr>
-	  <tr>
-		<td>Month</td>
-	    <td>Savings</td>
-	  </tr>
-	</table>
 
 
 
@@ -126,10 +106,6 @@ async handleSearch(evt) {
             font-size: 1.4rem;
             line-height: 1.6;
           }
-	.table-style{
-	  border: 1px solid black;
-	  border-collapse: collapse;
-	}
           h1 {
             font-size: 2.1rem;
             font-family: "Arial";
