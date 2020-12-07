@@ -55,7 +55,26 @@ async handleSearch(evt) {
 	    let answer = {};
 	    console.log("this is valuable information");
 	  if(campInfo != null){
-	  	console.log(this.state.campInfo.result.length);
+	  	var lenx = this.state.campInfo.result.length);
+	  }
+	  var x = 0;
+	  for(x = 0; x < lenx ; i++){
+		  answer = {};
+		  answer.desc = this.state.campInfo.result[x].desc;
+		  answer.kcal = this.state.campInfo.result[x].kcal;
+		  answer.protein = this.state.campInfo.result[x].protein;
+		  answer.carbs = this.state.campInfo.result[x].carbs;
+	          answer.fat = this.state.campInfo.result[x].fat;
+		  holdResults.push(answer);
+	  }
+	  var y = 0;
+	  for(y = lenx + 1; y < 25; i++){
+		answer = {};
+		 answer.desc = "";
+		 answer.kcal = "";
+		 answer.protein = "";
+	         answer.carbs = "";
+	         answer.fat = "";
 	  }
 
  	 }
@@ -103,11 +122,11 @@ async handleSearch(evt) {
 			  </thead>
 			  <tbody>
 			    <tr>
-			      <td>{holdResults[1]}</td>
-			      <td>{holdResults[1]}</td>
-			      <td>{this.state.campInfo.result[1].protein}</td>
-	 		      <td>{this.state.campInfo.result[1].carbs}</td>
-	 		      <td>{this.state.campInfo.result[1].fat}</td>
+			      <td>{holdResults[0].desc}</td>
+			      <td>{holdResults[0].kcal}</td>
+			      <td>{holdResults[0].protein}</td>
+	 		      <td>{holdResults[0].carbs}</td>
+	 		      <td>{holdResults[0].fat}</td>
 			    </tr>
 			    <tr>
 			      <td>Sue</td>
