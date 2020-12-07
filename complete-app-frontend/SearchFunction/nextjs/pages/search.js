@@ -36,7 +36,7 @@ async handleSearch(evt) {
 	 console.log("35");
 	  var i;
 	    for(i = 0; i < 20; i++){
-  		setTimeout(printThing, 2000);
+  		setTimeout(printThing(), 2000);
   		}
 
 	//this.handleSearch.bind(this.state.search);
