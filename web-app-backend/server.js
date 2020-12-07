@@ -7,7 +7,7 @@ const cors = requrie("cors");
 const app = express();
 
 
-app.set("port", 5432);
+app.set("port", 8080);
 
 app.use(bodyParser.json({ type: "application/json" }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,9 +19,6 @@ const config = {
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: "food_nutrition",
-    port: 5432,
-    idleTimeoutMillis: 0,
-    connectionTimeoutMillis: 0,
 };
 
 const pool = new Pool(config);
