@@ -14,7 +14,7 @@ async handleSearch(evt) {
    console.log("being queried");
  
     const campInfo = await getCampInfo(this.state.search);
-      if(campInfo.result != && campInfo.result.length != 25){
+      if(campInfo.result != null && campInfo.result.length != 25){
 		  let temp = {};
 		  var r = campInfo.result.length;
 		  for(r = campInfo.result.length; r < 25; r++){
