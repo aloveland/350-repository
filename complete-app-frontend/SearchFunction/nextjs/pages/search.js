@@ -2,8 +2,9 @@ import {getCampInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
-
+var holdResults = [];
 var globalString = "";
+let answer = {};
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -11,17 +12,43 @@ class Home extends React.Component {
   }	
 async handleSearch(evt) {
    console.log("being queried");
+ 
     const campInfo = await getCampInfo(this.state.search);
-     if(campInfo == null){
-	globalString = this.state.search + " campground not found";    
-      }
-	else{
-		globalString = "";
-	}
+     if(campInfo.error == "query failed"){
+	     console.log("its happening");
+     }
+	
+     if(typeof campInfo.result == undefined || campInfo.error == "query failed"){
+		  let temp = {};
+		  for(r = 0; r < 25; r++){
+			  campInfo.result = [];
+			  campInfo.result.length = 25;
+			  campInfo.result[r] = temp;
+			  campInfo.result[r].desc = "";
+		  }
+     }
+      if(typeof campInfo.result == null && campInfo.result.length != 25){
+		  let temp = {};
+		  var r = campInfo.result.length;
+		  for(r = campInfo.result.length; r < 25; r++){
+			  campInfo.result[r] = temp;
+			  campInfo.result[r].desc = "";
+		  }
+	  }
     console.log(campInfo);
      this.setState({campInfo});
       console.log("here");
       console.log(this.state.search + "test");
+	
+   	 var x = 0;
+	  for(x = 0; x < lenx ; x++){
+		  answer = {};
+		if(typeof this.state.campInfo.result[x] == undefined){
+			this.state.campinfo.result[x] = answer;
+			this.state.campInfo.result[x].desc = "x";	
+			console.log(this.state.campInfo[x].desc);
+		}
+	  }
  
 
   }
@@ -42,10 +69,63 @@ async handleSearch(evt) {
 	this.handleSearch.bind(this.state.search);
 	this.setState({search: evt.target.value});
 	  const campInfo = await getCampInfo(this.state.search);
+	    if(campInfo.error == "query failed"){
+	     console.log("its happening");
+     	}	
+	    if(typeof campInfo.result == undefined || campInfo.error == "query failed"){
+		  let temp = {};
+		  for(r = 0; r < 25; r++){
+			  campInfo.result = [];
+			  campInfo.result.length = 25;
+			  campInfo.result[r] = temp;
+			  campInfo.result[r].desc = "";
+		  }
+    	 }
+	  if(campInfo.result != null && campInfo.result.length != 25){
+		  let temp = {};
+		  var r = campInfo.result.length;
+		  for(r = campInfo.result.length; r < 25; r++){
+			  campInfo.result[r] = temp;
+			  campInfo.result[r].desc = "";
+		  }
+	  }
+	  
 	  this.setState({campInfo});
 	  if(campInfo != null){
-	  	console.log(this.state.campInfo.description);
+	  	console.log(this.state.campInfo.desc);
 	  }
+	    var obj1 = {};
+	    obj1 = campInfo;
+	    console.log("777");
+	    console.log(obj1.result[1]);
+	     console.log(this.state.campInfo.result.length);
+	  
+	    var x = 0;
+	    console.log("this is valuable information");
+	    console.log(holdResults[0]);
+	  if(campInfo != null){
+	  	var lenx = this.state.campInfo.result.length;
+	  }
+	  
+	  var x = 0;
+	  for(x = 0; x < lenx ; x++){
+		  answer  = {};
+		if(typeof this.state.campInfo.result[x] == undefined){
+			this.state.campinfo.result[x] = answer;
+			this.state.campInfo.result[x].desc = "x";
+			console.log(this.state.campInfo[x].desc);
+		}
+	  }
+	  var y = 0;
+	  for(y = lenx + 1; y < 25; y++){
+		answer = {};
+		 answer.desc = "";
+		 answer.kcal = "";
+		 answer.protein = "";
+	         answer.carbs = "";
+	         answer.fat = "";
+	  }
+
  	 }
   render() {
     return (
@@ -70,19 +150,49 @@ async handleSearch(evt) {
           />
         </p>
 		
-        <div className="button-style" onInput={this.handleSearch.bind(this)}>
-          Submit
-	<h2>{globalString}</h2>
+        
         </div>
+	<div>
 	{this.state.campInfo ?
-		
+	 
+	
 	<div>
 		<br />
-  		<h2>{this.state.campInfo.description}</h2>
+			<h2><table>
+			  <thead>
+			    <tr>
+			      <th>Description</th>
+			      <th>kcal</th>
+			      <th>Protein(g)</th>
+	 		      <th>Fat(g)</th>
+	 		      <th>Carbs(g)</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>{this.state.campInfo.result[23].desc}</td>
+			      <td>{this.state.campInfo.result[0].kcal}</td>
+			      <td>{this.state.campInfo.result[0].protein}</td>
+	 		      <td>{this.state.campInfo.result[0].carbs}</td>
+	 		      <td>{this.state.campInfo.result[0].fat}</td>
+			    </tr>
+			    <tr>
+			      <td>Sue</td>
+			      <td>00002</td>
+			      <td>Red</td>
+			    </tr>
+			    <tr>
+			      <td>Barb</td>
+			      <td>00003</td>
+			      <td>Green</td>
+			    </tr>
+			  </tbody>
+			</table></h2>
+	 
           </div> : <h2>{globalString}</h2>}
 	
 
-        
+
 
         <br />
         <style jsx>{`
@@ -102,6 +212,15 @@ async handleSearch(evt) {
             font-size: 1.4rem;
             line-height: 1.6;
           }
+	  table {
+	  border-collapse: collapse;
+	}
+
+	td, th {
+	  border: 1px solid #999;
+	  padding: 0.5rem;
+	  text-align: left;
+	}
           h1 {
             font-size: 2.1rem;
             font-family: "Arial";
@@ -126,4 +245,3 @@ async handleSearch(evt) {
 }
 
 export default Home;
-
