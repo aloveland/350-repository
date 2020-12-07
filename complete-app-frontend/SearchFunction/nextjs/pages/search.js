@@ -6,12 +6,15 @@ var holdResults = [];
 var globalString = "";
 let answer = {};
 if(typeof answer == undefined){
+	var h = 0;
+	for(h = 0;h <25;h++){
 	answer.desc = " ";
         answer.kcal = " ";
          answer.protein = " ";
 	answer.carbs = " ";
 	 answer.fat = " ";
-      holdResults.push(answer);
+	holdResults.push(answer);
+	}
 }
 	
 class Home extends React.Component {
