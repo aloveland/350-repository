@@ -99,6 +99,7 @@ async handleSearch(evt) {
 	    console.log("777");
 	    console.log(obj1.result[1]);
 	     console.log(this.state.campInfo.result.length);
+	     console.log(this.state.search);
 	  
 	    var x = 0;
 	    console.log("this is valuable information");
