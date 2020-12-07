@@ -72,22 +72,17 @@ async handleSearch(evt) {
 	    if(campInfo.error == "query failed"){
 	     console.log("its happening");
      	}	
-	    if(typeof campInfo.result == undefined || campInfo.error == "query failed"){
-		  let temp = {};
-		  for(r = 0; r < 25; r++){
-			  campInfo.result = [];
-			  campInfo.result.length = 25;
-			  campInfo.result[r] = temp;
-			  campInfo.result[r].desc = "";
-		  }
-    	 }
-	  if(campInfo.result != null && campInfo.result.length != 25){
-		  let temp = {};
-		  var r = campInfo.result.length;
-		  for(r = campInfo.result.length; r < 25; r++){
-			  campInfo.result[r] = temp;
-			  campInfo.result[r].desc = "";
-		  }
+	   var g = 0;
+	   for(g = 0; g < 25; g++){
+		   let gh = {};
+		   this.state.campInfo.result = gh;
+		   this.state.campInfo.result[g].desc = "";
+		   this.state.campInfo.result[g].kcal = "";
+		   this.state.campInfo.result[g].protein = "";
+		   this.state.campInfo.result[g].carbs = "";
+		   this.state.campInfo.result[g].fat = "";
+
+	   }
 	  }
 	  
 	  this.setState({campInfo});
