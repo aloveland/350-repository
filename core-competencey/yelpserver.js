@@ -69,14 +69,18 @@ app.get("/restaurant",async (req, res) => {
     const dollars = req.query.dollars;
     try {
         const template = "SELECT username FROM users WHERE username = $1";
-        const check = await pool.query(template, [username]);
-        if (check.rowCount > 0){
-            res.json({status: 'username taken'});
+        const check = await pool.query(template, [name, zip]);
+        if (check.rowCount == 0){
+            res.json({status: 'restaurant does not exist'});
              }
         else{
-           const template1 = "INSERT INTO users(username, firstname, lastname, email) VALUES ($1, $2, $3, $4)";
-           const response = await pool.query(template1, [name, city, state, zip, dollars]);
-            res.json({status: 'user added'})
+           let result = {};
+            result.name = check.rows[0].name;
+            result.city = check.rows[0].city;
+            result.state = check.rows[0].state;
+            result.zip = check.rows[0].zip; 
+     
+          res.json({status: result});
         }
         
  
