@@ -68,6 +68,7 @@ app.get("/restaurant",async (req, res) => {
     const state = req.query.state;
     const zip = req.query.zip;
     const dollars = req.query.dollars;
+    var avg = 0;
     try {
         const template = "SELECT * FROM restaurant WHERE name = $1 AND zip = $2";
         const check = await pool.query(template, [name, zip]);
@@ -89,8 +90,17 @@ app.get("/restaurant",async (req, res) => {
 			
 		}
 		
-		var avg = added/checker.rowCount;
+		avg = added/checker.rowCount;
 		console.log(avg);
+		if(avg.toString().includes(".")){
+		 var avgsplit = avg.toString(10).split(".");
+		  avgsplit[1] = avgsplit[1].substr(0, 2);
+		  avg = avgsplit[0] + "." + avgsplit[1];
+		}
+		
+		
+		
+		
 		
             let results = []
            let result = {};
@@ -100,6 +110,7 @@ app.get("/restaurant",async (req, res) => {
             result.city = check.rows[0].city;
             result.state = check.rows[0].state;
             result.zip = check.rows[0].zip;
+            results.stars = avg;
 	    results.push(result);
 	 }
      
