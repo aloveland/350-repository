@@ -9,10 +9,11 @@ CREATE TABLE restaurant(
        city TEXT,
        state TEXT,
        zip TEXT,
+       type TEXT,
        dollars TEXT
 );
-INSERT INTO restaurant( name, city, state, zip, dollars)VALUES
-('example restaurant', 'Sacremento', 'CA', '94203', '$$$');
+INSERT INTO restaurant( name, city, state, zip, type, dollars)VALUES
+('example restaurant', 'Sacremento', 'CA', '94203', 'georgian', '$$$');
 
 CREATE TABLE reviews(
       id SERIAL PRIMARY KEY,
