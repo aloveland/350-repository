@@ -75,7 +75,7 @@ app.get("/restaurant",async (req, res) => {
              }
         else{
               const temp = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
-              const reviews = await pool.query(template, [name, zip]);
+              const reviews = await pool.query(temp, [name, zip]);
             var x = 0;
             var ratings = 0;
             for(x = 0; x < reviews.rowCount; x++){
@@ -83,7 +83,7 @@ app.get("/restaurant",async (req, res) => {
                 console.log(reviews.rows[x].rating);
             }
             var average = ratings/reviews.rowCount;
-            console.log("this is average " + reviews);
+            console.log("this is average " + reviews.rows[0]);
            let result = {};
             result.name = check.rows[0].name;
             console.log(check.rows[0].city);
