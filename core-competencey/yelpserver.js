@@ -164,7 +164,7 @@ app.get("/find",async (req, res) => {
       const type = req.query.type;
  
     try {
-        const template = "SELECT * FROM restaurant WHERE type = $1";
+        const template = "SELECT * FROM restaurant WHERE type LIKE $1";
         const check = await pool.query(template, ["%" + type + "%"]);
         if (check.rowCount == 0){
             res.json({status: 'no restaurants of this type'});
