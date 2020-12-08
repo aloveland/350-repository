@@ -139,8 +139,6 @@ async handleSearch(evt) {
           margin: "auto auto",
           width: "1600x",
           textAlign: "center",
-	  borderStyle: "groove",
-	  borderColor: "#166d17",
         }}
       >	
         <h1>Food Search</h1>
