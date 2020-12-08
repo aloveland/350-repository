@@ -161,7 +161,7 @@ app.get("/reviews",async (req, res) => {
     }
 });
 app.get("/find",async (req, res) => {
-      const type = req.query.type;
+      var type = req.query.type;
  
     try {
         const template = "SELECT * FROM restaurant WHERE type LIKE $1";
@@ -173,7 +173,7 @@ app.get("/find",async (req, res) => {
            let result = {};
 	   let results = [];
 	    var g = 0;
-	    for(g; g < check.rowCount; check++){
+	    for(g = 0; g < check.rowCount; check++){
 		    result = {};
             result.restaurant = check.rows[0].name;
             result.dollars = check.rows[0].dollars;
