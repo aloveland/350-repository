@@ -76,11 +76,12 @@ app.get("/restaurant",async (req, res) => {
              }
         else{
               const temp1 = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
-              const reviews = await pool.query(temp1, [name, zip]);
+              const checker = await pool.query(temp1, [name, zip]);
              if(reviews.rowCount == 0){
                  console.log("no reviews");
+		
              }
-            console.log("this is reviews " + reviews);
+            console.log("this is checker " + checker);
            let result = {};
             result.name = check.rows[0].name;
             result.city = check.rows[0].city;
