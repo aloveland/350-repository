@@ -104,7 +104,7 @@ app.post("/review",async (req, res) => {
            const template1 = "INSERT INTO reviews(name, zip, reviewer, review) VALUES ($1, $2, $3, $4)";
            const response = await pool.query(template1, [name, zip, reviewer, review ]);
             res.json({status: 'OK'})
-        }
+
         
  
     } catch (err){
