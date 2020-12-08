@@ -46,7 +46,7 @@ app.post("/restaurant",async (req, res) => {
             res.json({status: 'restaurant already registered'});
              }
         else{
-           const template1 = "INSERT INTO restuarant(name, city, state, zip, dollars) VALUES ($1, $2, $3, $4, $5)";
+           const template1 = "INSERT INTO restaurant(name, city, state, zip, dollars) VALUES ($1, $2, $3, $4, $5)";
            const response = await pool.query(template1, [name, city, state, zip, dollars]);
             res.json({status: 'restaurant added'})
         }
