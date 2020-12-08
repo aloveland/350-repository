@@ -122,7 +122,7 @@ app.get("/restaurant",async (req, res) => {
     
 	}
     }catch (err){
-        res.json({error: 'workshop not found'});
+        res.json({error: 'not found'});
         console.log(err);
     }
 
