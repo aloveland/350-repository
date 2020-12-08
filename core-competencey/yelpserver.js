@@ -151,9 +151,8 @@ app.get("/reviews",async (req, res) => {
          }
         }
      
-          res.json({status: 'OK', result: results});
         }
-        
+          res.json({status: 'OK', result: results});
  
      catch (err){
         res.json({error: 'workshop not found'});
