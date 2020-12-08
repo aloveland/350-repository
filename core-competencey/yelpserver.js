@@ -143,7 +143,7 @@ app.get("/reviews",async (req, res) => {
         res.json({error: 'workshop not found'});
         console.log(err);
     }
-
+}
 app.listen(app.get("port"), () => {
   console.log(`Find the server at: http://localhost:${app.get("port")}/`); 
 });
