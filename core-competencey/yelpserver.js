@@ -191,7 +191,7 @@ app.get("/find",async (req, res) => {
     
 	}
 	catch (err){
-        res.json({error: 'workshop not found'});
+        //res.json({error: 'workshop not found'});
         console.log(err);
     }
 
