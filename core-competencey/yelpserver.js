@@ -149,13 +149,14 @@ app.get("/reviews",async (req, res) => {
             result.review = check.rows[0].review;
              results.push(result);
          }
+		res.json({status: 'OK', result: results});
         }
-     		res.json({status: 'OK', result: results});
+  
         }
     
  
      catch (err){
-        res.json({error: 'workshop not found'});
+        //res.json({error: 'workshop not found'});
         console.log(err);
     }
 });
