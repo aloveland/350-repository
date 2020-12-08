@@ -74,6 +74,16 @@ app.get("/restaurant",async (req, res) => {
             res.json({status: 'restaurant does not exist'});
              }
         else{
+              const temp = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
+              const reviews = await pool.query(template, [name, zip]);
+            var x = 0;
+            var ratings = 0;
+            for(x = 0; x < reviews.rowCount; x++){
+                ratings = ratings + parseInt(reviews.rows[i].rating,10);
+                console.log(reviews.rows[i].rating);
+            }
+            var average = ratings/reviews.rowCount;
+            console.log("this is average " + average);
            let result = {};
             result.name = check.rows[0].name;
             console.log(check.rows[0].city);
