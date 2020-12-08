@@ -97,12 +97,13 @@ app.post("/review",async (req, res) => {
     console.log("this is name");
     console.log(name);
     const zip = req.body.zip;
-    const reviewer = req.body.rating;
+    const reviewer = req.body.reviewer;
+    const rating = req.body.rating
     const review = req.body.review;
 
     try {
-           const template1 = "INSERT INTO reviews(name, zip, reviewer, review) VALUES ($1, $2, $3, $4)";
-           const response = await pool.query(template1, [name, zip, reviewer, review ]);
+           const template1 = "INSERT INTO reviews(name, zip, reviewer, rating, review) VALUES ($1, $2, $3, $4, $5)";
+           const response = await pool.query(template1, [name, zip, reviewer, rating, review ]);
             res.json({status: 'OK'})
 
         
@@ -113,6 +114,35 @@ app.post("/review",async (req, res) => {
     }
     
 });
+app.get("/reviews",async (req, res) => {
+      const name = req.query.name;
+    console.log("this is name");
+    console.log(name);
+    const zip = req.query.zip;
+    const state = req.query.state;
+    try {
+        const template = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
+        const check = await pool.query(template, [name, zip]);
+        if (check.rowCount == 0){
+            res.json({status: 'no reviews exist'});
+             }
+        else{
+           let result = {};
+            result.name = check.rows[0].name;
+            result.zip = check.rows[0].zip;
+            result.reviewer = check.row[0].reviewer
+            console.log(check);
+            result.rating = check.rows[0].rating;
+            result.review = check.rows[0].review;
+     
+          res.json({status: result});
+        }
+        
+ 
+    } catch (err){
+        res.json({error: 'workshop not found'});
+        console.log(err);
+    }
 
 app.listen(app.get("port"), () => {
   console.log(`Find the server at: http://localhost:${app.get("port")}/`); 
