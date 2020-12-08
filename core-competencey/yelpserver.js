@@ -92,6 +92,27 @@ app.get("/restaurant",async (req, res) => {
     }
 
 });
+app.post("/review",async (req, res) => {
+     const name = req.body.name;
+    console.log("this is name");
+    console.log(name);
+    const zip = req.body.zip;
+    const reviewer = req.body.rating;
+    const review = req.body.review;
+
+    try {
+           const template1 = "INSERT INTO reviews(name, zip, reviewer, review) VALUES ($1, $2, $3, $4)";
+           const response = await pool.query(template1, [name, zip, reviewer, review ]);
+            res.json({status: 'OK'})
+        }
+        
+ 
+    } catch (err){
+        res.json({error: 'review error'});
+        console.log(err);
+    }
+    
+}
 
 app.listen(app.get("port"), () => {
   console.log(`Find the server at: http://localhost:${app.get("port")}/`); 
