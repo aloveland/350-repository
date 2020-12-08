@@ -128,9 +128,10 @@ app.get("/reviews",async (req, res) => {
              }
         else{
            let result = {};
+            console.log(check);
             result.name = check.rows[0].name;
             result.zip = check.rows[0].zip;
-            result.reviewer = check.row[0].reviewer
+            //result.reviewer = check.row[0].reviewer
             console.log(check);
             result.rating = check.rows[0].rating;
             result.review = check.rows[0].review;
