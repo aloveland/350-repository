@@ -145,6 +145,7 @@ app.get("/reviews",async (req, res) => {
             result.review = check.rows[0].review;
              results.push(result);
          }
+        }
      
           res.json({status: 'OK', result: results});
         }
