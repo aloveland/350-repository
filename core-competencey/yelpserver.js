@@ -137,6 +137,13 @@ app.post("/review",async (req, res) => {
     const review = req.body.review;
 
     try {
+	      const temp1 = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
+              const checker = await pool.query(temp1, [name, zip]);
+	    if(checker.rowCount > 0){
+		res.json({status: 'review already added'});
+	    }
+	    
+	    
            const template1 = "INSERT INTO reviews(name, zip, reviewer, rating, review) VALUES ($1, $2, $3, $4, $5)";
            const response = await pool.query(template1, [name, zip, reviewer, rating, review ]);
             res.json({status: 'OK'})
