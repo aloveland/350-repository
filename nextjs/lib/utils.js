@@ -1,8 +1,12 @@
 require("isomorphic-fetch");
 
-function getCampInfo(name) {
+
+
+
+function getFoodInfo(name) {
   console.log("Fetching");
-  return fetch(`http://35.190.190.219/api/info?q=${name}`).then(function(resp) {
+  console.log("this is name " + name);
+  return fetch(`http://34.106.215.20/api/search?term=${name}`).then(function(resp) {
     return resp.json();
   });
 }
@@ -13,7 +17,7 @@ function handleError(error) {
 }
 
 module.exports = {
-  getCampInfo: function(camp) {
-    return getCampInfo(camp).catch(handleError);
+  getFoodInfo: function(camp) {
+    return getFoodInfo(camp).catch(handleError);
   },
 };
