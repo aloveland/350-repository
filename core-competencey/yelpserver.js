@@ -48,7 +48,7 @@ app.post("/restaurant",async (req, res) => {
              }
         else{
            const template1 = "INSERT INTO restaurant(name, city, state, zip, type, dollars) VALUES ($1, $2, $3, $4, $5, $6)";
-           const response = await pool.query(template1, [name, city, state, zip, dollars]);
+           const response = await pool.query(template1, [name, city, state, zip, type,dollars]);
             res.json({status: 'restaurant added'})
         }
         
