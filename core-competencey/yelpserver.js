@@ -80,7 +80,7 @@ app.get("/restaurant",async (req, res) => {
             var ratings = 0;
             for(x = 0; x < reviews.rowCount; x++){
                 ratings = ratings + parseInt(reviews.rows[x].rating,10);
-                console.log(reviews.rows[i].rating);
+                console.log(reviews.rows[x].rating);
             }
             var average = ratings/reviews.rowCount;
             console.log("this is average " + average);
