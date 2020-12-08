@@ -82,7 +82,13 @@ app.get("/restaurant",async (req, res) => {
 		
              }
             console.log(checker.rows[0]);
-		
+		var d = 0;
+		var added = 0;
+		for(d = 0; d < checker.rowsCount; d ++){
+			added = added + parseInt(checker.rows[i].rating,10);	
+			
+		}
+		console.log(added);
 		
 		
 		
