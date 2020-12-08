@@ -127,16 +127,21 @@ app.get("/reviews",async (req, res) => {
             res.json({status: 'no reviews exist'});
              }
         else{
-           let result = {};
+            let result = [];
+            var i = 0;
+         for(i = 0; i < check.rowCount; i++){
+           let result1 = {};
             console.log(check);
-            result.name = check.rows[0].name;
-            result.zip = check.rows[0].zip;
-            result.reviewer = check.rows[0].reviewer
+            result1.name = check.rows[0].name;
+            result1.zip = check.rows[0].zip;
+            result1.reviewer = check.rows[0].reviewer
             console.log(check);
-            result.rating = check.rows[0].rating;
-            result.review = check.rows[0].review;
+            result1.rating = check.rows[0].rating;
+            result1.review = check.rows[0].review;
+             result.push(result1);
+         }
      
-          res.json({status: 'OK', result: result});
+          res.json({status: 'OK', result: result1});
         }
         
  
