@@ -1,4 +1,4 @@
-import {getCampInfo} from '../lib/utils.js';
+import {getFoodInfo} from '../lib/utils.js';
 import Layout from '../components/MyLayout.js'
 import React from "react";
 
@@ -13,7 +13,7 @@ class Home extends React.Component {
 async handleSearch(evt) {
    console.log("being queried");
  
-    const campInfo = await getCampInfo(this.state.search);
+    const campInfo = await getFoodInfo(this.state.search);
      if(campInfo.error == "query failed"){
 	     console.log("its happening");
      }
@@ -72,7 +72,7 @@ async handleSearch(evt) {
 	    console.log("its happening JJ"); 
   	  }
 	  
-	  const campInfo = await getCampInfo(this.state.search);
+	  const campInfo = await getFoodInfo(this.state.search);
 	    if(campInfo.error == "query failed"){
 	     console.log("its happening");
      	}	
@@ -407,4 +407,3 @@ async handleSearch(evt) {
 }
 
 export default Home;
-
