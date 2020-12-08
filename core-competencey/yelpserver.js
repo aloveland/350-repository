@@ -79,7 +79,7 @@ app.get("/restaurant",async (req, res) => {
             console.log(check.rows[0].city);
             result.city = check.rows[0].city;
             result.state = check.rows[0].state;
-            console.log(check.rows[0]);
+            console.log(check);
             result.zip = check.rows[0].zip; 
      
           res.json({status: result});
