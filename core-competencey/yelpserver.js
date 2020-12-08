@@ -204,7 +204,7 @@ app.get("/find",async (req, res) => {
 		  results.push(result);
 	    }
      
-          res.json({status: results});
+          res.json({status: 'OK', result: results});
         
         
  
