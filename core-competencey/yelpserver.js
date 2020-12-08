@@ -159,6 +159,45 @@ app.get("/reviews",async (req, res) => {
         console.log(err);
     }
 });
+app.get("/find",async (req, res) => {
+      const type = req.query.type;
+ 
+    try {
+        const template = "SELECT * FROM restaurant WHERE tpye = $1";
+        const check = await pool.query(template, [tpye]);
+        if (check.rowCount == 0){
+            res.json({status: 'no restaurants of this type'});
+             }
+       
+           let result = {};
+	   let results = [];
+	    var g = 0;
+	    for(g = 0; g < check.rowCount; check++){
+		    result = {};
+            result.restaurant = check.rows[0].name;
+            result.dollars = check.rows[0].dollars;
+             result.city = check.rows[0].city;
+            result.state = check.rows[0].state;
+            result.zip = check.rows[0].zip; 
+		  results.push(result);
+	    }
+     
+          res.json({status: results});
+        
+        
+ 
+ 
+    
+	}
+    }catch (err){
+        res.json({error: 'workshop not found'});
+        console.log(err);
+    }
+
+});
+
+
+
 app.listen(app.get("port"), () => {
   console.log(`Find the server at: http://localhost:${app.get("port")}/`); 
 });
