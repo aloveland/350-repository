@@ -68,7 +68,7 @@ app.get("/restaurant",async (req, res) => {
     const zip = req.query.zip;
     const dollars = req.query.dollars;
     try {
-        const template = "SELECT username FROM restaurant WHERE name = $1 AND zip = $2";
+        const template = "SELECT name FROM restaurant WHERE name = $1 AND zip = $2";
         const check = await pool.query(template, [name, zip]);
         if (check.rowCount == 0){
             res.json({status: 'restaurant does not exist'});
