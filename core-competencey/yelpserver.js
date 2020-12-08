@@ -139,7 +139,7 @@ app.get("/reviews",async (req, res) => {
             console.log(check);
             result.rating = check.rows[0].rating;
             result.review = check.rows[0].review;
-             result.push(results);
+             results.push(result);
          }
      
           res.json({status: 'OK', result: result1});
