@@ -38,6 +38,7 @@ app.post("/restaurant",async (req, res) => {
     const city = req.body.city;
     const state = req.body.state;
     const zip = req.body.zip;
+    const type = req.body.type;
     const dollars = req.body.dollars;
     try {
         const template = "SELECT name FROM restaurant WHERE name = $1 AND zip = $2";
@@ -46,7 +47,7 @@ app.post("/restaurant",async (req, res) => {
             res.json({status: 'restaurant already registered'});
              }
         else{
-           const template1 = "INSERT INTO restaurant(name, city, state, zip, dollars) VALUES ($1, $2, $3, $4, $5)";
+           const template1 = "INSERT INTO restaurant(name, city, state, zip, dollars) VALUES ($1, $2, $3, $4, $5, $6)";
            const response = await pool.query(template1, [name, city, state, zip, dollars]);
             res.json({status: 'restaurant added'})
         }
