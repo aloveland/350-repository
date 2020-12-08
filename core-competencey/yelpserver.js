@@ -79,7 +79,7 @@ app.get("/restaurant",async (req, res) => {
             var x = 0;
             var ratings = 0;
             for(x = 0; x < reviews.rowCount; x++){
-                ratings = ratings + parseInt(reviews.rows[i].rating,10);
+                ratings = ratings + parseInt(reviews.rows[x].rating,10);
                 console.log(reviews.rows[i].rating);
             }
             var average = ratings/reviews.rowCount;
@@ -140,7 +140,7 @@ app.get("/reviews",async (req, res) => {
             let results = [];
             let result = {};
             var i = 0;
-         for(i = 0; i < check.rowCount; i++){
+         for(i = 0; i  check.rowCount; i++){
            result = {};
             console.log(check);
             result.name = check.rows[0].name;
