@@ -78,7 +78,7 @@ app.get("/restaurant",async (req, res) => {
               const reviews = await pool.query(temp1, [name, zip]);
              if(reviews.rowCount == 0){
                  console.log("no reviews");
-           
+             }
             console.log("this is reviews " + reviews);
            let result = {};
             result.name = check.rows[0].name;
@@ -87,7 +87,7 @@ app.get("/restaurant",async (req, res) => {
             result.zip = check.rows[0].zip; 
      
           res.json({status: result});
-        }
+        
         
  
     } catch (err){
