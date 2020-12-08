@@ -136,7 +136,7 @@ app.get("/reviews",async (req, res) => {
             result.rating = check.rows[0].rating;
             result.review = check.rows[0].review;
      
-          res.json({status: result});
+          res.json({status: 'OK', result: result});
         }
         
  
