@@ -140,7 +140,7 @@ app.get("/reviews",async (req, res) => {
             let results = [];
             let result = {};
             var i = 0;
-         for(i = 0; i  check.rowCount; i++){
+         for(i = 0; i < check.rowCount; i++){
            result = {};
             console.log(check);
             result.name = check.rows[0].name;
