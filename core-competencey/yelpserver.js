@@ -91,6 +91,8 @@ app.get("/restaurant",async (req, res) => {
         
  
  
+    
+	}
     }catch (err){
         res.json({error: 'workshop not found'});
         console.log(err);
@@ -152,7 +154,7 @@ app.get("/reviews",async (req, res) => {
         }
         
  
-    } catch (err){
+     catch (err){
         res.json({error: 'workshop not found'});
         console.log(err);
     }
