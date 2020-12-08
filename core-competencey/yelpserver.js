@@ -88,9 +88,9 @@ app.get("/restaurant",async (req, res) => {
 			added = added + parseInt(checker.rows[d].rating,10);	
 			
 		}
-		console.log(added);
 		
-		
+		var avg = added/checker.rowCount;
+		console.log(avg);
 		
             let results = []
            let result = {};
