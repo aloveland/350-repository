@@ -81,7 +81,7 @@ app.get("/restaurant",async (req, res) => {
                  console.log("no reviews");
 		
              }
-            console.log("this is checker " + checker);
+            console.log(checker);
            let result = {};
             result.name = check.rows[0].name;
             result.city = check.rows[0].city;
