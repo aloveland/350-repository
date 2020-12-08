@@ -83,7 +83,7 @@ app.get("/restaurant",async (req, res) => {
                 console.log(reviews.rows[x].rating);
             }
             var average = ratings/reviews.rowCount;
-            console.log("this is average " + ratings);
+            console.log("this is average " + reviews);
            let result = {};
             result.name = check.rows[0].name;
             console.log(check.rows[0].city);
