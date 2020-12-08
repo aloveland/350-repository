@@ -60,13 +60,13 @@ app.post("/restaurant",async (req, res) => {
 });
 
 app.get("/restaurant",async (req, res) => {
-      const name = req.body.name;
+      const name = req.query.name;
     console.log("this is name");
     console.log(name);
-    const city = req.body.city;
-    const state = req.body.state;
-    const zip = req.body.zip;
-    const dollars = req.body.dollars;
+    const city = req.query.city;
+    const state = req.query.state;
+    const zip = req.query.zip;
+    const dollars = req.query.dollars;
     try {
         const template = "SELECT username FROM users WHERE username = $1";
         const check = await pool.query(template, [username]);
