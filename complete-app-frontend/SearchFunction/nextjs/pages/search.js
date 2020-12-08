@@ -141,6 +141,7 @@ async handleSearch(evt) {
           textAlign: "center",
         }}
       >	
+	<img src= "/static/newmexico.jpg" className ="App-logo" />
         <h1>Food Search</h1>
       
         <p>
