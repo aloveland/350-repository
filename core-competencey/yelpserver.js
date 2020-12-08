@@ -82,13 +82,22 @@ app.get("/restaurant",async (req, res) => {
 		
              }
             console.log(checker.rows[0]);
+		
+		
+		
+		
+            let results = []
            let result = {};
+	var y = 0;
+         for(y = 0; y < check.rowCount; y++){
             result.name = check.rows[0].name;
             result.city = check.rows[0].city;
             result.state = check.rows[0].state;
-            result.zip = check.rows[0].zip; 
+            result.zip = check.rows[0].zip;
+	    results.push(result);
+	 }
      
-          res.json({status: result});
+          res.json({status: results});
         
         
  
