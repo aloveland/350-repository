@@ -164,7 +164,7 @@ app.get("/find",async (req, res) => {
  
     try {
         const template = "SELECT * FROM restaurant WHERE tpye = $1";
-        const check = await pool.query(template, [tpye]);
+        const check = await pool.query(template, [type]);
         if (check.rowCount == 0){
             res.json({status: 'no restaurants of this type'});
              }
