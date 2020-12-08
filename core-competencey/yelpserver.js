@@ -77,7 +77,7 @@ app.get("/restaurant",async (req, res) => {
         else{
               const temp1 = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
               const checker = await pool.query(temp1, [name, zip]);
-             if(reviews.rowCount == 0){
+             if(checker.rowCount == 0){
                  console.log("no reviews");
 		
              }
