@@ -142,7 +142,7 @@ app.get("/reviews",async (req, res) => {
              results.push(result);
          }
      
-          res.json({status: 'OK', result: result1});
+          res.json({status: 'OK', result: results});
         }
         
  
