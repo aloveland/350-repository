@@ -22,10 +22,8 @@ const pool = new Pool(config);
 
 
 app.get('/hello', (req, res) => {
-  // console log the request query json object
-  console.log(req.query);
-  // console log the person parameter
-  console.log(req.query.person);
+
+  
   // now send a response back to the client
   res.json({response: `Hello from yelp, ${req.query.person}`});
 });
@@ -33,8 +31,7 @@ app.get('/hello', (req, res) => {
 
 app.post("/restaurant",async (req, res) => {
     const name = req.body.name;
-    console.log("this is name");
-    console.log(name);
+
     const city = req.body.city;
     const state = req.body.state;
     const zip = req.body.zip;
@@ -62,8 +59,6 @@ app.post("/restaurant",async (req, res) => {
 
 app.get("/restaurant",async (req, res) => {
       const name = req.query.name;
-    console.log("this is name");
-    console.log(name);
     const city = req.query.city;
     const state = req.query.state;
     const zip = req.query.zip;
@@ -82,7 +77,6 @@ app.get("/restaurant",async (req, res) => {
                  console.log("no reviews");
 		
              }
-            console.log(checker.rows[0]);
 		var d = 0;
 		var added = 0;
 		for(d = 0; d < checker.rowCount; d ++){
@@ -91,7 +85,6 @@ app.get("/restaurant",async (req, res) => {
 		}
 		
 		avg = added/checker.rowCount;
-		console.log(avg);
 		if(avg.toString().includes(".")){
 		 var avgsplit = avg.toString(10).split(".");
 		  avgsplit[1] = avgsplit[1].substr(0, 2);
@@ -129,8 +122,6 @@ app.get("/restaurant",async (req, res) => {
 });
 app.post("/review",async (req, res) => {
      const name = req.body.name;
-    console.log("this is name");
-    console.log(name);
     const zip = req.body.zip;
     const reviewer = req.body.reviewer;
     const rating = req.body.rating
@@ -158,8 +149,6 @@ app.post("/review",async (req, res) => {
 });
 app.get("/reviews",async (req, res) => {
       const name = req.query.name;
-    console.log("this is name");
-    console.log(name);
     const zip = req.query.zip;
     const state = req.query.state;
     try {
@@ -174,11 +163,9 @@ app.get("/reviews",async (req, res) => {
             var i = 0;
          for(i = 0; i < check.rowCount; i++){
            result = {};
-            console.log(check);
             result.name = check.rows[0].name;
             result.zip = check.rows[0].zip;
             result.reviewer = check.rows[0].reviewer
-            console.log(check);
             result.rating = check.rows[0].rating;
             result.review = check.rows[0].review;
              results.push(result);
@@ -190,7 +177,7 @@ app.get("/reviews",async (req, res) => {
     
  
      catch (err){
-        //res.json({error: 'workshop not found'});
+        //res.json({error: 'not found'});
         console.log(err);
     }
 });
@@ -225,7 +212,7 @@ app.get("/find",async (req, res) => {
     
 	}
 	catch (err){
-        //res.json({error: 'workshop not found'});
+        //res.json({error: 'not found'});
         console.log(err);
     }
 
