@@ -74,22 +74,14 @@ app.get("/restaurant",async (req, res) => {
             res.json({status: 'restaurant does not exist'});
              }
         else{
-              const temp = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
-              const reviews = await pool.query(temp, [name, zip]);
-            var x = 0;
-            var ratings = 0;
-            for(x = 0; x < reviews.rowCount; x++){
-                ratings = ratings + parseInt(reviews.rows[x].rating,10);
-                console.log(reviews.rows[x].rating);
-            }
-            var average = ratings/reviews.rowCount;
-            console.log("this is average " + reviews.rows[0]);
+              const temp1 = "SELECT * FROM reviews WHERE name = $1 AND zip = $2";
+              const reviews = await pool.query(temp1, [name, zip]);
+           
+            console.log("this is reviews " + reviews);
            let result = {};
             result.name = check.rows[0].name;
-            console.log(check.rows[0].city);
             result.city = check.rows[0].city;
             result.state = check.rows[0].state;
-            console.log(check);
             result.zip = check.rows[0].zip; 
      
           res.json({status: result});
