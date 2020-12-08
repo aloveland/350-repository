@@ -86,9 +86,9 @@ app.get("/restaurant",async (req, res) => {
 		var added = 0;
 		for(d = 0; d < checker.rowCount; d ++){
 			added = added + parseInt(checker.rows[d].rating,10);	
-			console.log("added");
+			
 		}
-		
+		console.log(added);
 		
 		
 		
